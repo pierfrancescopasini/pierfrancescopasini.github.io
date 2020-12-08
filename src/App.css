@@ -1,0 +1,159 @@
+body {
+  text-align: center;
+  background-color: #282c34;
+  margin: auto;
+  display: block;
+  width: 90%;
+  height: 100%;
+  font-family: 'Chivo', 'serif';
+}
+
+h1,h2,h3, h4{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #F5F5F5;
+}
+
+#contacts{
+  color: #F5F5F5;
+  cursor: pointer;
+}
+
+.lnk{
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #F5F5F5;
+  cursor: pointer;
+}
+
+.social-lnk{
+  color: #F5F5F5;
+  cursor: pointer;
+  text-decoration: none;
+}
+.downmovers{
+  right: 0px;
+  left: 0px;
+}
+
+#centerall{
+  margin: auto;
+}
+
+#videoscontactslink{
+  cursor: pointer;
+  color: #F5F5F5;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  font-size: 120%;
+  margin: auto;
+}
+
+#videoGrid{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-row-gap: 10%;
+}
+
+.customYT{
+  border-radius: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 0.5px 0.2px #F5F5F5;
+  margin-inline:10px;
+}
+
+.customYT:hover{
+  border-radius: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 2px 2px #F5F5F5;
+}
+
+.spotifyGrid{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-row-gap: 2%;
+  grid-column-gap: 1%;
+  grid-auto-flow: column;
+}
+
+.spotifyCard{
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 0px 0px #F5F5F5;
+}
+
+#aboutme {
+  position: absolute;
+  -webkit-animation: fromleft 1s;
+  animation: fromleft 1s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  animation-direction: normal;
+}
+@-webkit-keyframes fromleft {
+  0% {
+      left: -30%;
+  }
+  100% {
+      left: 5%;
+  }
+}
+@keyframes fromleft {
+  0% {
+      left: -30%;
+  }
+  100% {
+      left: 5%;
+  }
+}
+
+
+.arrow {
+  border: solid #282c34;
+  border-width: 0px 1px 1px 0px;
+  display: inline-block;
+  margin: auto;
+  padding: 10px 10px 0px 0px;
+  margin-bottom: 2px;
+  margin-top: 0px;
+  transition: 0.8s;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 1px;
+}
+
+::-webkit-scrollbar-track {
+  background: #282c34;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #F5F5F5;
+}

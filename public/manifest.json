@@ -1,0 +1,25 @@
+{
+  "short_name": "Pierfrancsco Pasini",
+  "name": "Pierfrancesco Pasini",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "270x310",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "pierfrancesco.png",
+      "type": "image/png",
+      "sizes": "270x310"
+    },
+    {
+      "src": "pierfrancescopasini.png",
+      "type": "image/png",
+      "sizes": "270x310"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
