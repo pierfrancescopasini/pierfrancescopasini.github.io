@@ -1,16 +1,16 @@
 import React from 'react';
-import SpotifyEmbed from './SpotifyEmbed.js'
-import ProgressBar from './ProgressBar.js'
+import VideoGrid from './VideoGrid.js';
+import ProgressBar from './ProgressBar.js';
 
-class ProjectsPage extends React.Component {
+class HomeVideosPage extends React.Component {
     state = {
-        styleSpotify: { display: 'none' },
+        styleVid: { display: 'none'},
         styleLoad: { display: 'block' }
     }
 
     componentDidMount = () => {
         setTimeout(() => {        
-            this.setState({ styleSpotify: { display: 'block' }, styleLoad: { display: 'none' } })
+            this.setState({ styleVid: { display: 'block' }, styleLoad: { display: 'none' } })
         }, 2000);
         window.addEventListener('load', () => {            
             this.setState({ stylePage: { display: 'block' }, styleLoad: { display: 'none' } })
@@ -20,13 +20,13 @@ class ProjectsPage extends React.Component {
     render() {
         let dim = window.outerWidth / 4;        
         return (
-            <div>
-                <h1>Projects</h1>
-                <div style={this.state.styleSpotify}><SpotifyEmbed nTracks={100} nAlbums={100} displayAlbums={true}></SpotifyEmbed></div>
+            <div id=''>
+                <h1 style={{marginTop:'10px'}}>Videos</h1>
+                <div style={this.state.styleVid}><VideoGrid nVids={2} home={true}></VideoGrid></div>
                 <div style={this.state.styleLoad}><ProgressBar progress={{amount: 0.2, time: 1}} styleBar={{ width: dim, height: dim}} ></ProgressBar></div>
             </div>
         )
     }
 }
 
-export default ProjectsPage;
+export default HomeVideosPage;

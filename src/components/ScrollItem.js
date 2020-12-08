@@ -1,15 +1,11 @@
 import React from 'react';
-import {
-    Link,
-  } from "react-router-dom";
 
-class LinkItem extends React.Component{
+class ScrollItem extends React.Component{
     state = {
         mouseOver: false
     }
-    
-
     render(){
+    
         let styleOn = { 
             transition: '0.8s', 
             backgroundColor: '#F5F5F5', 
@@ -43,10 +39,8 @@ class LinkItem extends React.Component{
             marginRight: 'auto',
             fontSize: '22px',
         }
-        
+
         if(this.props.home){
-            styleMob.color = '#282c34'
-            styleMob.backgroundColor = '#f5f5f5'
             styleOff.color = '#282c34'
             styleOff.backgroundColor = '#f5f5f5'
         }
@@ -61,20 +55,24 @@ class LinkItem extends React.Component{
                 }
                 mob = true;
         }
-           
-        
-        return(
-        <Link className='lnk' to={this.props.path}
+        return (
+            <div className='lnk' to={this.props.path}
             onMouseEnter={() => {this.setState({mouseOver:true})}}
             onMouseLeave={() => {this.setState({mouseOver:false})}}
+            onTouchEnd={() => {
+                window.scrollTo(this.props.scroll)
+            }}
+            onClick={() => {
+                window.scrollTo(this.props.scroll)
+            }}
         >
         {this.state.mouseOver || mob?
-        <div className='lnk' style={mob? styleMob : styleOn} >{this.props.name}        <i style={(mob && !this.props.home)?{border:' solid #F5F5F5', borderWidth: '0px 1px 1px 0px'}:{}}className="arrow right"></i> </div> 
+        <div className='lnk' style={mob? styleMob : styleOn} >{this.props.name}        <i style={mob?{border:' solid #F5F5F5', borderWidth: '0px 1px 1px 0px'}:{}}className="arrow right"></i> </div> 
         : <div style={styleOff}>{this.props.name}</div>
         }   
-        </Link>
+        </div>
         )
     }
 }
 
-export default LinkItem;
+export default ScrollItem;

@@ -4,6 +4,10 @@ import "p5/lib/addons/p5.sound";
 
 
 class Keyboard extends React.Component {
+
+    componentDidMount = () => {
+        window.addEventListener('orientationchange', () => {this.setState({})})
+    }
     render() {
         //Roba de initializao
         let widthWhite = window.innerWidth / 22.5;

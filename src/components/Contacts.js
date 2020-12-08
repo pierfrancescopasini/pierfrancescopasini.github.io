@@ -46,10 +46,7 @@ class Contacts extends React.Component{
                     styleOn
                     : {transition: '0.4s', fontSize: fontSize}
                 }
-                onClick={() => {
-                    setTimeout(() => {                    
-                        window.scrollTo(0, window.outerHeight + 20);
-                    },20);                    
+                onClick={() => {                 
                     this.setState((prevState) => ({
                         showPhone: !prevState.showPhone,
                         showMail: false,
@@ -67,9 +64,6 @@ class Contacts extends React.Component{
                     : {transition: '0.4s', fontSize: fontSize}
                 }
                 onClick={() => {
-                    setTimeout(() => {                    
-                        window.scrollTo(0, window.outerHeight + 20);
-                    },20);
                     this.setState((prevState) => ({
                         showPhone: false,
                         showMail: !prevState.showMail,
@@ -85,10 +79,7 @@ class Contacts extends React.Component{
                     styleOn
                     : {transition: '0.4s', fontSize: fontSize}
                 }
-                onClick={() => {
-                    setTimeout(() => {                    
-                        window.scrollTo(0, window.outerHeight + window.outerHeight/5);
-                    },20);                    
+                onClick={() => {                   
                     this.setState((prevState) => ({
                         showPhone: false,
                         showMail: false,
@@ -109,7 +100,7 @@ class Contacts extends React.Component{
                     style={{fontSize: fontSize, marginBottom: '2%', cursor:'pointer'}}>pierfrancesco.pasini@gmail.com </div> : <div></div>} 
                 {this.state.showSocial? 
                 <div className= 'downmovers' style={mob? {}: {bottom:'8%'}}>
-                    <div style={{marginBottom:'1%'}}>
+                    <span style={{marginRight:'1%'}}>
                         <a 
                         className='social-lnk' 
                         style={
@@ -118,8 +109,8 @@ class Contacts extends React.Component{
                             }} 
                             href='https://www.instagram.com/pierfrancescopasini/'
                             >Instagram  </a>
-                    </div>
-                    <div style={{marginBottom:'1%'}}>
+                    </span>
+                    <span style={{marginRight:'1%'}}>
                     <a 
                         className='social-lnk' 
                         style={
@@ -128,7 +119,7 @@ class Contacts extends React.Component{
                             }} 
                             href='https://it-it.facebook.com/pierfrancesco.pasini'
                             >facebook   </a>
-                    </div>
+                    </span>
                 </div> : <div></div>}
         </div>
        </div>

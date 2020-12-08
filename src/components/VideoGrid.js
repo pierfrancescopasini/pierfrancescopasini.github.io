@@ -1,12 +1,13 @@
 import React from 'react';
 import YouTube from 'react-youtube';
+import LinkItem from './LinkItem.js'
 
 
 class VideoGrid extends React.Component {
 
     componentDidMount() {
-        window.addEventListener('resize', () => {});
-        window.addEventListener('orientationchange', () => {setTimeout( () => {this.setState({})}, 200)} );
+        window.addEventListener('resize', () => { });
+        window.addEventListener('orientationchange', () => { setTimeout(() => { this.setState({}) }, 200) });
     }
 
     render() {
@@ -26,7 +27,7 @@ class VideoGrid extends React.Component {
                     playerVars: {
                         color: 'white',
                         autoplay: 0,
-                            },
+                    },
                 };
             } else {
                 opts = {
@@ -35,7 +36,7 @@ class VideoGrid extends React.Component {
                     playerVars: {
                         color: 'white',
                         autoplay: 0,
-                            },
+                    },
                 };
             }
         }
@@ -46,25 +47,35 @@ class VideoGrid extends React.Component {
             { text: 'Carolina', link: 'HzTJkXgs44c' },
             { text: 'Carolina', link: 'Lex3FXEpr0Y' },
         ]
+
+        links = links.slice(0, this.props.nVids);
+
         return (
-            <div id="videoGrid">
-                {
-                    links.map((item) =>
-                        (<div key={item.link}>
-                            <YouTube
-                                className={'customYT'}
-                                videoId={item.link}
-                                opts={opts}>
-                            </YouTube>
-                            <span
-                                style={{
-                                    color: '#F5F5F5',
-                                    textTransform: 'uppercase'
-                                }}
-                            >{item.text}</span>
-                        </div>)
-                    )
-                }
+            <div>
+                <div id="videoGrid">
+                    {
+                        links.map((item) =>
+                            (<div key={item.link}>
+                                <YouTube
+                                    className={'customYT'}
+                                    videoId={item.link}
+                                    opts={opts}>
+                                </YouTube>
+                                <span
+                                    style={{
+                                        color: '#F5F5F5',
+                                        textTransform: 'uppercase'
+                                    }}
+                                >{item.text}</span>
+                            </div>)
+                        )
+                    }
+                </div>
+                <div>
+                {this.props.home ?
+                        <div style={{ marginTop: '10%', width: '100%', height: '100%' }}><LinkItem path={'/videos'} name={'See More'} home={false}></LinkItem></div>
+                        : <div></div>}
+                </div>
             </div>
         )
     }
