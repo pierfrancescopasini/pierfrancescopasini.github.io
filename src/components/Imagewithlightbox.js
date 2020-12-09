@@ -1,4 +1,5 @@
 import React from 'react'
+import LinkTo from './LinkTo.js'
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
 
@@ -47,6 +48,8 @@ class GridImage extends React.Component{
                                     mainSrc={this.props.src}
                                     style={{width:'100%'}}
                                     onCloseRequest={() => {this.setState({lightBox:false})}}
+                                    toolbarButtons={
+                                        [(<LinkTo link={this.props.link} name={'Go To Event'}></LinkTo>)]}
                                 >
                                 </Lightbox> 
                             </div>
