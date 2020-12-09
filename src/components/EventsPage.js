@@ -1,8 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import images from './importPics.js'
 import ProgressBar from './ProgressBar.js'
-import Gallery from 'react-grid-gallery'
+import GridImage from './GridImage'
+
 
 
 let events = [
@@ -64,120 +63,44 @@ class EventsPage extends React.Component {
 					years.add(date.getFullYear());
 				}
 			} catch (e) {
-				console.log(e);
 			}
 			derived = true;
 		}
 	}
 
 	componentDidMount = () => {
-		setTimeout(() => {
-			this.setState({
-				displayBar: { display: 'none' },
-				displayPage: { display: 'block' }
-			})
-			console.log(this.state)
-		}, 2000)
-		window.addEventListener('load', this.setState(
-			{
-				displayBar: { display: 'none' },
-				displayPage: { display: 'block' }
-			}
-		));
-
-		var acc = document.getElementsByClassName("accordion");
-		var i;
-
-		for (i = 0; i < acc.length; i++) {
-			acc[i].addEventListener("click", function () {
-				this.classList.toggle("active");
-				var panel = this.nextElementSibling;
-				if (panel.style.display === "block") {
-					panel.style.display = "none";
-				} else {
-					panel.style.display = "block";
-				}
-			});
-		}
 	}
 
 
 
 	render() {
-		//Manip Stuff
 		this.deriveData();
-		console.log(years);
-		let ordYears = [];
-		for (let item of years) {
-			console.log(item);
-			ordYears.push(item);
-		}
-		ordYears.sort((a, b) => (b - a));
-		console.log(ordYears);
-		let ordImg = [];
-		for (let i = 0; i < ordYears.length; i++) {
-			ordImg.push({ year: ordYears[i], events: events.filter((item) => (item.date.getFullYear() === ordYears[i])) });
-			ordImg[i].events.sort((a, b) => {
-				if ((a.date.getMonth() - b.date.getMonth()) !== 0) {
-					return b.date.getMonth() - a.date.getMonth();
-				} else {
-					return (b.date.getDate() - a.date.getDate());
-				}
-			}
-			);
-		}
-		//Stop manip stuff
 
-		let imageData = [];
-		for(let i=events.length-1; i >= 0; i--){
-			imageData.push({
-				src:images[events[i].name], 
-				thumbnail:images[events[i].name], 
-				alt:events[i].link, 
-			});
-		}
+		//Numero Elementi per riga
+		let nElem = Math.floor(events.length/3);
+
+		//Ordine Cronologico
+		events = events.sort((a, b) => {
+			if ((a.date.getFullYear() - b.date.getFullYear()) !== 0) {
+				return b.date.getFullYear() - a.date.getFullYear();
+			} else if ((a.date.getMonth() - b.date.getMonth()) !== 0) {
+				return b.date.getMonth() - a.date.getMonth();
+			} else {
+				return (b.date.getDate() - a.date.getDate());
+			}
+		});
 
 		document.body.style.backgroundColor = "#282c34";
 
 		return (
 			<div style={{ backgroundColor: '#282c34', width:window.outerWidth, height: window.outerHeight * 2 }}>
 				<h1 style={{ backgroundColor: '#282c34', color: '#f5f5f5' }}>Events</h1>
-				<div style={this.state.displayPage} style={{width: window.innerWidth, backgroundColor: '#282c34', left:0, height:0}}>		
-				<Gallery
-					style={{width:'100%'}}
-					margin='10px'
-					rowHeight={window.innerHeight/2.8}
-					enableImageSelection={false}
-					onClickImage={(e) => {console.log(e.target)}}
-					className='imgInGrid'
-					images={imageData}
-				></Gallery>
-				</div>
-				<div style={{display:'none'}}>
-			
-					{
-						ordImg.map((year) => {
-							return (
-								<div>
-									<button
-										className='accordion'
-										style={{ border: '1px', backgroundColor: '#f5f5f5' }}
-									><h1 style={{ marginLeft: '5px', fontSize: '48px', color: '#282c34' }}>{year.year}</h1></button>
-									<div className='panel'>
-										{year.events.map((image) =>
-											(
-												<img
-													key={image.name}
-													alt={''}
-													className='imglist'
-													src={images[image.name]}>
-												</img>
-											))}
-									</div>
-								</div>
-							)
-						})
-					}
+				<div style={this.state.displayPage} style={{width: '100%', backgroundColor: '#282c34', left:0, right:0}}>		
+						<div className='row' style={{width:'80%', height:'80%', margin:'auto'}}>
+							<GridImage nElem={nElem} sEl={nElem*2} events={events}></GridImage>
+							<GridImage nElem={nElem} sEl={nElem} events={events}></GridImage>
+							<GridImage nElem={nElem} sEl={0} events={events}></GridImage>
+						</div>
 				</div>
 				<div style={this.state.displayBar}><ProgressBar progress={{ amount: 0.2, time: 1 }} styleBar={{ width: window.innerWidth / 4, height: window.innerWidth / 4 }}></ProgressBar></div>
 			</div>
