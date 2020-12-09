@@ -25,7 +25,6 @@ class GridImage extends React.Component{
                                  para.appendChild(node);
                             });
                         }}, 100)
-        
     }
 
     render(){        
@@ -40,8 +39,9 @@ class GridImage extends React.Component{
                                 }}
                             ></img>
                             {this.state.lightBox? 
-                            <div>
+                            <div className='stupidme'>
                                 <Lightbox
+                                    wrapperClassName='stupidme'
                                     id='weirdshit'
                                     enableZoom={false}
                                     mainSrc={this.props.src}
