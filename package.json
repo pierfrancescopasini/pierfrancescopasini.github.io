@@ -11,6 +11,7 @@
     "rc-progress": "^3.1.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-grid-gallery": "^0.5.5",
     "react-infinite-scroll-component": "^5.1.0",
     "react-p5": "^1.1.8",
     "react-router": "^5.2.0",

@@ -13,7 +13,7 @@ class ProjectsPage extends React.Component {
             this.setState({ styleSpotify: { display: 'block' }, styleLoad: { display: 'none' } })
         }, 2000);
         window.addEventListener('load', () => {            
-            this.setState({ stylePage: { display: 'block' }, styleLoad: { display: 'none' } })
+            this.setState({ styleSpotify: { display: 'block' }, styleLoad: { display: 'none' } })
         });
     }
 
@@ -21,7 +21,7 @@ class ProjectsPage extends React.Component {
         let dim = window.outerWidth / 4;        
         return (
             <div>
-                <h1>Projects</h1>
+                <h1>Spotify</h1>
                 <div style={this.state.styleSpotify}><SpotifyEmbed nTracks={100} nAlbums={100} displayAlbums={true}></SpotifyEmbed></div>
                 <div style={this.state.styleLoad}><ProgressBar progress={{amount: 0.2, time: 1}} styleBar={{ width: dim, height: dim}} ></ProgressBar></div>
             </div>
