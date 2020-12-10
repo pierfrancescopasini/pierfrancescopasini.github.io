@@ -6,7 +6,8 @@ import "p5/lib/addons/p5.sound";
 class Keyboard extends React.Component {
 
     componentDidMount = () => {
-        window.addEventListener('orientationchange', () => {this.setState({})})
+        window.addEventListener('resize', () => {setTimeout(() => {this.setState({})}, 200)});
+        window.addEventListener('orientationchange', () => {window.location.reload()})
     }
     render() {
         //Roba de initializao

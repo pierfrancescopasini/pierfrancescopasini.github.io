@@ -21,6 +21,7 @@ class ProjectandVideos extends React.Component {
                 <div style={{ marginBottom: '20px' }} ><LinkItem name={'Events'} path={'/events'}></LinkItem></div>
                 <div style={{ marginBottom: '20px' }} ><ScrollItem name={'Videos'} scroll={{ top: height*1.1, left: 0, behavior: 'smooth'}}></ScrollItem></div>
                 <div style={{ marginBottom: '20px' }} ><ScrollItem name={'Spotify'} scroll={{ top: height*2.35, left: 0, behavior: 'smooth'}}></ScrollItem></div>
+                <div style={{ marginBottom: '20px' }} ><ScrollItem name={'Eventssss'} scroll={{ top: height*3.35, left: 0, behavior: 'smooth'}}></ScrollItem></div>
             </div>
         )
     }

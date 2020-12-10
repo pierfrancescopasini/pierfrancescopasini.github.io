@@ -12,6 +12,7 @@ class AboutPage extends React.Component{
     }
 
     componentDidMount = () => {
+        window.scrollTo({top:0, left:0, behavior:'smooth'});
         setTimeout(() => {        
             this.setState({ stylePage: { display: 'block' }, styleLoad: { display: 'none' } })
         }, 800);

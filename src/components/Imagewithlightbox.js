@@ -33,7 +33,7 @@ class GridImage extends React.Component{
                         <div>
                             <img
                                 src={this.props.src} 
-                                alt={this.props.alt} 
+                                alt={''} 
                                 style={{width:'95%', height:'95%'}} 
                                 onClick={() => {
                                     this.setState({lightBox:true});

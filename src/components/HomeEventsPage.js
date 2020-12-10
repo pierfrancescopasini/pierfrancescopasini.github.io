@@ -1,8 +1,6 @@
-import React from 'react'
-import ProgressBar from './ProgressBar.js'
-import GridImage from './GridImage'
-
-
+import React from 'react';
+import GridImage from './GridImage.js';
+import LinkItem from './LinkItem.js'
 
 let events = [
 	{ name: 'Evento1', date: '12/12/2017', img: 'Evento1.jpg', link: 'https://www.facebook.com/events/1991748301073144/' },
@@ -40,77 +38,49 @@ let events = [
 	{ name: 'Evento33', date: '25/12/2020', img: 'Evento33.jpg', link: 'https://dice.fm/event/lyp8r-mecna-xmas-live-streaming-from-dolomiti-25th-dec-antenna-sala-virtuale-bologna-tickets' },
 ]
 
-let derived = false;
-class EventsPage extends React.Component {
 
-	state = {
-		displayBar: { display: 'block' },
-		displayPage: { display: 'none' }
-	}
-
-	deriveData = () => {
-		if (!derived) {
-			let date = null;
-			let dateDum = null;
-			try {
-				for (let i = 0; i < events.length; i++) {
-					console.log(events[i].date);
-					dateDum = events[i].date.split('/');
-					date = dateDum[1] + '/' + dateDum[0] + '/' + dateDum[2];
-					date = new Date(date);
-					events[i].date = date;
-				}
-			} catch (e) {
-			}
-			derived = true;
-		}
-	}
-
-	componentDidMount = () => {
-		setTimeout(() => {this.setState({displayPage:{display:'block'}, displayBar:{display:'none'}})}, 500);
-		window.scrollTo({top:0, left:0, behavior:'smooth'});
-		window.addEventListener('load', () => {
-			this.setState({displayPage:{display:'block'}, displayBar:{display:'none'}})
-		});
-	}
-
-
-
-	render() {
-		this.deriveData();
-
-		//Numero Elementi per riga
-		let nElem = Math.floor(events.length/3);
-
-		//Ordine Cronologico
-		events = events.sort((a, b) => {
+class HomeEventsPage extends React.Component{
+    render(){
+        let mob = false;
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            mob = true;
+        }
+        let ev= events.slice(events.length-3, events.length);
+        ev =  ev.sort((a, b) => {
+            console.log(a);
+            console.log(b);
+            /*let dumA = a.date.split('/');
+            let datA = dumA[1] + '/' + dumA[0] + '/' + dumA[2];
+            a.date = new Date(datA);
+            let dumB = b.date.split('/');
+            let datB = dumB[1] + '/' + dumB[0] + '/' + dumB[2];
+			b.date = new Date(datB);
 			if ((a.date.getFullYear() - b.date.getFullYear()) !== 0) {
 				return b.date.getFullYear() - a.date.getFullYear();
 			} else if ((a.date.getMonth() - b.date.getMonth()) !== 0) {
 				return b.date.getMonth() - a.date.getMonth();
 			} else {
 				return (b.date.getDate() - a.date.getDate());
-			}
+			}*/
 		});
-
-		document.body.style.backgroundColor = "#282c34";
-
-		return (
-			<div style={{ backgroundColor: '#282c34', width:window.outerWidth, height: window.outerHeight * 2 }}>
-				<h1 style={{ backgroundColor: '#282c34', color: '#f5f5f5' }}>Events</h1>
-				<div style={this.state.displayPage}>
-				<div style={{width: '100%', backgroundColor: '#282c34', left:0, right:0}}>		
-						<div className='row' style={{width:'80%', height:'80%', margin:'auto'}}>
-							<GridImage nElem={nElem} sEl={nElem*2} events={events}></GridImage>
-							<GridImage nElem={nElem} sEl={nElem} events={events}></GridImage>
-							<GridImage nElem={nElem} sEl={0} events={events}></GridImage>
+        return (
+            <div>
+                <h1>Events</h1>
+                <div style={{width:'80%', height:'80%', margin:'auto'}}>
+                    <div className='row' style={!mob? {width:'80%', margin:'auto'}: {height:'40%', margin:'auto'}}>
+                        {!mob? 
+                        (ev.map((item, index) => (
+                            <GridImage key={item.name} nElem={1} sEl={index} events={ev}></GridImage>
+                        )))
+                        :  <div style={{width:'60%', margin:'auto'}}><GridImage nElem={2} sEl={1} events={ev}></GridImage>
 						</div>
-				</div>
-				</div>
-				<div style={this.state.displayBar}><ProgressBar progress={{ amount: 0.8, time: 1 }} styleBar={{ width: window.innerWidth / 4, height: window.innerWidth / 4 }}></ProgressBar></div>
-			</div>
-		)
-	}
+                    }
+                    </div>
+                </div>
+                <div style={{marginTop:'5%'}}><LinkItem path={'/events'} name={'See More'}></LinkItem></div>
+            </div>
+        )
+    }
 }
 
-export default EventsPage
+export default HomeEventsPage

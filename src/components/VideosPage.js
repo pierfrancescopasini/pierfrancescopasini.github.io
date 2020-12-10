@@ -8,18 +8,17 @@ class VideosPage extends React.Component{
         styleVideos : {display:'none'},
         styleLoad : {display:'block'}
     }
-
-    reload = () => {
-        window.location.reload();
-    }
-    
     componentDidMount = () => {
+        window.scrollTo({top:0, left:0, behavior:'smooth'});
         setTimeout(() => {        
             this.setState({ styleVideos: { display: 'block' }, styleLoad: { display: 'none' } })
         }, 2000);
         window.addEventListener('load', () => {            
             this.setState({ stylePage: { display: 'block' }, styleLoad: { display: 'none' } })
         });
+        window.addEventListener('orientationchange', () => {
+            window.location.reload()
+        })
     }
     
     render(){

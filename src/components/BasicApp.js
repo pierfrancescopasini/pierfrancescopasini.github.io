@@ -5,6 +5,7 @@ import ProgressBar from './ProgressBar.js';
 import ProjectsandVideos from './ProjectsandVideos.js';
 import HomeProjectPage from './HomeProjectPage.js';
 import HomeVideosPage from './HomeVideosPage.js';
+import HomeEventsPage from './HomeEventsPage.js';
 
 
 class BasicApp extends React.Component{
@@ -14,8 +15,11 @@ class BasicApp extends React.Component{
     }
 
     componentDidMount(){
+        window.scrollTo({top:0, left:0, behavior:'smooth'});
         setTimeout(() => {this.setState({display:{display:'block'}, displayBar:{display:'none'}})}, 600);
         window.addEventListener('load', () => { this.setState({display:{display:'block'}, displayBar:{display:'none'}})});
+        window.addEventListener('resize', () => { this.setState({})});
+        window.addEventListener('onfullscreenchange', () => { window.location.reload()});
     }
 
     render(){
@@ -45,7 +49,7 @@ class BasicApp extends React.Component{
                     <div style={{height:height, width:'100%', marginTop:0, marginBottom:0}}>
                         <h1 style={styleH1} id="nameTitle" >Pierfrancesco Pasini</h1>
                         <h2 style={styleH2} id="musician">Musician</h2>
-                        <Keyboard></Keyboard>
+                        <div style={{width:'100%', margin:'auto'}}><Keyboard></Keyboard></div>
                         <ProjectsandVideos></ProjectsandVideos>
                         <div style={{width:'100%', height:'10%'}}><Contacts></Contacts></div>   
                     </div>
@@ -54,6 +58,9 @@ class BasicApp extends React.Component{
                     </div>
                     <div id='homeProjects' style={{height: height, width:'100%', marginTop:0, marginBottom:0}}>
                         <HomeProjectPage></HomeProjectPage>
+                    </div>
+                    <div id='homeEvents' style={{height: height, width:'100%', marginTop:0, marginBottom:0}}>
+                        <HomeEventsPage></HomeEventsPage>
                     </div>
                 </div>
                 <div style={this.state.displayBar}><ProgressBar progress={{amount: 0.3, time:10}} styleBar={{width:window.outerWidth/4, height:window.outerWidth/4}}></ProgressBar></div>
