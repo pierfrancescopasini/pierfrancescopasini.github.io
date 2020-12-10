@@ -35,8 +35,8 @@ class BasicApp extends React.Component{
                 styleH2={
                     fontSize:window.outerWidth/18,
                 }
-                dimFab=window.innerWidth/10;
-                marFab=window.innerWidth/22;
+                dimFab=window.innerWidth/8;
+                marFab=window.innerWidth/20;
             }else{
                 styleH1={
                     fontSize:window.outerWidth/20,
@@ -46,7 +46,7 @@ class BasicApp extends React.Component{
                 }
                 height = window.screen.height*2;
                 dimFab=window.innerHeight/5;
-                marFab=window.innerWidth/25;
+                marFab=window.innerWidth/26;
             }
         }
         return(
@@ -68,7 +68,7 @@ class BasicApp extends React.Component{
                     <div id='homeEvents' style={{height: height, width:'100%', marginTop:0, marginBottom:0}}>
                         <HomeEventsPage></HomeEventsPage>
                     </div>
-                    <div className='fab' style={{width:dimFab, height:dimFab, borderRadius:'50px'}} onClick={() => {window.scrollTo({top:0, left:0, behavior:'smooth'})}} ><i class='arrow up' style = {{marginTop:marFab}}></i></div>
+                    <div className='fab' style={{width:'50px', height:'50px', borderRadius:'50px'}} onClick={() => {window.scrollTo({top:0, left:0, behavior:'smooth'})}} ><i class='arrow up' style = {{marginTop:marFab}}></i></div>
                 </div>
                 <div style={this.state.displayBar} ><ProgressBar progress={{amount: 0.3, time:10}} styleBar={{width:window.outerWidth/4, height:window.outerWidth/4}}></ProgressBar></div>
             </div>
