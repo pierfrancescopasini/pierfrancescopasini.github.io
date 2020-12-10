@@ -37,8 +37,6 @@ class SpotifyEmbed extends React.Component {
     }
 
     render() {
-        console.log('https://open.spotify.com/embed/playlist/24UsN45jfHwYkqtKKt9hwG')
-        console.log(this.props);
         let album_links = al_links;
         let track_links = tr_links;
 
