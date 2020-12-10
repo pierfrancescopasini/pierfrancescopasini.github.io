@@ -19,7 +19,7 @@ class HomeEventsPage extends React.Component{
 							evArr.map((item) => (
 								<GridImage nElem={1} sEl={item}></GridImage>
 							))
-                        :  <div style={{width:'60%', margin:'auto'}}><GridImage nElem={2} sEl={-1}></GridImage>
+                        :  <div style={{width:'60%', margin:'auto'}}><GridImage nElem={2} sEl={0}></GridImage>
 						</div>
                     }
                     </div>
