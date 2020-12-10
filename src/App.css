@@ -59,6 +59,23 @@ h1,h2,h3, h4{
   font-family: 'Chivo', 'serif';
 }
 
+.fab{
+  position: fixed;
+  top: 80%;
+  left: 80%;
+  width: 50px;
+  height: 50px;
+  background-color: #F5F5F5;
+  border: 2px #282c34;
+  border-radius: 30px;
+  margin-bottom: 15px;
+  box-shadow: 3px 3px 0px 0px #B0B0B0;
+}
+
+.fab:hover{
+  border: 3px #282c34;
+  box-shadow: 4px 4px 0px 0px #B0B0B0;
+}
 
 #contacts{
   color: #F5F5F5;

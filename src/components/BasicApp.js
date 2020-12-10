@@ -25,6 +25,7 @@ class BasicApp extends React.Component{
     render(){
         let height = window.innerHeight*1.1;
         let styleH1, styleH2;
+        let mob = false;
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
             if(window.matchMedia("(orientation: portrait)").matches){
                 styleH1={
@@ -42,6 +43,7 @@ class BasicApp extends React.Component{
                 }
                 height = window.screen.height*2;
             }
+            mob = true;
         }
         return(
             <div>
@@ -62,8 +64,9 @@ class BasicApp extends React.Component{
                     <div id='homeEvents' style={{height: height, width:'100%', marginTop:0, marginBottom:0}}>
                         <HomeEventsPage></HomeEventsPage>
                     </div>
+                    <div className='fab' style={mob? {width:window.innerWidth/10, height:window.innerWidth/10}:{ width:window.innerWidth/25, height:window.innerWidth/25 }} onClick={() => {window.scrollTo({top:0, left:0, behavior:'smooth'})}} ><i class='arrow up' style = {mob? {marginTop:window.innerWidth/22} : {marginTop:window.innerWidth/60}}></i></div>
                 </div>
-                <div style={this.state.displayBar}><ProgressBar progress={{amount: 0.3, time:10}} styleBar={{width:window.outerWidth/4, height:window.outerWidth/4}}></ProgressBar></div>
+                <div style={this.state.displayBar} ><ProgressBar progress={{amount: 0.3, time:10}} styleBar={{width:window.outerWidth/4, height:window.outerWidth/4}}></ProgressBar></div>
             </div>
             
         )

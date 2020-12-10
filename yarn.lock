@@ -9258,6 +9258,11 @@ react-scrolllock@^2.0.1:
     exenv "^1.2.2"
     react-prop-toggle "^1.0.2"
 
+react-spotify-api@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/react-spotify-api/-/react-spotify-api-3.0.0.tgz#7a8d92ce76267fa757e2ea51321c0d60b25f7bf0"
+  integrity sha512-q7X/fIBRVpx1iZfPocDl7Q7qv8nU+MFpMqQMMEcveQD9wQ8DWnDeSbkbiH9TW7NlyOc+G4IpuZ/9jk5Z306Itw==
+
 react-spotify-player@^1.0.4:
   version "1.0.4"
   resolved "https://registry.npmjs.org/react-spotify-player/-/react-spotify-player-1.0.4.tgz"

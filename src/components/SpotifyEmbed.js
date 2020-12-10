@@ -2,6 +2,7 @@ import React from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import LinkItem from './LinkItem.js'
 
+
 let al_links = [
     '5e33d90hvAsPdOrC0dtskP',
     '0HUDXbFaRlxFJuFRSftwJA',
@@ -36,6 +37,7 @@ class SpotifyEmbed extends React.Component {
     }
 
     render() {
+        console.log('https://open.spotify.com/embed/playlist/24UsN45jfHwYkqtKKt9hwG')
         console.log(this.props);
         let album_links = al_links;
         let track_links = tr_links;
