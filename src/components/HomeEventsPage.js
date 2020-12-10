@@ -63,6 +63,7 @@ class HomeEventsPage extends React.Component{
 				return (b.date.getDate() - a.date.getDate());
 			}*/
 		});
+
         return (
             <div>
                 <h1>Events</h1>

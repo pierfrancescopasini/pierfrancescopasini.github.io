@@ -9,7 +9,7 @@ class ProjectandVideos extends React.Component {
         mouseOverAbout: false
     }
     render() {
-        let height = window.innerHeight;
+        let height = window.innerHeight*1.135;
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
             if(!window.matchMedia("(orientation: portrait)").matches){
                 height = window.screen.height*2;
@@ -18,9 +18,9 @@ class ProjectandVideos extends React.Component {
         return (
             <div id='videoscontactslink'>
                 <div style={{ marginBottom: '20px' }} ><LinkItem name={'About Me'} path={'/about'}></LinkItem></div>
-                <div style={{ marginBottom: '20px' }} ><ScrollItem name={'Videos'} scroll={{ top: height*1.1, left: 0, behavior: 'smooth'}}></ScrollItem></div>
-                <div style={{ marginBottom: '20px' }} ><ScrollItem name={'Spotify'} scroll={{ top: height*2.35, left: 0, behavior: 'smooth'}}></ScrollItem></div>
-                <div style={{ marginBottom: '20px' }} ><ScrollItem name={'Events'} scroll={{ top: height*3.35, left: 0, behavior: 'smooth'}}></ScrollItem></div>
+                <div style={{ marginBottom: '20px' }} ><ScrollItem name={'Videos'} scroll={{ top: height*1, left: 0, behavior: 'smooth'}}></ScrollItem></div>
+                <div style={{ marginBottom: '20px' }} ><ScrollItem name={'Spotify'} scroll={{ top: height*2, left: 0, behavior: 'smooth'}}></ScrollItem></div>
+                <div style={{ marginBottom: '20px' }} ><ScrollItem name={'Events'} scroll={{ top: height*3, left: 0, behavior: 'smooth'}}></ScrollItem></div>
             </div>
         )
     }

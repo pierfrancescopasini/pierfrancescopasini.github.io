@@ -1,6 +1,6 @@
 import React from 'react'
 
-let widthOn = window.innerWidth/8;
+let width = window.innerWidth/8;
 let widthOff = window.innerWidth/10;
 class LinkTo extends React.Component{
     state = {
@@ -24,8 +24,8 @@ class LinkTo extends React.Component{
         return (
             <div 
             style={this.state.mouseOver && !mob?
-                  {width: Math.max('fit-content', widthOn), height:'5%', color:'#282c34', borderRadius:'10px', backgroundColor:'#f5f5f5', left:0, right:0, transition:'0.5s'}
-                  : {width:widthOff, height:'5%', color:'#282c34', borderRadius:'10px', backgroundColor:'#f5f5f5', left:0, right:0, transition:'0.5s'}
+                  {width: width, color:'#282c34', borderRadius:'10px', backgroundColor:'#f5f5f5', marginTop:'5px', transition:'0.5s'}
+                  : {width:widthOff, color:'#282c34', borderRadius:'10px', backgroundColor:'#f5f5f5', marginTop:'5px', transition:'0.5s'}
             }
             onClick={() => {window.location=this.props.link}}
             onMouseEnter={() => {this.setState({mouseOver:true})}}

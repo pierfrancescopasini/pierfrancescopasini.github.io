@@ -21,7 +21,7 @@ class HomeVideosPage extends React.Component {
         let dim = window.outerWidth / 4;        
         return (
             <div id=''>
-                <h1 style={{marginTop:'10px'}}>Videos</h1>
+                <h1 style={{}}>Videos</h1>
                 <div style={this.state.styleVid}><VideoGrid nVids={2} home={true}></VideoGrid></div>
                 <div style={this.state.styleLoad}><ProgressBar progress={{amount: 0.2, time: 1}} styleBar={{ width: dim, height: dim}} ></ProgressBar></div>
             </div>

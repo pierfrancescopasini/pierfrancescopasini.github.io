@@ -53,7 +53,7 @@ class BasicApp extends React.Component{
                         <ProjectsandVideos></ProjectsandVideos>
                         <div style={{width:'100%', height:'10%'}}><Contacts></Contacts></div>   
                     </div>
-                    <div style={{height: height, width:'100%', marginTop:0, marginBottom:0}}>
+                    <div id='homeVideos' style={{height: height, width:'100%', marginTop:0, marginBottom:0}}>
                         <HomeVideosPage></HomeVideosPage>
                     </div>
                     <div id='homeProjects' style={{height: height, width:'100%', marginTop:0, marginBottom:0}}>
