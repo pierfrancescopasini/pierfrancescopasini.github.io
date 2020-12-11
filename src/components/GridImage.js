@@ -45,7 +45,7 @@ class GridImage extends React.Component{
             <div className='column'>
                 {
                     ev.map((item) => (
-                        <div key={item.name}>
+                        <div key={images[item.name]}>
                             <Imagewithlighbox
                                 src={images[item.name]} 
                                 link={item.link} 

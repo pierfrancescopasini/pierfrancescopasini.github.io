@@ -21,17 +21,17 @@ class EventsPage extends React.Component {
 
 
 	render() {
-		document.body.style.backgroundColor = "#282c34";
+		document.body.style.backgroundColor = "#000000";
 		let nElem = Math.ceil(allEv.length/3);
 		let mob = false;
 		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 			mob = true;
 		}
 		return (
-			<div style={{ backgroundColor: '#282c34', width:window.outerWidth, height: window.outerHeight * 2 }}>
-				<h1 style={{ backgroundColor: '#282c34', color: '#f5f5f5' }}>Events</h1>
+			<div style={{ backgroundColor: 'none', width:window.outerWidth, height: window.outerHeight * 2 }}>
+				<h1 style={{ backgroundColor: 'none', color: '#f5f5f5' }}>Events</h1>
 				<div style={this.state.displayPage}>
-				<div style={{width: '100%', backgroundColor: '#282c34', left:0, right:0}}>		
+				<div style={{width: '100%', backgroundColor: 'none', left:0, right:0}}>		
 						<div className='row' style={mob? {width:'90%', height:'90%', margin:'auto'} : {width:'80%', height:'80%', margin:'auto'}}>
 							<GridImage nElem={nElem} sEl={nElem*2}></GridImage>
 							<GridImage nElem={nElem} sEl={nElem}></GridImage>

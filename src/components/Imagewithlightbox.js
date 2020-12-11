@@ -17,7 +17,6 @@ class GridImage extends React.Component{
     componentDidUpdate = () => {
         setTimeout(() => {
                         let els = document.getElementsByClassName('ril-image-current ril__image');
-                        console.log(els.length);
                         for(let i=0; i < els.length; i++){
                              els[i].addEventListener('mouseover', () => {
                                  console.log('Mouse me all like I am your bitch');
@@ -32,6 +31,15 @@ class GridImage extends React.Component{
         return (
                         <div>
                             <img
+                            /*onMouseOver={(e) => {
+                                if(Math.abs(e.clientX - e.target.y)  > e.target.height){
+                                    if(e.clientY > e.target.y){
+                                        window.scrollTo({top:e.clientY - e.target.height, behavior:'smooth'})
+                                    }else{
+                                        window.scrollTo({top:e.clientY + e.target.height, behavior:'smooth'})
+                                    }
+                                }
+                                }}*/
                                 src={this.props.src} 
                                 alt={''} 
                                 style={{width:'95%', height:'95%'}} 

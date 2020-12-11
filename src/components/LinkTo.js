@@ -24,8 +24,8 @@ class LinkTo extends React.Component{
         return (
             <div 
             style={this.state.mouseOver && !mob?
-                  {width: width, color:'#282c34', borderRadius:'10px', backgroundColor:'#f5f5f5', marginTop:'5px', transition:'0.5s'}
-                  : {width:widthOff, color:'#282c34', borderRadius:'10px', backgroundColor:'#f5f5f5', marginTop:'5px', transition:'0.5s'}
+                  {width: width, color:'#000000', borderRadius:'4px', backgroundColor:'#f5f5f5', marginTop:'5px', transition:'0.5s', cursor:'pointer'}
+                  : {width:widthOff, color:'#000000', borderRadius:'4px', backgroundColor:'#f5f5f5', marginTop:'5px', transition:'0.5s', cursor:'pointer'}
             }
             onClick={() => {window.location=this.props.link}}
             onMouseEnter={() => {this.setState({mouseOver:true})}}

@@ -9,8 +9,8 @@ class ScrollItem extends React.Component{
         let styleOn = { 
             transition: '0.8s', 
             backgroundColor: '#F5F5F5', 
-            color: '#282c34', 
-            borderRadius: '10px', 
+            color: '#000000', 
+            borderRadius: '4px', 
             width: 205,
             heigth: '100%',
             marginLeft: 'auto',
@@ -20,8 +20,8 @@ class ScrollItem extends React.Component{
     
         let styleOff = { 
             transition:'1.2s',  
-            borderRadius: '10px', 
-            backgroundColor: '#282c34', 
+            borderRadius: '4px', 
+            backgroundColor: '#000000', 
             width: 144,    
             heigth: '100%',            
             marginLeft: 'auto',
@@ -32,7 +32,7 @@ class ScrollItem extends React.Component{
         let styleMob = {
             transition:'1.2s',  
             borderRadius: '10px', 
-            backgroundColor: '#282c34', 
+            backgroundColor: '#000000', 
             width: 144,    
             heigth: '100%',            
             marginLeft: 'auto',
@@ -41,7 +41,7 @@ class ScrollItem extends React.Component{
         }
 
         if(this.props.home){
-            styleOff.color = '#282c34'
+            styleOff.color = '#000000'
             styleOff.backgroundColor = '#f5f5f5'
         }
         let mob = false;
@@ -61,9 +61,10 @@ class ScrollItem extends React.Component{
             onMouseLeave={() => {this.setState({mouseOver:false})}}
             onTouchEnd={() => {
                 window.scrollTo(this.props.scroll)
+                this.props.update();
             }}
             onClick={() => {
-                window.scrollTo(this.props.scroll)
+                window.scrollTo(this.props.scroll);
             }}
         >
         {this.state.mouseOver || mob?

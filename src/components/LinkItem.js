@@ -12,9 +12,8 @@ class LinkItem extends React.Component{
     render(){
         let styleOn = { 
             transition: '0.8s', 
-            backgroundColor: '#F5F5F5', 
-            color: '#282c34', 
-            borderRadius: '10px', 
+            color: '#F5f5f5', 
+            borderRadius: '4px', 
             width: 205,
             heigth: '100%',
             marginLeft: 'auto',
@@ -24,8 +23,8 @@ class LinkItem extends React.Component{
     
         let styleOff = { 
             transition:'1.2s',  
-            borderRadius: '10px', 
-            backgroundColor: '#282c34', 
+            borderRadius: '4px', 
+            backgroundColor: 'none', 
             width: 144,    
             heigth: '100%',            
             marginLeft: 'auto',
@@ -35,8 +34,8 @@ class LinkItem extends React.Component{
 
         let styleMob = {
             transition:'1.2s',  
-            borderRadius: '10px', 
-            backgroundColor: '#282c34', 
+            borderRadius: '4px', 
+            backgroundColor: 'none', 
             width: 144,    
             heigth: '100%',            
             marginLeft: 'auto',
@@ -45,9 +44,9 @@ class LinkItem extends React.Component{
         }
         
         if(this.props.home){
-            styleMob.color = '#282c34'
+            styleMob.color = '#000000'
             styleMob.backgroundColor = '#f5f5f5'
-            styleOff.color = '#282c34'
+            styleOff.color = '#000000'
             styleOff.backgroundColor = '#f5f5f5'
         }
         let mob = false;
@@ -69,7 +68,7 @@ class LinkItem extends React.Component{
             onMouseLeave={() => {this.setState({mouseOver:false})}}
         >
         {this.state.mouseOver || mob?
-        <div className='lnk' style={mob? styleMob : styleOn} >{this.props.name}        <i style={(mob && !this.props.home)?{border:' solid #F5F5F5', borderWidth: '0px 1px 1px 0px'}:{}}className="arrow right"></i> </div> 
+        <div className='lnk' style={mob? styleMob : styleOn} >{this.props.name}        <i style={(mob && !this.props.home)?{border:' solid #F5F5F5', borderWidth: '0px 1px 1px 0px'}:{border:' solid #F5F5F5', borderWidth: '0px 1px 1px 0px'}}className="arrow right"></i> </div> 
         : <div style={styleOff}>{this.props.name}</div>
         }   
         </Link>

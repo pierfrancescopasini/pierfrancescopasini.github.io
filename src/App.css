@@ -1,12 +1,42 @@
+html{
+  margin: 0;
+  height: 100%;
+}
+
 body {
   text-align: center;
-  background-color: #282c34;
+  background-color: #000000;
   margin: auto;
   display: block;
-  width: 100%;
   height: 100%;
   font-family: 'Chivo', 'serif';
   scroll-behavior: smooth;
+}
+
+.header{
+  height: 100%;
+}
+
+.lefty{
+  float: left;
+}
+
+.headerspan{
+  font-family: 'Chivo', 'serif';
+  color:#f5f5f5;
+  margin-right: 2%;
+  cursor: pointer;
+  border-radius: 4px;
+  height: 100%;
+  width: 33%;
+  padding: 1px;
+  font-size: 20px;
+}
+
+.headerspan:hover{
+  color: #000000;
+  background-color: #F5F5F5;
+  cursor:pointer;
 }
 
 .row {
@@ -27,6 +57,23 @@ body {
   margin-left: 8px;
   vertical-align: middle;
   cursor: pointer;
+  transition: 0.5s;
+  border-radius: 4px;
+}
+
+.column img:hover {
+  box-shadow: 1.5px 1.5px 1.5px 1.5px #F5F5F5;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-right: 8px;
+  margin-left: 8px;
+  transition: 0.5s;
+}
+
+.header{
+  position: fixed;
+  left: 0;
+  bottom:100%;
 }
 
 #stupidme{
@@ -41,9 +88,10 @@ h1,h2,h3, h4{
   text-transform: uppercase;
   color: #F5F5F5;
 }
+
 #homeVideos{
   text-align: center;
-  background-color: #282c31;
+  background-color: #000000;
   display: block;
   width: 100%;
   height: 100%;
@@ -53,7 +101,7 @@ h1,h2,h3, h4{
 
 #homeProjects{
   text-align: center;
-  background-color: #282c38;
+  background-color: #000000;
   display: block;
   width: 100%;
   height: 100%;
@@ -63,7 +111,7 @@ h1,h2,h3, h4{
 
 #homeEvents{
   text-align: center;
-  background-color: #282c30;
+  background-color: #000000;
   display: block;
   width: 100%;
   height: 100%;
@@ -78,7 +126,7 @@ h1,h2,h3, h4{
   height: 56px;
   cursor: pointer;
   background-color: none;
-  border: 2px #282c34;
+  border: 2px #000000;
   border-radius: 30px;
   margin-bottom: 15px;
   box-shadow: 0px 0px 0px 1px #B0B0B0;
@@ -87,7 +135,7 @@ h1,h2,h3, h4{
 }
 
 .fab:hover{
-  border: 2px #282c34;
+  border: 2px #000000;
   box-shadow: 0px 0px 0px 3px #B0B0B0;
   transition: 0.4s;
 }
@@ -109,6 +157,7 @@ h1,h2,h3, h4{
   cursor: pointer;
   text-decoration: none;
 }
+
 .downmovers{
   right: 0px;
   left: 0px;
@@ -141,14 +190,14 @@ h1,h2,h3, h4{
 }
 
 .customYT{
-  border-radius: 30px;
+  width: 100%;
+  border-radius:4px;
   margin-bottom: 20px;
-  box-shadow: 0px 0px 0.5px 0.2px #F5F5F5;
-  margin-inline:10px;
+  box-shadow: 0px 0px 0px 0px #F5F5F5;
+  margin-right:10px;
 }
 
 .customYT:hover{
-  border-radius: 30px;
   margin-bottom: 20px;
   box-shadow: 0px 0px 2px 2px #F5F5F5;
 }
@@ -170,9 +219,8 @@ h1,h2,h3, h4{
   }
 } 
 
-
 .spotifyCard{
-  border-radius: 20px;
+  border-radius:4px;
   margin-bottom: 20px;
   box-shadow: 0px 0px 0px 0px #F5F5F5;
 }
@@ -203,7 +251,7 @@ h1,h2,h3, h4{
 }
 
 .arrow {
-  border: solid #282c34;
+  border: solid #000000;
   border-width: 0px 1px 1px 0px;
   display: inline-block;
   margin: auto;
@@ -239,7 +287,7 @@ h1,h2,h3, h4{
 }
 
 ::-webkit-scrollbar-track {
-  background: #282c34;
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {

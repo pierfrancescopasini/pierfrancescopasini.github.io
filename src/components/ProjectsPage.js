@@ -23,7 +23,7 @@ class ProjectsPage extends React.Component {
     }
 
     render() {
-        document.body.style.backgroundColor = '#282c38'
+        document.body.style.backgroundColor = '#000000'
         let dim = window.outerWidth / 4;        
         return (
             <div>

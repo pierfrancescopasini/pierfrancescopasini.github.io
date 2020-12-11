@@ -43,7 +43,7 @@ class Keyboard extends React.Component {
 
         const draw = (p5) => {
             p5.frameRate(12);
-            p5.background("#282c34");
+            p5.background("#000000");
             p5.noStroke();
             for (let i = 0; i < 10; i++) {
                 shiftx = Math.random() * 1.5;
@@ -55,7 +55,7 @@ class Keyboard extends React.Component {
                 if (i !== 2 && i !== 6) {
                     shiftx = Math.random() * 1.5;
                     shifty = Math.random() * 2.5;
-                    p5.fill("#282c34");
+                    p5.fill("#000000");
                     p5.rect(xBlack + shiftx + delta * i, yAll + shifty, widthBlack, heightBlack, 20);
                 }
             }

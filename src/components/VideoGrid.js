@@ -12,8 +12,8 @@ class VideoGrid extends React.Component {
 
     render() {
         let opts = {
-            width: window.innerWidth / 2.5,
-            height: window.innerHeight / 2,
+            width: '' + window.innerWidth*0.4,
+            height: '' + window.innerWidth*0.23,
             playerVars: {
                 color: 'white',
                 autoplay: 0,
@@ -24,9 +24,9 @@ class VideoGrid extends React.Component {
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             mob = true;
             if (window.matchMedia("(orientation: portrait)").matches) {
-                if(!this.props.home && !mob){
+                if(!this.props.home){
                     opts = {
-                        width: window.innerWidth / 2.7,
+                        width: '80%',
                         height: window.innerHeight / 4,
                         playerVars: {
                             color: 'white',
@@ -66,36 +66,14 @@ class VideoGrid extends React.Component {
 
         return (
             <div>
-                {
-                !this.props.home || !mob? 
-                (<div id={mob? "videoGridMob" : "videoGrid"} style={mob? {gridRowGap:'1%'}: {}}>
-                {
-                    links.map((item) =>
-                        (<div key={item.link}>
-                            <YouTube
-                                className={'customYT'}
-                                videoId={item.link}
-                                opts={opts}>
-                            </YouTube>
-                            <span
-                                style={{
-                                    color: '#F5F5F5',
-                                    textTransform: 'uppercase'
-                                }}
-                            >{item.text}</span>
-                        </div>)
-                    )
-                }
-            </div>)
-            : 
-            <div id='videoGridMob'>
+            <div id={mob? 'videoGridMob' : 'videoGrid'}>
             {
                 links.map((item) =>
-                    (<div key={item.link}>
+                    (<div key={item.link} style={{height:'70%', width:'80%', margin:'auto'}}>
                         <YouTube
-                            className={'customYT'}
                             videoId={item.link}
-                            opts={opts}>
+                            opts={opts}
+                            >
                         </YouTube>
                         <span
                             style={{
@@ -108,7 +86,6 @@ class VideoGrid extends React.Component {
                 )
             }
             </div>
-            }
             <div>
                 {this.props.home ?
                         <div style={mob? { marginTop: '20%', width: '100%', height: '100%' } : { marginTop: '10%', width: '100%', height: '100%' }}><LinkItem path={'/videos'} name={'See More'} home={false}></LinkItem></div>

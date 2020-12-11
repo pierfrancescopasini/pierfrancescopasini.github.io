@@ -20,9 +20,9 @@ class ProjectandVideos extends React.Component {
         return (
             <div id='videoscontactslink'>
                 <div style={{ marginBottom: '20px' }} ><LinkItem name={'About Me'} path={'/about'}></LinkItem></div>
-                <div style={{ marginBottom: '20px' }} ><ScrollItem name={'Videos'} scroll={{ top: height*1, left: 0, behavior: 'smooth'}}></ScrollItem></div>
-                <div style={{ marginBottom: '20px' }} ><ScrollItem name={'Spotify'} scroll={mob?{ top: height*2.1, left: 0, behavior: 'smooth'} : { top: height*2, left: 0, behavior: 'smooth'}}></ScrollItem></div>
-                <div style={{ marginBottom: '20px' }} ><ScrollItem name={'Events'} scroll={{ top: height*3, left: 0, behavior: 'smooth'}}></ScrollItem></div>
+                <div style={{ marginBottom: '20px' }} ><ScrollItem name={'Videos'} scroll={{ top: height*1, left: 0, behavior: 'smooth'}} update={() => {this.props.update()}}></ScrollItem></div>
+                <div style={{ marginBottom: '20px' }} ><ScrollItem name={'Spotify'} scroll={{ top: height*2, left: 0, behavior: 'smooth'}} update={() => {this.props.update()}}></ScrollItem></div>
+                <div style={{ marginBottom: '20px' }} ><ScrollItem name={'Events'} scroll={{ top: height*3, left: 0, behavior: 'smooth'}} update={() => {this.props.update()}}></ScrollItem></div>
             </div>
         )
     }

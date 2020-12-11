@@ -105,7 +105,6 @@ class SpotifyEmbed extends React.Component {
                     </div>
                     :
                     <div style={{ width: '100%' }}>
-                        <h4>Singles</h4>
                         <div className="spotifyGrid" style={{ left: 'auto', gridGap: '1%'}}>
                             {track_links.map((item) => (
                                 <div
