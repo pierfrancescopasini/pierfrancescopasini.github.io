@@ -16,8 +16,8 @@ class BasicApp extends React.Component{
 
     componentDidMount(){
         window.scrollTo({top:0, left:0, behavior:'smooth'});
-        setTimeout(() => {this.setState({display:{display:'block'}, displayBar:{display:'none'}})}, 600);
-        window.addEventListener('load', () => { this.setState({display:{display:'block'}, displayBar:{display:'none'}})});
+        setTimeout(() => {this.setState({display:{display:'block'}, displayBar:{display:'none'}})}, 1300);
+        //window.addEventListener('load', () => { this.setState({display:{display:'block'}, displayBar:{display:'none'}})});
         window.addEventListener('resize', () => { this.setState({})});
         window.addEventListener('onfullscreenchange', () => { window.location.reload()});
     }
@@ -69,7 +69,7 @@ class BasicApp extends React.Component{
                     <div id='homeEvents' style={{height: height, width:'100%', marginTop:0, marginBottom:0}}>
                         <HomeEventsPage></HomeEventsPage>
                     </div>
-                    <div className='fab' style={{}} onClick={() => {window.scrollTo({top:0, left:0, behavior:'smooth'})}} ><i class='arrow up' style = {{marginTop:25, borderColor:'#f5f5f5'}}></i></div>
+                    <div className='fab' style={{}} onClick={() => {window.scrollTo({top:0, left:0, behavior:'smooth'})}} ><i class='arrow up' style = {{marginTop:'25px', borderColor:'#f5f5f5'}}></i></div>
                 </div>
                 <div style={this.state.displayBar} ><ProgressBar progress={{amount: 0.3, time:10}} styleBar={{width:window.outerWidth/4, height:window.outerWidth/4}}></ProgressBar></div>
             </div>

@@ -112,7 +112,7 @@ class VideoGrid extends React.Component {
             <div>
                 {this.props.home ?
                         <div style={mob? { marginTop: '20%', width: '100%', height: '100%' } : { marginTop: '10%', width: '100%', height: '100%' }}><LinkItem path={'/videos'} name={'See More'} home={false}></LinkItem></div>
-                        : <div className='fab' style={{}} onClick={() => {window.scrollTo({top:0, left:0, behavior:'smooth'})}} ><i class='arrow up' style = {{marginTop:25, borderColor:'#f5f5f5'}}></i></div>
+                        : <div className='fab' style={{}} onClick={() => {window.scrollTo({top:0, left:0, behavior:'smooth'})}}><i class='arrow up' style = {{marginTop:25, borderColor:'#f5f5f5'}}></i></div>
                     }
                 </div>
             </div>
