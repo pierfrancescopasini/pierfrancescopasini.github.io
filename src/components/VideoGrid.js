@@ -19,19 +19,33 @@ class VideoGrid extends React.Component {
                 autoplay: 0,
             },
         };
+
+        let mob = false;
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            mob = true;
             if (window.matchMedia("(orientation: portrait)").matches) {
-                opts = {
-                    width: window.innerWidth / 2.7,
-                    height: window.innerHeight / 4,
-                    playerVars: {
-                        color: 'white',
-                        autoplay: 0,
-                    },
-                };
+                if(!this.props.home && !mob){
+                    opts = {
+                        width: window.innerWidth / 2.7,
+                        height: window.innerHeight / 4,
+                        playerVars: {
+                            color: 'white',
+                            autoplay: 0,
+                        },
+                    };
+                }else{
+                    opts = {
+                        width: window.innerWidth / 1.5,
+                        height: window.innerHeight / 4,
+                        playerVars: {
+                            color: 'white',
+                            autoplay: 0,
+                        },
+                    };
+                }
             } else {
                 opts = {
-                    width: window.innerWidth / 2.3,
+                    width: window.innerWidth / 0.7,
                     height: window.innerHeight / 1.5,
                     playerVars: {
                         color: 'white',
@@ -52,29 +66,54 @@ class VideoGrid extends React.Component {
 
         return (
             <div>
-                <div id="videoGrid">
-                    {
-                        links.map((item) =>
-                            (<div key={item.link}>
-                                <YouTube
-                                    className={'customYT'}
-                                    videoId={item.link}
-                                    opts={opts}>
-                                </YouTube>
-                                <span
-                                    style={{
-                                        color: '#F5F5F5',
-                                        textTransform: 'uppercase'
-                                    }}
-                                >{item.text}</span>
-                            </div>)
-                        )
-                    }
-                </div>
-                <div>
+                {
+                !this.props.home || !mob? 
+                (<div id={mob? "videoGridMob" : "videoGrid"} style={mob? {gridRowGap:'1%'}: {}}>
+                {
+                    links.map((item) =>
+                        (<div key={item.link}>
+                            <YouTube
+                                className={'customYT'}
+                                videoId={item.link}
+                                opts={opts}>
+                            </YouTube>
+                            <span
+                                style={{
+                                    color: '#F5F5F5',
+                                    textTransform: 'uppercase'
+                                }}
+                            >{item.text}</span>
+                        </div>)
+                    )
+                }
+            </div>)
+            : 
+            <div id='videoGridMob'>
+            {
+                links.map((item) =>
+                    (<div key={item.link}>
+                        <YouTube
+                            className={'customYT'}
+                            videoId={item.link}
+                            opts={opts}>
+                        </YouTube>
+                        <span
+                            style={{
+                                color: '#F5F5F5',
+                                textTransform: 'uppercase',
+                                marginBottom:'5%'
+                            }}
+                        >{item.text}</span>
+                    </div>)
+                )
+            }
+            </div>
+            }
+            <div>
                 {this.props.home ?
-                        <div style={{ marginTop: '10%', width: '100%', height: '100%' }}><LinkItem path={'/videos'} name={'See More'} home={false}></LinkItem></div>
-                        : <div></div>}
+                        <div style={mob? { marginTop: '20%', width: '100%', height: '100%' } : { marginTop: '10%', width: '100%', height: '100%' }}><LinkItem path={'/videos'} name={'See More'} home={false}></LinkItem></div>
+                        : <div className='fab' style={{}} onClick={() => {window.scrollTo({top:0, left:0, behavior:'smooth'})}} ><i class='arrow up' style = {{marginTop:25, borderColor:'#f5f5f5'}}></i></div>
+                    }
                 </div>
             </div>
         )

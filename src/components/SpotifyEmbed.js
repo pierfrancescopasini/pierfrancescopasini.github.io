@@ -22,8 +22,8 @@ class SpotifyEmbed extends React.Component {
         let mob = false;
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             if (window.matchMedia("(orientation: portrait)").matches) {
-                height = "" + window.innerHeight / 3.5;
-                width = "" + window.innerHeight / 3;
+                height = "" + window.innerHeight / 2.9;
+                width = "" + window.innerHeight / 2.8;
             } else {
                 width = "" + window.innerWidth / 4;
                 height = "" + window.innerHeight / 2;
@@ -35,9 +35,9 @@ class SpotifyEmbed extends React.Component {
         track_links = track_links.slice(0, this.props.nTracks)
 
         return (
-            <div>
+            <div style={{ width: '100%', margin:'auto'}}>
                 {this.props.displayAlbums ?
-                    <div>
+                    <div style={{ width: '90%', margin:'auto'}}>
                         <h4>Albums</h4>
                         <div id='album-scroll' className="spotifyGrid">
                         </div>
@@ -70,7 +70,7 @@ class SpotifyEmbed extends React.Component {
                                 ))
                             }
                         </InfiniteScroll>
-                        <div>
+                        <div style={{ width: '100%', margin: 'auto' }}>
                             <h4>Singles</h4>
                             <div id='singles-scroll' className="spotifyGrid">
                             </div>
@@ -106,20 +106,21 @@ class SpotifyEmbed extends React.Component {
                     :
                     <div style={{ width: '100%' }}>
                         <h4>Singles</h4>
-                        <div className="spotifyGrid" style={{ left: 'auto' }}>
+                        <div className="spotifyGrid" style={{ left: 'auto', gridGap: '1%'}}>
                             {track_links.map((item) => (
                                 <div
                                     key={item}
                                     style={{
-                                        marginInline: '5px',
-                                        marginRight: '5px'
+                                        marginInline: '2px',
+                                        marginRight: '2px',
+                                        marginBottom: '1px'
                                     }}
                                 >
                                     <iframe
                                         className='spotifyCard'
                                         src={'https://open.spotify.com/embed/track/' + item}
-                                        width={this.props.displayAlbums || mob ? width : window.outerWidth / 4.5}
-                                        height={this.props.displayAlbums || mob ? height : window.outerWidth / 4.5}
+                                        width={width}
+                                        height={height}
                                         frameBorder="0"
                                         allowtransparency="true"
                                         allow="encrypted-media"
@@ -129,7 +130,7 @@ class SpotifyEmbed extends React.Component {
                                 </div>
                             ))}
                         </div>
-                        <div style={{width:'100%', height:'100%', marginTop:'10%'}}><LinkItem path={'/projects'} name={'See More'} home={true}></LinkItem></div>
+                        <div style={{width:'100%', height:'100%', marginTop:'10%'}}><LinkItem path={'/projects'} name={'See More'} home={false}></LinkItem></div>
                     </div>
                 }
             </div>

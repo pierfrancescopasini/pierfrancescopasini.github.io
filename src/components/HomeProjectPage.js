@@ -24,7 +24,7 @@ class HomeProjectPage extends React.Component {
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){nTracks = 2}    
         return (
             <div style={{}}>
-                <h1 style={{color:'#282c34'}}>Spotify</h1>
+                <h1 style={{}}>Spotify</h1>
                 <div style={this.state.styleSpotify}><SpotifyEmbed nTracks={nTracks} nAlbums={0} displayAlbums={false}></SpotifyEmbed></div>
                 <div style={this.state.styleLoad}><ProgressBar progress={{amount: 0.2, time: 1}} styleBar={{ width: dim, height: dim}} ></ProgressBar></div>
             </div>
