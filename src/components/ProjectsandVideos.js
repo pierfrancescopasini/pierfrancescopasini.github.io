@@ -19,10 +19,10 @@ class ProjectandVideos extends React.Component {
         }
         return (
             <div id='videoscontactslink'>
-                <div style={{ marginBottom: '20px' }} ><LinkItem name={'About Me'} path={'/about'}></LinkItem></div>
-                <div style={{ marginBottom: '20px' }} ><ScrollItem name={'Videos'} scroll={{ top: height*1, left: 0, behavior: 'smooth'}} update={() => {this.props.update()}}></ScrollItem></div>
-                <div style={{ marginBottom: '20px' }} ><ScrollItem name={'Spotify'} scroll={{ top: height*2, left: 0, behavior: 'smooth'}} update={() => {this.props.update()}}></ScrollItem></div>
-                <div style={{ marginBottom: '20px' }} ><ScrollItem name={'Events'} scroll={{ top: height*3, left: 0, behavior: 'smooth'}} update={() => {this.props.update()}}></ScrollItem></div>
+                <div style={{ margin: '20px' }} ><ScrollItem name={'Videos'} scroll={{ top: height*1, left: 0, behavior: 'smooth'}} update={() => {this.props.update()}}></ScrollItem></div>
+                <div style={{ margin: '20px' }} ><ScrollItem name={'Spotify'} scroll={{ top: height*2, left: 0, behavior: 'smooth'}} update={() => {this.props.update()}}></ScrollItem></div>
+                <div style={{ margin: '20px' }} ><ScrollItem name={'Events'} scroll={{ top: height*3, left: 0, behavior: 'smooth'}} update={() => {this.props.update()}}></ScrollItem></div>
+                <div style={{ margin: '20px' }} ><ScrollItem name={'Contacts'} scroll={{ top: height*4, left: 0, behavior: 'smooth'}} update={() => {this.props.update()}}></ScrollItem></div>
             </div>
         )
     }

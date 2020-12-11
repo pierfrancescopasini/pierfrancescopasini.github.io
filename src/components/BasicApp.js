@@ -58,6 +58,7 @@ class BasicApp extends React.Component {
         return (
             <div>
                 <div style={this.state.displayMenu}>
+                    <div style={{width:window.innerWidth, height:window.innerHeight, margin:'auto'}}>
                     <div style={{ margin: 'auto', width: '100%', height: window.screen.height }}>
                         <ProjectsandVideos
                             update={() => {
@@ -68,6 +69,7 @@ class BasicApp extends React.Component {
                                 })
                             }}>
                         </ProjectsandVideos>
+                    </div>
                     </div>
                 </div>
                 <div style={this.state.display}>
@@ -100,8 +102,9 @@ class BasicApp extends React.Component {
                             <header style={{ width: '100%', height: '5%', marginTop: '0%', borderRadius: '4px', background: 'none' }}>
                                 <div className='lefty' style={{ width: '33%', marginTop: '2%' }}>
                                     <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 1, left: 0, behavior: 'smooth' }) }}>Videos</span>
-                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 2, left: 0, behavior: 'smooth' }) }}>Music</span>
+                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 2, left: 0, behavior: 'smooth' }) }}>Spotify</span>
                                     <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 3, left: 0, behavior: 'smooth' }) }}>Events</span>
+                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 4, left: 0, behavior: 'smooth' }) }}>Contacts</span>
                                 </div>
                             </header>}
                         <h1 style={styleH1} id="nameTitle" >Pierfrancesco Pasini</h1>
@@ -118,6 +121,7 @@ class BasicApp extends React.Component {
                             <HomeEventsPage></HomeEventsPage>
                         </div>
                     </div>
+                    <hr></hr>
                     <footer style={{ width: '100%', height: '10%' }}><Contacts></Contacts></footer>
                 </div>
                 <div style={this.state.displayBar} ><ProgressBar progress={{ amount: 0.3, time: 10 }} styleBar={{ width: window.outerWidth / 4, height: window.outerWidth / 4 }}></ProgressBar></div>
