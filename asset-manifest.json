@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.08ad529b.chunk.css",
+    "main.css": "/static/css/main.e93f0935.chunk.css",
     "main.js": "/static/js/main.6cb537c6.chunk.js",
     "main.js.map": "/static/js/main.6cb537c6.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.4d22da63.js",
@@ -10,7 +10,7 @@
     "static/js/2.6da03e0c.chunk.js.map": "/static/js/2.6da03e0c.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.ab18fb39.chunk.css.map": "/static/css/2.ab18fb39.chunk.css.map",
-    "static/css/main.08ad529b.chunk.css.map": "/static/css/main.08ad529b.chunk.css.map",
+    "static/css/main.e93f0935.chunk.css.map": "/static/css/main.e93f0935.chunk.css.map",
     "static/js/2.6da03e0c.chunk.js.LICENSE.txt": "/static/js/2.6da03e0c.chunk.js.LICENSE.txt",
     "static/media/Evento1.ef8afa57.jpg": "/static/media/Evento1.ef8afa57.jpg",
     "static/media/Evento10.defe97ad.jpg": "/static/media/Evento10.defe97ad.jpg",
@@ -46,14 +46,14 @@
     "static/media/Evento9.6cde5f1e.jpg": "/static/media/Evento9.6cde5f1e.jpg",
     "static/media/background1.682c70d8.jpg": "/static/media/background1.682c70d8.jpg",
     "static/media/background2.b6d6aaac.jpg": "/static/media/background2.b6d6aaac.jpg",
-    "static/media/App.css": "/static/media/background3.6648eecc.jpg",
+    "static/media/background3.6648eecc.jpg": "/static/media/background3.6648eecc.jpg",
     "static/media/pierpiero.64f785bd.jpeg": "/static/media/pierpiero.64f785bd.jpeg"
   },
   "entrypoints": [
     "static/js/runtime-main.4d22da63.js",
     "static/css/2.ab18fb39.chunk.css",
     "static/js/2.6da03e0c.chunk.js",
-    "static/css/main.08ad529b.chunk.css",
+    "static/css/main.e93f0935.chunk.css",
     "static/js/main.6cb537c6.chunk.js"
   ]
 }
