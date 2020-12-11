@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.afff6790.chunk.css",
-    "main.js": "/static/js/main.090825e2.chunk.js",
-    "main.js.map": "/static/js/main.090825e2.chunk.js.map",
+    "main.js": "/static/js/main.6bd1ecaa.chunk.js",
+    "main.js.map": "/static/js/main.6bd1ecaa.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.4d22da63.js",
     "runtime-main.js.map": "/static/js/runtime-main.4d22da63.js.map",
     "static/css/2.ab18fb39.chunk.css": "/static/css/2.ab18fb39.chunk.css",
@@ -44,9 +44,9 @@
     "static/media/Evento7.07fb2587.jpg": "/static/media/Evento7.07fb2587.jpg",
     "static/media/Evento8.fa7fa3ab.jpg": "/static/media/Evento8.fa7fa3ab.jpg",
     "static/media/Evento9.6cde5f1e.jpg": "/static/media/Evento9.6cde5f1e.jpg",
+    "static/media/b1mobile.239f452f.png": "/static/media/b1mobile.239f452f.png",
     "static/media/background1.682c70d8.jpg": "/static/media/background1.682c70d8.jpg",
-    "static/media/background2.b6d6aaac.jpg": "/static/media/background2.b6d6aaac.jpg",
-    "static/media/background3.6648eecc.jpg": "/static/media/background3.6648eecc.jpg",
+    "static/media/logo.7c90e441.png": "/static/media/logo.7c90e441.png",
     "static/media/pierpiero.64f785bd.jpeg": "/static/media/pierpiero.64f785bd.jpeg"
   },
   "entrypoints": [
@@ -54,6 +54,6 @@
     "static/css/2.ab18fb39.chunk.css",
     "static/js/2.8b2ef0c9.chunk.js",
     "static/css/main.afff6790.chunk.css",
-    "static/js/main.090825e2.chunk.js"
+    "static/js/main.6bd1ecaa.chunk.js"
   ]
 }
