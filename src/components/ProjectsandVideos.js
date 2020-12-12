@@ -11,7 +11,7 @@ class ProjectandVideos extends React.Component {
     render() {
         let height = window.innerHeight*1.135;
         let mob = false;
-        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
             if(!window.matchMedia("(orientation: portrait)").matches){
                 height = window.screen.height*2;
             }

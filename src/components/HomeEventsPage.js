@@ -6,7 +6,7 @@ import LinkItem from './LinkItem.js'
 class HomeEventsPage extends React.Component{
     render(){
         let mob = false;
-        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
             mob = true;
 		}
 		let evArr = [2, 1, 0];
@@ -17,7 +17,7 @@ class HomeEventsPage extends React.Component{
                     <div className='row' style={!mob? {width:'80%', margin:'auto'}: {height:'40%', margin:'auto'}}>
 						{!mob? 
 							evArr.map((item) => (
-								<GridImage nElem={1} sEl={item}></GridImage>
+								<GridImage key={item.name} nElem={1} sEl={item}></GridImage>
 							))
                         :  <div style={{width:'60%', margin:'auto'}}><GridImage nElem={2} sEl={0}></GridImage>
 						</div>

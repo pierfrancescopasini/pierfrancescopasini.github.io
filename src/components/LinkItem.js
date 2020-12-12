@@ -50,7 +50,7 @@ class LinkItem extends React.Component{
             styleOff.backgroundColor = '#f5f5f5'
         }
         let mob = false;
-        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
                 styleOff.width = 'auto';
                 styleOff.height = 'auto';
                 if(window.matchMedia("(orientation: portrait)").matches){

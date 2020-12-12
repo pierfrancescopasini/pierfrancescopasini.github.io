@@ -22,7 +22,7 @@ class Keyboard extends React.Component {
         let shifty = Math.random() * 10;
         let delta = widthWhite + window.innerWidth / 230;
 
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             if (window.matchMedia("(orientation: portrait)").matches) {
                 widthWhite = window.innerWidth / 15;
                 heightWhite = widthWhite * 4;
@@ -42,13 +42,13 @@ class Keyboard extends React.Component {
         }
 
         const draw = (p5) => {
+            p5.background(0,0,0,1)
             p5.frameRate(12);
-            p5.background("#000000");
-            p5.noStroke();
+            p5.strokeWeight(0);
             for (let i = 0; i < 10; i++) {
                 shiftx = Math.random() * 1.5;
                 shifty = Math.random() * 2.5;
-                p5.fill('white');
+                p5.fill('#f5f5f5');
                 p5.rect(xWhite + shiftx + delta * i, yAll + shifty, widthWhite, heightWhite, 20);
             }
             for (let i = 0; i < 9; i++) {

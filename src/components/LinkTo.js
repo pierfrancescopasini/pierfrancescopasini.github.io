@@ -1,7 +1,7 @@
 import React from 'react'
 
-let width = window.innerWidth/8;
-let widthOff = window.innerWidth/10;
+let width = window.innerWidth/5;
+let widthOff = window.innerWidth/7;
 class LinkTo extends React.Component{
     state = {
         mouseOver: false
@@ -13,7 +13,7 @@ class LinkTo extends React.Component{
 
     render(){        
         let mob = false
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             if (window.matchMedia("(orientation: portrait)").matches) {
                 widthOff = window.innerWidth*0.7;
             }else{

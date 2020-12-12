@@ -27,7 +27,7 @@ class AboutPage extends React.Component{
         let fontP = window.outerWidth/50;
         let float = 'right';
         let widthP = '50%';
-        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        if(/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
             if(window.matchMedia("(orientation: portrait)").matches){
                 fontH = window.outerWidth/15;
                 fontP = window.outerWidth/20;

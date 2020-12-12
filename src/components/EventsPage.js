@@ -24,7 +24,7 @@ class EventsPage extends React.Component {
 		document.body.style.backgroundColor = "#000000";
 		let nElem = Math.ceil(allEv.length/3);
 		let mob = false;
-		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 			mob = true;
 		}
 		return (

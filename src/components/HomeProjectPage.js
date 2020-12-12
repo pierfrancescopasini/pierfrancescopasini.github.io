@@ -21,7 +21,7 @@ class HomeProjectPage extends React.Component {
     render() {
         let dim = window.outerWidth / 4;    
         let nTracks = 3;
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){nTracks = 2}    
+        if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){nTracks = 2}    
         return (
             <div style={{}}>
                 <h1>Spotify</h1>

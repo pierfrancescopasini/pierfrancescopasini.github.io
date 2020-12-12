@@ -21,7 +21,7 @@ class VideoGrid extends React.Component {
         };
 
         let mob = false;
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             mob = true;
             if (window.matchMedia("(orientation: portrait)").matches) {
                     opts = {

@@ -45,7 +45,7 @@ class ScrollItem extends React.Component{
             styleOff.backgroundColor = '#f5f5f5'
         }
         let mob = false;
-        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
                 styleOff.width = 'auto';
                 styleOff.height = 'auto';
                 if(window.matchMedia("(orientation: portrait)").matches){
@@ -68,7 +68,7 @@ class ScrollItem extends React.Component{
             }}
         >
         {this.state.mouseOver || mob?
-        <div className='lnk' style={mob? styleMob : styleOn} >{this.props.name}        <i style={mob?{border:' solid #F5F5F5', borderWidth: '0px 1px 1px 0px'}:{}}className="arrow right"></i> </div> 
+        <div className='lnk' style={mob? styleMob : styleOn} >{this.props.name}</div> 
         : <div style={styleOff}>{this.props.name}</div>
         }   
         </div>

@@ -23,7 +23,7 @@ class VideosPage extends React.Component{
     
     render(){
         let dim = window.outerWidth / 4;    
-        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
             if(window.matchMedia("(orientation: portrait)").matches){
                dim = window.outerHeight/5;
             }
