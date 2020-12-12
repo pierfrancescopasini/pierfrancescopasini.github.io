@@ -1,6 +1,6 @@
 import React from 'react';
-import GridImage from './GridImage.js';
-import LinkItem from './LinkItem.js'
+import GridImage from '../GridImage.js';
+import LinkItem from '../LinkItem.js'
 
 
 class HomeEventsPage extends React.Component{

@@ -1,6 +1,6 @@
 import React from 'react';
-import SpotifyEmbed from './SpotifyEmbed.js'
-import ProgressBar from './ProgressBar.js'
+import SpotifyEmbed from '../SpotifyEmbed.js'
+import ProgressBar from '../ProgressBar.js'
 
 class HomeProjectPage extends React.Component {
     state = {

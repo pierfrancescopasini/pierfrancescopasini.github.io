@@ -80,11 +80,22 @@ body {
   margin-left: 8px;
   transition: 0.5s;
 }
-.svg{
-  width: 56px;
+
+.svgCont{
+  width: 53px;
   height: 56px;
+  border-color: #000000;
+  background-color: #f5f5f5b7;
+}
+
+.svgCont:hover{
   background-color: #f5f5f5;
 }
+
+.pathCont{
+  margin: auto;
+}
+
 
 .header{
   position: fixed;

@@ -1,6 +1,6 @@
 import React from 'react';
-import VideoGrid from './VideoGrid.js';
-import ProgressBar from './ProgressBar.js';
+import VideoGrid from '../VideoGrid.js';
+import ProgressBar from '../ProgressBar.js';
 
 class HomeVideosPage extends React.Component {
     state = {
