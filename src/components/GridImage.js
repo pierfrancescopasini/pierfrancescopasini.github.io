@@ -1,5 +1,5 @@
 import React from 'react'
-import images from './importPics.js'
+import images from './imports/importPics.js'
 import Imagewithlighbox from './Imagewithlightbox.js'
 import {allEv} from './imports/events.js'
 
