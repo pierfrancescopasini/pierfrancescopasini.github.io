@@ -21,8 +21,8 @@ class VideoGrid extends React.Component {
         };
         if(this.props.home){
             opts = {
-                width: '' + window.innerWidth*0.3,
-                height: '' + window.innerWidth*0.17,
+                width: '' + window.innerWidth*0.28,
+                height: '' + window.innerWidth*0.15,
                 playerVars: {
                     color: 'white',
                     autoplay: 0,
@@ -70,6 +70,10 @@ class VideoGrid extends React.Component {
             id = 'videoGridMob';
         }
 
+        // YT No Lib
+        //<iframe style={{ border:'0px'}} width={opts.width} height={opts.height} className='customYT' src={"https://www.youtube.com/embed/watch?v=" + item.link}></iframe> 
+
+
         return (
             <div>
             <div id={id}>
@@ -77,7 +81,6 @@ class VideoGrid extends React.Component {
                 links.map((item) =>
                     (<div key={item.link} style={{height:'80%', width:'100%', margin:'auto'}}>
                         <YouTube
-                            className='customYT'
                             videoId={item.link}
                             opts={opts}
                             >
@@ -95,7 +98,7 @@ class VideoGrid extends React.Component {
             </div>
             <div>
                 {this.props.home ?
-                        <div style={mob? { marginTop: '30%', width: '100%', height: '100%' } : { marginTop: '10%', width: '100%', height: '100%' }}><LinkItem path={'/videos'} name={'See More'} home={false}></LinkItem></div>
+                        <div style={mob? { marginTop: '30%', width: '100%', height: '100%' } : { marginTop:'15%', width: '100%', height: '100%' }}><LinkItem path={'/videos'} name={'See More'} home={false}></LinkItem></div>
                         : <div className='fab' style={{}} onClick={() => {window.scrollTo({top:0, left:0, behavior:'smooth'})}}><i class='arrow up' style = {{marginTop:25, borderColor:'#f5f5f5'}}></i></div>
                     }
                 </div>

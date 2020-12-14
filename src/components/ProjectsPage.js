@@ -25,9 +25,14 @@ class ProjectsPage extends React.Component {
     render() {
         document.body.style.backgroundColor = '#000000'
         let dim = window.outerWidth / 4;        
+        let mob = false;
+        if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            mob = true;
+		}
         return (
             <div>
-                <h1>Spotify</h1>
+                <h1 style={mob? {} : {float:'left', marginLeft:'56px'}}>Spotify</h1>
+                {mob? <div></div> : <div style={{height:'100px'}}></div>}
                 <div style={this.state.styleSpotify}><SpotifyEmbed nTracks={100} nAlbums={100} displayAlbums={true}></SpotifyEmbed></div>
                 <div style={this.state.styleLoad}><ProgressBar progress={{amount: 0.2, time: 1}} styleBar={{ width: dim, height: dim}} ></ProgressBar></div>
             </div>

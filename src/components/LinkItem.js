@@ -20,7 +20,9 @@ class LinkItem extends React.Component{
             fontSize: '22px',
             border: 'solid #F5F5F5',
             borderWidth: '1px 1px 1px 1px',
-            transition: '0.5s'
+            transition: '0.5s',
+            transform: 'rotate(3deg)',
+            transformOrigin: 'center'
         }
     
         let styleOff = { 

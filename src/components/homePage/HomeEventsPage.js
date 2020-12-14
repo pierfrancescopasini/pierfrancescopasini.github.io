@@ -32,7 +32,7 @@ class HomeEventsPage extends React.Component{
                     }
                     </div>
                 </div>
-                <div style={{marginTop:'5%'}}><LinkItem path={'/events'} name={'See More'}></LinkItem></div>
+                <div style={{marginTop:'5%'}} onClick={() => {window.scrollTo(0,0)}}><LinkItem path={'/events'} name={'See More'}></LinkItem></div>
             </div>
         )
     }
