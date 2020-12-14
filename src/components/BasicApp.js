@@ -6,6 +6,7 @@ import ProjectsandVideos from './ProjectsandVideos.js';
 import HomeProjectPage from './homePage/HomeProjectPage.js';
 import HomeVideosPage from './homePage/HomeVideosPage.js';
 import HomeEventsPage from './homePage/HomeEventsPage.js';
+import HomeBookPage from './homePage/HomeBookPage.js';
 import icon from './resources/logo.png';
 import back1 from './resources/background1.jpg';
 import back1mob from './resources/b1mobile.png';
@@ -46,6 +47,15 @@ class BasicApp extends React.Component {
         let styleH1, styleH2;
         let mob = false;
         let b1 = `url(${back1})`;
+        let land = false;
+
+        if(/iPad/i.test(navigator.userAgent)){
+            if (window.matchMedia("(orientation: portrait)").matches) {
+                mob = true;
+            }
+
+        }
+
         if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             if (window.matchMedia("(orientation: portrait)").matches) {
                 styleH1 = {
@@ -54,6 +64,7 @@ class BasicApp extends React.Component {
                 styleH2 = {
                     fontSize: window.outerWidth / 18,
                 }
+                b1 = `url(${back1mob})`;
             } else {
                 styleH1 = {
                     fontSize: window.outerWidth / 20,
@@ -62,9 +73,9 @@ class BasicApp extends React.Component {
                     fontSize: window.outerWidth / 25,
                 }
                 height = window.screen.height * 2;
+                land = true;
             }
             mob = true;
-            b1 = `url(${back1mob})`;
         }
 
         return (
@@ -96,7 +107,7 @@ class BasicApp extends React.Component {
                     <div style={{ height: height, width: '100%', margin: '0', marginRight: 'auto', marginBottom: 'auto', backgroundImage: b1 }}>
                         {mob ?
                             <header style={{ width: '100%', height: '10%', marginTop: '0%', marginBottom: '10%', borderRadius: '4px', background: 'none' }}>
-                                <img src={icon} style={{ position: 'fixed', height: '56px', width: '56px', left: '15px', top: '15px', borderRadius: '50px' }}
+                                <img src={icon} style={{ position: 'fixed', height: '60px', width: '60px', left: '15px', top: '15px', borderRadius: '50px', backgroundColor:'none', borderWidth:'2px', borderColor:'solid #f5f5f5' }}
                                     onClick={(e) => {
                                         this.disableScroll();
                                         window.scrollTo({ top: 0, left: 0 })
@@ -122,12 +133,14 @@ class BasicApp extends React.Component {
                             :
                             <header style={{ width: '100%', height: '5%', marginTop: '0%', borderRadius: '4px', background: 'none' }}>
                                 <div className='lefty' style={{ width: '33%', marginTop: '2%' }}>
-                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 1, left: 0, behavior: 'smooth' }) }}>Videos</span>
-                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 2, left: 0, behavior: 'smooth' }) }}>Spotify</span>
-                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 3, left: 0, behavior: 'smooth' }) }}>Events</span>
-                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 4, left: 0, behavior: 'smooth' }) }}>Contacts</span>
+                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 1, left: 0, behavior: 'smooth' }) }}>Books</span>
+                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 2, left: 0, behavior: 'smooth' }) }}>Videos</span>
+                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 3, left: 0, behavior: 'smooth' }) }}>Music</span>
+                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 4, left: 0, behavior: 'smooth' }) }}>Events</span>
+                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 5, left: 0, behavior: 'smooth' }) }}>Contacts</span>
                                 </div>
                             </header>}
+                        <div style={{height:'100px'}}></div>
                         <h1 style={styleH1} id="nameTitle" >Pierfrancesco Pasini</h1>
                         <h2 style={styleH2} id="musician">Musician</h2>
                     </div>
@@ -138,6 +151,9 @@ class BasicApp extends React.Component {
                             }}
                         >
                             <i className='arrow up' style={{ marginTop: '25px', borderColor: '#f5f5f5' }}></i>
+                        </div>
+                        <div id='homeBooks' style={{ height: height, width: '100%', marginTop: 0, marginBottom: '0px' }}>
+                            <HomeBookPage></HomeBookPage>
                         </div>
                         <div id='homeVideos' style={{ height: height, width: '100%', marginTop: 0, marginBottom: '0px' }}>
                             <HomeVideosPage></HomeVideosPage>

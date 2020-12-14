@@ -42,12 +42,15 @@ body {
   width: 33%;
   padding: 1px;
   font-size: 20px;
+  transition: 0.5s;
 }
 
 .headerspan:hover{
   color: #000000;
   background-color: #F5F5F5;
   cursor:pointer;
+  width: 40%;
+  transition: 0.5s;
 }
 
 .row {
@@ -229,20 +232,20 @@ h1,h2,h3, h4{
   grid-row-gap: 10%;
 }
 
+#videoGridHome{
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3% ;
+}
+
 .customYT{
-  width: 100%;
-  border-radius:4px;
-  margin-bottom: 20px;
-  box-shadow: 0px 0px 0px 0px #F5F5F5;
-  margin-right:10px;
 }
 
 .customYT:hover{
-  margin-bottom: 20px;
-  box-shadow: 0px 0px 2px 2px #F5F5F5;
+  border: dotted #f5f5f5;
+  border-width: 0.05px;
 }
 
-@media screen and (max-width:400px) and (orientation:landscape){
+@media screen and (max-width:600px) and (orientation:landscape){
   .spotifyGrid{
     display: inline-grid;
     grid-template-columns: 33% 33%;
@@ -250,11 +253,11 @@ h1,h2,h3, h4{
     margin:auto;
   }
 } 
-@media screen and (min-width:800px){
+
+@media screen and (min-width:801px){
   .spotifyGrid{
     display: inline-grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-column-gap: 1%;
+    grid-template-columns: 33.3% 33.3% 33.3%;
     margin:auto;
   }
 } 

@@ -51,6 +51,7 @@ class GridImage extends React.Component{
                                 link={item.link} 
                                 style={{width:'100%'}} 
                             ></Imagewithlighbox>
+							{!this.props.home? <div></div> : <div style={{color:'#F5F5F5', fontSize:'18px'}}>{item.date.getDate() + '/' + (item.date.getMonth() + 1) + '/' + item.date.getFullYear()}</div>}
                         </div>
                     ))
                 }

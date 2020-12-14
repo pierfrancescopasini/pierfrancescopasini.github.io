@@ -20,13 +20,22 @@ class SpotifyEmbed extends React.Component {
         width = "" + window.innerWidth / 4.5;
         height = "" + window.innerHeight / 3;
         let mob = false;
-        if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        if(/iPad/i.test(navigator.userAgent)){
             if (window.matchMedia("(orientation: portrait)").matches) {
                 height = "" + window.innerHeight / 2.9;
                 width = "" + window.innerHeight / 2.8;
             } else {
-                width = "" + window.innerWidth / 4;
+                width = "" + window.innerWidth / 3.5;
                 height = "" + window.innerHeight / 2;
+            }
+        }
+        if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            if (window.matchMedia("(orientation: portrait)").matches) {
+                height = "" + window.innerHeight / 2.8;
+                width = "" + window.innerHeight / 2.8;
+            } else {
+                width = "" + window.innerWidth / 2.6;
+                height = "" + window.innerHeight / 1.5;
             }
             mob = true
         }

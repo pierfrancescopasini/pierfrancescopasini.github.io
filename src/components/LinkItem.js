@@ -11,7 +11,6 @@ class LinkItem extends React.Component{
 
     render(){
         let styleOn = { 
-            transition: '0.8s', 
             color: '#F5f5f5', 
             borderRadius: '4px', 
             width: 205,
@@ -19,10 +18,12 @@ class LinkItem extends React.Component{
             marginLeft: 'auto',
             marginRight: 'auto',
             fontSize: '22px',
+            border: 'solid #F5F5F5',
+            borderWidth: '1px 1px 1px 1px',
+            transition: '0.5s'
         }
     
         let styleOff = { 
-            transition:'1.2s',  
             borderRadius: '4px', 
             backgroundColor: 'none', 
             width: 144,    
@@ -30,6 +31,7 @@ class LinkItem extends React.Component{
             marginLeft: 'auto',
             marginRight: 'auto',
             fontSize: '22px',
+            transition: '0.5s'
         }
 
         let styleMob = {

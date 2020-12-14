@@ -19,9 +19,19 @@ class VideoGrid extends React.Component {
                 autoplay: 0,
             },
         };
+        if(this.props.home){
+            opts = {
+                width: '' + window.innerWidth*0.3,
+                height: '' + window.innerWidth*0.17,
+                playerVars: {
+                    color: 'white',
+                    autoplay: 0,
+                },
+            };
+        }
 
         let mob = false;
-        if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             mob = true;
             if (window.matchMedia("(orientation: portrait)").matches) {
                     opts = {
@@ -52,14 +62,22 @@ class VideoGrid extends React.Component {
         ]
 
         links = links.slice(0, this.props.nVids);
+        let id = 'videoGrid';
+        if(this.props.home){
+            id = 'videoGridHome';
+        }
+        if(mob){
+            id = 'videoGridMob';
+        }
 
         return (
             <div>
-            <div id={mob? 'videoGridMob' : 'videoGrid'}>
+            <div id={id}>
             {
                 links.map((item) =>
-                    (<div key={item.link} style={{height:'70%', width:'100%', margin:'auto'}}>
+                    (<div key={item.link} style={{height:'80%', width:'100%', margin:'auto'}}>
                         <YouTube
+                            className='customYT'
                             videoId={item.link}
                             opts={opts}
                             >

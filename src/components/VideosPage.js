@@ -16,9 +16,7 @@ class VideosPage extends React.Component{
         window.addEventListener('load', () => {            
             this.setState({ stylePage: { display: 'block' }, styleLoad: { display: 'none' } })
         });
-        window.addEventListener('orientationchange', () => {
-            window.location.reload()
-        })
+        window.addEventListener('orientationchange', () => {})
     }
     
     render(){
