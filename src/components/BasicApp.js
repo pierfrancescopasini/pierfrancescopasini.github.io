@@ -14,10 +14,6 @@ import smoothscroll from 'smoothscroll-polyfill';
 smoothscroll.polyfill();
 window.__forceSmoothScrollPolyfill__ = true;
 
-
-
-
-
 class BasicApp extends React.Component {
     state = {
         display: { display: 'none' },
@@ -29,7 +25,6 @@ class BasicApp extends React.Component {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
         setTimeout(() => { this.setState({ display: { display: 'block' }, displayBar: { display: 'none' } }) }, 1300);
         window.addEventListener('resize', () => { this.setState({}) });
-        window.addEventListener('onfullscreenchange', () => { window.location.reload() });
     }
 
     disableScroll = () => {
@@ -106,7 +101,7 @@ class BasicApp extends React.Component {
                 <div style={this.state.display}>
                     <div style={{ height: height, width: '100%', margin: '0', marginRight: 'auto', marginBottom: 'auto', backgroundImage: b1 }}>
                         {mob ?
-                            <header style={{ width: '100%', height: '10%', marginTop: '0%', marginBottom: '10%', borderRadius: '4px', background: 'none' }}>
+                            <header style={{ width: '100%', height: '10%', marginTop: '0%', marginBottom: '10%', marginLeft:'10%', borderRadius: '4px', background: 'none' }}>
                                 <img src={icon} style={{ position: 'fixed', height: '60px', width: '60px', left: '15px', top: '15px', borderRadius: '50px', backgroundColor:'none', borderWidth:'2px', borderColor:'solid #f5f5f5' }}
                                     onClick={(e) => {
                                         this.disableScroll();

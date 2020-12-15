@@ -52,7 +52,7 @@ class GridImage extends React.Component{
 								style={{width:'100%'}} 
 								withDate={this.props.home}
 								day = {item.date.getDate()}
-								month={item.date.toLocaleString('default', { month: 'short' })}
+								month={item.date.toLocaleString('en-US', { month: 'short' })}
 								year={item.date.getFullYear()}
                             ></Imagewithlighbox>
                         </div>

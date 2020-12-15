@@ -81,6 +81,7 @@ class VideoGrid extends React.Component {
                 links.map((item) =>
                     (<div key={item.link} style={{height:'80%', width:'100%', margin:'auto'}}>
                         <YouTube
+                            className='customYT'
                             videoId={item.link}
                             opts={opts}
                             >

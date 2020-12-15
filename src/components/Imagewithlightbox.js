@@ -41,7 +41,10 @@ class GridImage extends React.Component {
                         }}
                     ></img>
                     {this.props.withDate ?
-                        <div className='calendarIt'>
+                        <div 
+                            className='calendarIt'
+                            onClick={() => {window.location=this.props.link}}
+                        >
                             <div className='calendDate' style={{height:'100%'}}>
                                 <div className='calendarMonth'>
                                     <div style={{margin:'auto'}}>{this.props.month}</div>
@@ -53,10 +56,9 @@ class GridImage extends React.Component {
                             <div style={{margin:'auto', width:'100%'}}>   
                                     <div      
                                         style={{margin:'auto'}}       
-                                        onClick={() => {window.location=this.props.link}}
                                         className='goTo'
                                     > 
-                                        <div style={{margin:'auto'}}>Go To Event</div>
+                                        <div style={{left:'auto'}}>Go To Event</div>
                                         <div>
                                             <i className='arrow left' style={{border: 'solid #F5F5F5', borderWidth: '1px 0px 0px 1px', marginLeft:'10px', float:'center right'}}></i>
                                         </div>

@@ -29,9 +29,10 @@ export const allEv = [
 	{ name: 'Evento28', date: '23/11/2019', img: 'Evento28.jpg', link: 'https://www.facebook.com/events/1662300497238760/' },
 	{ name: 'Evento29', date: '16/07/2020', img: 'Evento29.jpg', link: 'https://dice.fm/event/obqyg-cuori-impavidi-generic-animal-irbis-37-post-nebbia-altri-16th-jul-tribune-idroscalo-milano-tickets' },
 	{ name: 'Evento30', date: '23/07/2020', img: 'Evento30.jpg', link: 'https://dice.fm/event/7yq69-cuori-impavidi-eugenio-in-via-gioia-in-concerti-leggeri-altri-2-spettacolo-23rd-jul-tribune-idroscalo-milano-tickets' },
-	{ name: 'Evento31', date: '19/11/2020', img: 'Evento31.jpg', link: 'https://www.youtube.com/watch?v=LJtOZH701ZI&t=2286s' },
-	{ name: 'Evento32', date: '26/11/2020', img: 'Evento32.jpg', link: 'https://www.youtube.com/watch?v=05sFO3zOdcg&t=3s' },
-	{ name: 'Evento33', date: '25/12/2020', img: 'Evento33.jpg', link: 'https://dice.fm/event/lyp8r-mecna-xmas-live-streaming-from-dolomiti-25th-dec-antenna-sala-virtuale-bologna-tickets' },
+	{ name: 'Evento31', date:'13/09/2020', img: 'Evento31.jpg', link:''},
+	{ name: 'Evento32', date:'19/11/2020', img: 'Evento32.jpg', link:'https://www.youtube.com/watch?v=LJtOZH701ZI&t=2286s'},
+	{ name: 'Evento33', date:'26/11/2020', img: 'Evento33.jpg', link:'https://www.youtube.com/watch?v=05sFO3zOdcg&t=3s'},
+	{ name: 'Evento34', date:'25/12/2020', img: 'Evento34.jpg', link:'https://dice.fm/event/lyp8r-mecna-xmas-live-streaming-from-dolomiti-25th-dec-antenna-sala-virtuale-bologna-tickets'}
 ]
 
 export default {

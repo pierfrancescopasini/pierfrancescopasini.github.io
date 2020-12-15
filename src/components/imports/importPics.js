@@ -31,6 +31,7 @@ import Evento30 from '../resources/locs/All/Evento30.jpg';
 import Evento31 from '../resources/locs/All/Evento31.jpg';
 import Evento32 from '../resources/locs/All/Evento32.jpg';
 import Evento33 from '../resources/locs/All/Evento33.jpg';
+import Evento34 from '../resources/locs/All/Evento34.jpg';
 
 const images = {
     Evento1,
@@ -66,6 +67,7 @@ const images = {
     Evento31,
     Evento32,
     Evento33,
+    Evento34
 } 
 
 export default images;
