@@ -1,6 +1,5 @@
 import React from 'react';
 import Contacts from './homePage/Contacts.js';
-import Keyboard from './Keyboard.js';
 import ProgressBar from './ProgressBar.js';
 import ProjectsandVideos from './ProjectsandVideos.js';
 import HomeProjectPage from './homePage/HomeProjectPage.js';
@@ -24,7 +23,7 @@ class BasicApp extends React.Component {
     componentDidMount() {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
         setTimeout(() => { this.setState({ display: { display: 'block' }, displayBar: { display: 'none' } }) }, 1300);
-        window.addEventListener('resize', () => { this.setState({}) });
+        //window.addEventListener('resize', () => { this.setState({}) });
     }
 
     disableScroll = () => {
@@ -101,7 +100,7 @@ class BasicApp extends React.Component {
                 <div style={this.state.display}>
                     <div style={{ height: height, width: '100%', margin: '0', marginRight: 'auto', marginBottom: 'auto', backgroundImage: b1 }}>
                         {mob ?
-                            <header style={{ width: '100%', height: '10%', marginTop: '0%', marginBottom: '10%', marginLeft:'10%', borderRadius: '4px', background: 'none' }}>
+                            <header style={mob? {width: '100%', height: '10%', marginTop: '0%', marginBottom: '10%', borderRadius: '4px', background: 'none' }: { width: '100%', height: '10%', marginTop: '0%', marginBottom: '10%', marginLeft:'10%', borderRadius: '4px', background: 'none' }}>
                                 <img src={icon} style={{ position: 'fixed', height: '60px', width: '60px', left: '15px', top: '15px', borderRadius: '50px', backgroundColor:'none', borderWidth:'2px', borderColor:'solid #f5f5f5' }}
                                     onClick={(e) => {
                                         this.disableScroll();
@@ -140,7 +139,7 @@ class BasicApp extends React.Component {
                         <h2 style={styleH2} id="musician">Musician</h2>
                     </div>
                     <div>
-                        <div className='fab' style={{}}
+                        <div className='fab'
                             onClick={() => {
                                 window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
                             }}
@@ -148,7 +147,7 @@ class BasicApp extends React.Component {
                             <i className='arrow up' style={{ marginTop: '25px', borderColor: '#f5f5f5' }}></i>
                         </div>
                         <div id='homeBooks' style={{ height: height, width: '100%', marginTop: 0, marginBottom: '0px' }}>
-                            <HomeBookPage></HomeBookPage>
+                            <HomeBookPage mob={mob}></HomeBookPage>
                         </div>
                         <div id='homeVideos' style={{ height: height, width: '100%', marginTop: 0, marginBottom: '0px' }}>
                             <HomeVideosPage></HomeVideosPage>

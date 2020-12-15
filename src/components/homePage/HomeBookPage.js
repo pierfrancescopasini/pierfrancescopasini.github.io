@@ -1,5 +1,4 @@
 import React from 'react'
-import LinkItem from '../LinkItem.js'
 import bookFront from '../resources/frontLibro.png'
 import bookBack from '../resources/backLibro.png'
 
@@ -23,45 +22,35 @@ class HomeBookPage extends React.Component {
                 <div style={{ color: '#f5f5f5' }}>
                     <div>
                         <div>
-                            <div style={{ display: 'grid', gridTemplateColumns: '30% 70%' }}>
-                                <div>
-                                    <h3>POP PIANO ACCOMPAGNAMENTI</h3>
-                                    <p>All the hits: 
-                                      
-                                    </p>
-                                    <div style={{height:'50px'}}></div>
-                                    <div 
-                                        id='amznBtn'
-                                            onMouseOver={() => {this.setState({overAmzn:true})}}
-                                            onMouseLeave={() => {this.setState({overAmzn:false})}}
-                                        >AMAZON    {this.state.overAmzn? <i style={{ border: 'solid #F5F5F5', borderWidth: '0px 1px 1px 0px' }} className='arrow right'></i>: <i></i>}</div>
-                                </div>
+                            <div style={mob ? { display: 'grid', gridTemplateRows: '40% 60%' } : { display: 'grid', gridTemplateColumns: '100%' }}>
+                                <div style={{height:'40px'}}></div>
                                 <div style={{ display: 'grid', gridTemplateColumns: '100%', gridTemplateRows: '80%' }}>
                                     <div>
                                         {
                                             this.state.back ?
                                                 <img
                                                     id='backBook'
-                                                    onMouseOver={() => {
-                                                        this.setState({ back: false })
-                                                    }
-                                                    }
+                                                    onMouseOver={!this.props.mob ? () => { this.setState({ back: false }) } : () => { }}
                                                     src={bookBack}
-                                                    width='40%'
+                                                    width='30%'
                                                 >
                                                 </img>
                                                 :
                                                 <img
                                                     id='frontBook'
-                                                    onMouseOver={() => {
-                                                        this.setState({ back: true })
-                                                    }
-                                                    }
+                                                    onMouseOver={!this.props.mob ? () => { this.setState({ back: true }) } : () => { }}
                                                     src={bookFront}
-                                                    width='40%'
+                                                    width='30%'
                                                 >
                                                 </img>
                                         }
+                                        <div
+                                            id='amznBtn'
+                                            onMouseOver={!this.props.mob ? () => { this.setState({ overAmzn: true }) } : () => { }}
+                                            onMouseLeave={!this.props.mob ? () => { this.setState({ overAmzn: false }) } : () => { }}
+                                            onClick={() => {window.location='https://www.amazon.it/Pop-Piano-Accompagnamenti-Accompagnare-Pianoforte/dp/B087R9NJK2/'}}
+                                        >AMAZON    {this.state.overAmzn ? <i style={{ border: 'solid #F5F5F5', borderWidth: '0px 1px 1px 0px' }} className='arrow right'></i> : <i></i>}
+                                        </div>
                                     </div>
                                 </div>
                             </div>

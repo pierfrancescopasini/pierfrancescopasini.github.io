@@ -20,8 +20,8 @@ class LinkItem extends React.Component{
             fontSize: '22px',
             border: 'solid #F5F5F5',
             borderWidth: '1px 1px 1px 1px',
-            transition: '0.5s',
-            transform: 'rotate(3deg)',
+            transition: '0.3s',
+            transform: 'rotate(1deg)',
             transformOrigin: 'center'
         }
     
@@ -33,7 +33,7 @@ class LinkItem extends React.Component{
             marginLeft: 'auto',
             marginRight: 'auto',
             fontSize: '22px',
-            transition: '0.5s'
+            transition: '0.3s'
         }
 
         let styleMob = {
