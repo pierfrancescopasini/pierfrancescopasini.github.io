@@ -1,5 +1,4 @@
 import React from 'react';
-import InfiniteScroll from 'react-infinite-scroll-component';
 import LinkItem from './LinkItem.js';
 import {al_links, tr_links} from './imports/linkSpotify.js';
 
@@ -45,74 +44,6 @@ class SpotifyEmbed extends React.Component {
 
         return (
             <div style={{ width: '100%', margin:'auto'}}>
-                {this.props.displayAlbums ?
-                    <div style={{ width: '90%', margin:'auto'}}>
-                        <h4>Albums</h4>
-                        <div id='album-scroll' className="spotifyGrid">
-                        </div>
-                        <InfiniteScroll
-                            dataLength={album_links.length}
-                            style={this.state.styleCards}
-                            scrollableTarget="single-scroll"
-                        >
-                            {
-                                album_links.map((item) => (
-                                    <div
-                                        key={item}
-                                        style={{
-                                            marginInline: '5px',
-                                            marginRight: '5px'
-                                        }}
-                                    >
-                                        <iframe
-                                            className='spotifyCard'
-                                            src={'https://open.spotify.com/embed/album/' + item}
-                                            width={width}
-                                            height={height}
-                                            frameBorder="0"
-                                            allowtransparency="true"
-                                            allow="encrypted-media"
-                                            title={item}
-                                        >
-                                        </iframe>
-                                    </div>
-                                ))
-                            }
-                        </InfiniteScroll>
-                        <div style={{ width: '100%', margin: 'auto' }}>
-                            <h4>Singles</h4>
-                            <div id='singles-scroll' className="spotifyGrid">
-                            </div>
-                            <InfiniteScroll
-                                dataLength={track_links.length}
-                                style={this.state.styleCards}
-                                scrollableTarget="single-scroll"
-                            >
-                                {track_links.map((item) => (
-                                    <div
-                                        key={item}
-                                        style={{
-                                            marginInline: '5px',
-                                            marginRight: '5px'
-                                        }}
-                                    >
-                                        <iframe
-                                            className='spotifyCard'
-                                            src={'https://open.spotify.com/embed/track/' + item}
-                                            width={width}
-                                            height={height}
-                                            frameBorder="0"
-                                            allowtransparency="true"
-                                            allow="encrypted-media"
-                                            title={item}
-                                        >
-                                        </iframe>
-                                    </div>
-                                ))}
-                            </InfiniteScroll>
-                        </div>
-                    </div>
-                    :
                     <div style={{ width: '100%' }}>
                         <div className="spotifyGrid" style={{ left: 'auto', gridGap: '1%'}}>
                             {track_links.map((item) => (
@@ -140,7 +71,6 @@ class SpotifyEmbed extends React.Component {
                         </div>
                         <div style={{width:'100%', height:'100%', marginTop:'10%'}}><LinkItem path={'/projects'} name={'See More'} home={false}></LinkItem></div>
                     </div>
-                }
             </div>
         )
     }

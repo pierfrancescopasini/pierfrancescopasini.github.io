@@ -1,6 +1,5 @@
 import React from 'react'
-import LinkTo from './LinkTo.js'
-import Lightbox from "react-image-lightbox";
+import MyLightBox from './MyLightBox.js'
 import "react-image-lightbox/style.css";
 
 
@@ -10,22 +9,12 @@ class GridImage extends React.Component {
         showtoLink: false
     }
 
-    componentDidMount = () => {
-
-    }
-
-    componentDidUpdate = () => {
-        setTimeout(() => {
-            let els = document.getElementsByClassName('ril-image-current ril__image');
-            for (let i = 0; i < els.length; i++) {
-                els[i].addEventListener('mouseover', () => {
-                    console.log('Mouse me all like I am your bitch');
-                    let para = document.createElement("div");
-                    var node = document.createTextNode("This is new.");
-                    para.appendChild(node);
-                });
+    update = () => {
+        this.setState(
+            {
+                lightBox: false
             }
-        }, 100)
+        )
     }
 
     render() {
@@ -69,7 +58,22 @@ class GridImage extends React.Component {
                 </div>
                 {this.state.lightBox ?
                     <div className='stupidme'>
-                        <Lightbox
+                        <MyLightBox
+                            mainSrc={this.props.src}
+                            update={this.update}
+                            link={this.props.link}
+                        >
+                        </MyLightBox>
+                    </div>
+                    : <div></div>}
+            </div>
+        )
+    }
+}
+
+export default GridImage
+
+/*<Lightbox
                             wrapperClassName='stupidme'
                             id='weirdshit'
                             enableZoom={false}
@@ -79,12 +83,4 @@ class GridImage extends React.Component {
                             toolbarButtons={
                                 [(<LinkTo link={this.props.link} name={'Go To Event'}></LinkTo>)]}
                         >
-                        </Lightbox>
-                    </div>
-                    : <div></div>}
-            </div>
-        )
-    }
-}
-
-export default GridImage
+                        </Lightbox>*/

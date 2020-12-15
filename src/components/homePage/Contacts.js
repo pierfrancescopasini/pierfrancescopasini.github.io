@@ -37,9 +37,15 @@ class Contacts extends React.Component {
             <div id="contacts" className='container' style={{ marginTop: '20px' }}>
                 <div>
                     <div style={{ width: '100%', margin: 'auto' }}>
-                        <div style={{ fontSize: fontSize, marginBottom: '20px', marginLeft: 'auto' }}>(+39)  3343777058</div>
+                        <div 
+                        id='phoneNumber'
+                        style={{ 
+                            fontSize: fontSize, 
+                            marginBottom: '20px', 
+                            marginLeft: 'auto', 
+                            }}>(+39)  3343777058</div>
                         <div
-
+                            id='mailCont'
                             onClick={() => {
                                 window.location.href = "mailto:pierfrancesco.pasini@gmail.com";
                             }}

@@ -22,17 +22,16 @@ class HomeBookPage extends React.Component {
                 <div style={{ color: '#f5f5f5' }}>
                     <div>
                         <div>
-                            <div style={mob ? { display: 'grid', gridTemplateRows: '40% 60%' } : { display: 'grid', gridTemplateColumns: '100%' }}>
+                            <div>
                                 <div style={{height:'40px'}}></div>
-                                <div style={{ display: 'grid', gridTemplateColumns: '100%', gridTemplateRows: '80%' }}>
-                                    <div>
+                                    <div style={{margin:'auto'}}>
                                         {
                                             this.state.back ?
                                                 <img
                                                     id='backBook'
                                                     onMouseOver={!this.props.mob ? () => { this.setState({ back: false }) } : () => { }}
                                                     src={bookBack}
-                                                    width='30%'
+                                                    width={mob? '70%' : '30%'}
                                                 >
                                                 </img>
                                                 :
@@ -40,7 +39,7 @@ class HomeBookPage extends React.Component {
                                                     id='frontBook'
                                                     onMouseOver={!this.props.mob ? () => { this.setState({ back: true }) } : () => { }}
                                                     src={bookFront}
-                                                    width='30%'
+                                                    width={mob? '70%' : '30%'}
                                                 >
                                                 </img>
                                         }
@@ -52,7 +51,6 @@ class HomeBookPage extends React.Component {
                                         >AMAZON    {this.state.overAmzn ? <i style={{ border: 'solid #F5F5F5', borderWidth: '0px 1px 1px 0px' }} className='arrow right'></i> : <i></i>}
                                         </div>
                                     </div>
-                                </div>
                             </div>
                         </div>
                     </div>

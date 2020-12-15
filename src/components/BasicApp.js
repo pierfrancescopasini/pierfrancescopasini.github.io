@@ -101,7 +101,7 @@ class BasicApp extends React.Component {
                     <div style={{ height: height, width: '100%', margin: '0', marginRight: 'auto', marginBottom: 'auto', backgroundImage: b1 }}>
                         {mob ?
                             <header style={mob? {width: '100%', height: '10%', marginTop: '0%', marginBottom: '10%', borderRadius: '4px', background: 'none' }: { width: '100%', height: '10%', marginTop: '0%', marginBottom: '10%', marginLeft:'10%', borderRadius: '4px', background: 'none' }}>
-                                <img src={icon} style={{ position: 'fixed', height: '60px', width: '60px', left: '15px', top: '15px', borderRadius: '50px', backgroundColor:'none', borderWidth:'2px', borderColor:'solid #f5f5f5' }}
+                                <img id='iconPiano' src={icon} style={{ position: 'fixed', height: '60px', width: '60px', left: '15px', top: '15px', borderRadius: '50px', backgroundColor:'none', borderWidth:'2px', borderColor:'solid #f5f5f5' }}
                                     onClick={(e) => {
                                         this.disableScroll();
                                         window.scrollTo({ top: 0, left: 0 })
