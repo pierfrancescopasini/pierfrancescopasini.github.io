@@ -48,7 +48,7 @@ class HomeBookPage extends React.Component {
                                             onMouseOver={!this.props.mob ? () => { this.setState({ overAmzn: true }) } : () => { }}
                                             onMouseLeave={!this.props.mob ? () => { this.setState({ overAmzn: false }) } : () => { }}
                                             onClick={() => {window.location='https://www.amazon.it/Pop-Piano-Accompagnamenti-Accompagnare-Pianoforte/dp/B087R9NJK2/'}}
-                                        >AMAZON    {this.state.overAmzn ? <i style={{ border: 'solid #F5F5F5', borderWidth: '0px 1px 1px 0px' }} className='arrow right'></i> : <i></i>}
+                                        ><div style={{fontSize:'20px', margin:'auto'}}>AMAZON        {this.state.overAmzn ? <i style={{ border: 'solid #F5F5F5', borderWidth: '0px 1px 1px 0px' }} className='arrow right'></i> : <i></i>}</div>
                                         </div>
                                     </div>
                             </div>
