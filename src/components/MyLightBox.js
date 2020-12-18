@@ -6,7 +6,8 @@ class MyLightBox extends React.Component {
         overImage: false,
         overBtn: false,
         imgHeight: 0,
-        imgWidth:0
+        imgWidth:0,
+        buttonHeight:0
     }
 
     render() {
@@ -44,8 +45,10 @@ class MyLightBox extends React.Component {
                         >
                             <div
                                 className='linkImageBtn'
-                                style={{marginLeft:'auto', marginRight:'auto', marginTop:this.state.imgHeight/2}}
+                                style={{marginLeft:'auto', marginRight:'auto', marginTop:this.state.imgHeight/2.3}}
                                 onClick={() => { window.location = this.props.link }}
+                                onLoad={(e) => {this.setState({buttonHeight: e.target.height})}}
+                                onMouseEnter={(e) => {this.setState({buttonHeight: e.target.height})}}
                             >
                                 <div style={{margin:'auto'}}>
                                     <div style={{  
