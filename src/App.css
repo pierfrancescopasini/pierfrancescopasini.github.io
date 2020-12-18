@@ -91,11 +91,31 @@ body {
   background-color: #f5f5f5b7;
 }
 
+.svgContInv{
+  width: 53px;
+  height: 56px;
+  border-color: #000000;
+  background-color: #000000;
+  fill: #f5f5f5b7;
+}
+.svgContInv:hover{
+  width: 53px;
+  height: 56px;
+  border-color: #000000;
+  background-color: #000000;
+  fill: #F5F5F5;
+}
+
+
 .svgCont:hover{
   background-color: #f5f5f5;
 }
 
 .pathCont{
+  margin: auto;
+}
+
+.pathContInv{
   margin: auto;
 }
 
@@ -138,9 +158,18 @@ h1,h2,h3, h4{
   color: #F5F5F5;
 }
 
+#nameTitle{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  text-transform: none;
+  color: #F5F5F5;
+  font-size: 45px;
+}
+
+
 .socialGrid{
   display: grid;
-  grid-template-columns: 56px 56px 56px;
+  grid-template-columns: 56px 56px 56px 56px;
   grid-template-rows: 56px;
   gap: 0px;
   border:0vw;
@@ -253,7 +282,7 @@ h1,h2,h3, h4{
 
 #videoGridHome{
   display: grid;
-  grid-template-columns: 33.3% 33.3% 33.3% ;
+  grid-template-columns: 100% ;
   margin: auto;
 }
 
@@ -269,8 +298,6 @@ h1,h2,h3, h4{
           box-shadow: 2px 2px 0px 0px rgb(245,245,245,0.4);
   transition: 0.3s;
   border-radius: 4px;
-  transform: rotate(1deg);
-  transform-origin: center;
 }
 
 
@@ -286,7 +313,9 @@ h1,h2,h3, h4{
 @media screen and (min-width:801px){
   .spotifyGrid{
     display: inline-grid;
-    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-columns: 25% 25% 25% 25%;
+    column-gap: 30px;
+    row-gap: 25px;
     margin:auto;
   }
 } 

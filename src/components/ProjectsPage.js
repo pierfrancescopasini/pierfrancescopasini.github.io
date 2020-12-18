@@ -31,7 +31,7 @@ class ProjectsPage extends React.Component {
 		}
         return (
             <div>
-                <h1 style={mob? {} : {float:'left', marginLeft:'56px'}}>Spotify</h1>
+                <h1>Music</h1>
                 {mob? <div></div> : <div style={{height:'100px'}}></div>}
                 <div style={this.state.styleSpotify}><SpotifyEmbed nTracks={100} nAlbums={100} displayAlbums={true}></SpotifyEmbed></div>
                 <div style={this.state.styleLoad}><ProgressBar progress={{amount: 0.2, time: 1}} styleBar={{ width: dim, height: dim}} ></ProgressBar></div>

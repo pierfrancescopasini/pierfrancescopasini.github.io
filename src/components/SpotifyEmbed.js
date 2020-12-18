@@ -1,6 +1,6 @@
 import React from 'react';
-import LinkItem from './LinkItem.js';
-import {al_links, tr_links} from './imports/linkSpotify.js';
+import { spotifyPic } from './imports/importLinkSpotify'
+import cover_images from "./imports/importPicSpotify";
 
 class SpotifyEmbed extends React.Component {
     state = {
@@ -12,9 +12,7 @@ class SpotifyEmbed extends React.Component {
     }
 
     render() {
-        let album_links = al_links;
-        let track_links = tr_links;
-
+        console.log(this.props)
         let width, height;
         width = "" + window.innerWidth / 4.5;
         height = "" + window.innerHeight / 3;
@@ -39,37 +37,24 @@ class SpotifyEmbed extends React.Component {
             mob = true
         }
 
-        album_links = album_links.slice(0, this.props.nAlbums)
-        track_links = track_links.slice(0, this.props.nTracks)
+        spotifyPic.sort((a,b) => {
+            return parseInt(b.img.replace(/[^0-9]/g,''))-parseInt(a.img.replace(/[^0-9]/g,''));
+        })
 
         return (
             <div style={{ width: '100%', margin:'auto'}}>
-                    <div style={{ width: '100%' }}>
-                        <div className="spotifyGrid" style={{ left: 'auto', gridGap: '1%'}}>
-                            {track_links.map((item) => (
-                                <div
-                                    key={item}
-                                    style={{
-                                        marginInline: '2px',
-                                        marginRight: '2px',
-                                        marginBottom: '1px'
-                                    }}
-                                >
-                                    <iframe
-                                        className='spotifyCard'
-                                        src={'https://open.spotify.com/embed/track/' + item}
-                                        width={width}
-                                        height={height}
-                                        frameBorder="0"
-                                        allowtransparency="true"
-                                        allow="encrypted-media"
-                                        title={item}
-                                    >
-                                    </iframe>
-                                </div>
-                            ))}
+                    <div style={{ width: '100%', margin: 'auto' }}>
+                        <div className="spotifyGrid" style={{ width: '65%', margin: 'auto' }}>
+                           {
+                                spotifyPic.map((item) => {
+                                    return (
+                                    <div>
+                                        <div style={{width:'100%'}} onClick={() => {window.location = item.link}}><img style={{width:'100%', cursor: 'pointer', margin:'auto'}} src={cover_images[item.img]}></img></div>
+                                    </div>
+                                    )
+                                })
+                            }
                         </div>
-                        <div style={{width:'100%', height:'100%', marginTop:'10%'}}><LinkItem path={'/projects'} name={'See More'} home={false}></LinkItem></div>
                     </div>
             </div>
         )

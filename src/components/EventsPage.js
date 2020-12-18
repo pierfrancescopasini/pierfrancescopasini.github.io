@@ -29,7 +29,7 @@ class EventsPage extends React.Component {
 		}
 		return (
 			<div style={{ backgroundColor: 'none', width:window.outerWidth, height: window.outerHeight * 2 }}>
-				<h1 style={mob? { backgroundColor: 'none', color: '#f5f5f5' } : { float:'left', marginLeft:'56px' }}>Events</h1>
+				<h1>Events</h1>
 				{mob? <div></div> : <div style={{height:'100px'}}></div>}
 				<div style={this.state.displayPage}>
 				<div style={{width: '100%', backgroundColor: 'none', left:0, right:0}}>		

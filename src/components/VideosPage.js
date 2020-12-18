@@ -30,7 +30,7 @@ class VideosPage extends React.Component{
         }    
         return (
             <div>
-                <h1 style={mob? {} : {float:'left', marginLeft:'56px'}}>Videos</h1>
+                <h1>Videos</h1>
                 {mob? <div></div> : <div style={{height:'100px'}}></div>}
                 <div style={this.state.styleVideos}><VideoGrid nVids={100} home={false}></VideoGrid></div>
                 <div style={this.state.styleLoad} id='barVid'>

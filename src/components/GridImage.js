@@ -44,19 +44,21 @@ class GridImage extends React.Component{
         return (
             <div className='column'>
                 {
-                    ev.map((item) => (
-                        <div key={images[item.name]}>
-                            <Imagewithlighbox
-                                src={images[item.name]} 
-                                link={item.link} 
-								style={{width:'100%'}} 
-								withDate={this.props.home}
-								day = {item.date.getDate()}
-								month={item.date.toLocaleString('en-US', { month: 'short' })}
-								year={item.date.getFullYear()}
-                            ></Imagewithlighbox>
-                        </div>
-                    ))
+					ev.map((item) => {
+						return (
+							<div key={images[item.name]}>
+								<Imagewithlighbox
+									src={images[item.name]} 
+									link={item.link} 
+									style={{width:'100%'}} 
+									withDate={this.props.home}
+									day = {item.date.getDate()}
+									month={item.date.toLocaleString('en-US', { month: 'short' })}
+									year={item.date.getFullYear()}
+								></Imagewithlighbox>
+							</div>
+						)
+					})
                 }
             </div>
         )

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Circle } from 'rc-progress';
+import {Line } from 'rc-progress';
 
 class ProgressBar extends React.Component{
     state = {
@@ -12,7 +12,7 @@ class ProgressBar extends React.Component{
 
     render(){
         return(
-        <Circle percent={this.state.percent} style={this.props.styleBar} strokeWidth="1.5" strokeColor="#F5F5F5"></Circle>
+        <Line percent={this.state.percent} style={{top: '-2px', height:'1px', width:'95%', margin: 'auto'}} strokeWidth="0.8" strokeColor="#F5F5F5"></Line>
         )
     }
 }

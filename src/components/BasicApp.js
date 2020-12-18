@@ -10,6 +10,10 @@ import icon from './resources/logo.png';
 import back1 from './resources/background1.jpg';
 import back1mob from './resources/b1mobile.png';
 import smoothscroll from 'smoothscroll-polyfill';
+import {
+    Link,
+} from "react-router-dom";
+
 smoothscroll.polyfill();
 window.__forceSmoothScrollPolyfill__ = true;
 
@@ -128,16 +132,15 @@ class BasicApp extends React.Component {
                             :
                             <header style={{ width: '100%', height: '5%', marginTop: '0%', borderRadius: '4px', background: 'none' }}>
                                 <div className='lefty' style={{ width: '33%', marginTop: '2%' }}>
-                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 1, left: 0, behavior: 'smooth' }) }}>Books</span>
-                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 2, left: 0, behavior: 'smooth' }) }}>Videos</span>
-                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 3, left: 0, behavior: 'smooth' }) }}>Music</span>
-                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 4, left: 0, behavior: 'smooth' }) }}>Events</span>
-                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 5, left: 0, behavior: 'smooth' }) }}>Contacts</span>
+                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 1, left: 0, behavior: 'smooth' }) }}>Videos</span>
+                                    <Link to={'/projects'} style={{textDecoration:'none', color:'#F5F5F5'}}><span className={'headerspan'} >Music</span></Link>
+                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 2, left: 0, behavior: 'smooth' }) }}>Events</span>
+                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 3, left: 0, behavior: 'smooth' }) }}>Contacts</span>
                                 </div>
-                            </header>}
+                            </header>
+                           }
                         <div style={{height:'100px'}}></div>
                         <h1 style={styleH1} id="nameTitle" >Pierfrancesco Pasini</h1>
-                        <h2 style={styleH2} id="musician">Musician</h2>
                     </div>
                     <div>
                         <div className='fab'
@@ -147,14 +150,8 @@ class BasicApp extends React.Component {
                         >
                             <i className='arrow up' style={{ marginTop: '25px', borderColor: '#f5f5f5' }}></i>
                         </div>
-                        <div id='homeBooks' style={{ height: height, width: '100%', marginTop: 0, marginBottom: '0px' }}>
-                            <HomeBookPage mob={mob}></HomeBookPage>
-                        </div>
                         <div id='homeVideos' style={{ height: height, width: '100%', marginTop: 0, marginBottom: '0px' }}>
                             <HomeVideosPage></HomeVideosPage>
-                        </div>
-                        <div id='homeProjects' style={{ height: height, width: '100%', marginTop: 0, marginBottom: '0px' }}>
-                            <HomeProjectPage></HomeProjectPage>
                         </div>
                         <div id='homeEvents' style={{ height: height, width: '100%', marginTop: 0, marginBottom: '0px' }}>
                             <HomeEventsPage></HomeEventsPage>

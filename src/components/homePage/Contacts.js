@@ -55,7 +55,7 @@ class Contacts extends React.Component {
                     </div>
                     <div style={{ marginTop: '20px', marginBottom: '20px' }}>
                         <div style={{ width: '100%' }}>
-                            <div className='socialGrid' style={{ backgroundColor: '#000000', width: '168px', height: '56px', marginLeft: 'auto' }}>
+                            <div className='socialGrid' style={{ backgroundColor: '#000000', width: '224px', height: '56px', marginLeft: 'auto' }}>
                                     <a href='https://www.instagram.com/pierfrancescopasini/'>
                                         <svg 
                                             className='svgCont'>
@@ -78,6 +78,14 @@ class Contacts extends React.Component {
                                             <path    
                                             className='pathCont'                                     
                                             d="M39,37.7c-4.2-2.6-9.4-3.2-15.5-1.8c-0.5,0.1-0.9,0.7-0.8,1.2c0.1,0.5,0.7,0.9,1.2,0.7c5.6-1.3,10.3-0.8,14.1,1.5 c0.5,0.3,1.1,0.1,1.4-0.3C39.6,38.6,39.5,38,39,37.7z M40.9,33c-4.9-3-12.2-3.9-18-2.1c-0.7,0.2-1,0.9-0.8,1.6 c0.2,0.7,0.9,1,1.6,0.8c5.1-1.5,11.6-0.8,15.9,1.9c0.6,0.4,1.4,0.2,1.7-0.4C41.7,34.1,41.5,33.4,40.9,33z M0,0v64h64V0H0z M32,48 c-8.8,0-16-7.2-16-16c0-8.8,7.2-16,16-16c8.8,0,16,7.2,16,16C48,40.8,40.8,48,32,48z M43,27.6c-5.9-3.5-15.3-3.9-21-2.1 c-0.8,0.2-1.2,1.1-1,1.9c0.2,0.8,1.1,1.2,1.9,1c4.9-1.5,13.4-1.2,18.6,1.9c0.7,0.4,1.6,0.2,2.1-0.5C43.9,29,43.7,28,43,27.6z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                    <a href='https://www.youtube.com/channel/UCPB3jS7oPlA-UGXdSfjqxNA'>
+                                        <svg className='svgContInv'>
+                                            <path    
+                                            className='pathCont'                                     
+                                            d="M46.7,26c0,0-0.3-2.1-1.2-3c-1.1-1.2-2.4-1.2-3-1.3C38.3,21.4,32,21.4,32,21.4h0 c0,0-6.3,0-10.5,0.3c-0.6,0.1-1.9,0.1-3,1.3c-0.9,0.9-1.2,3-1.2,3S17,28.4,17,30.9v2.3c0,2.4,0.3,4.9,0.3,4.9s0.3,2.1,1.2,3 c1.1,1.2,2.6,1.2,3.3,1.3c2.4,0.2,10.2,0.3,10.2,0.3s6.3,0,10.5-0.3c0.6-0.1,1.9-0.1,3-1.3c0.9-0.9,1.2-3,1.2-3s0.3-2.4,0.3-4.9 v-2.3C47,28.4,46.7,26,46.7,26z M28.9,35.9l0-8.4l8.1,4.2L28.9,35.9z">
                                             </path>
                                         </svg>
                                     </a>

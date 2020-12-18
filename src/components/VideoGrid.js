@@ -1,6 +1,8 @@
 import React from 'react';
 import YouTube from 'react-youtube';
-import LinkItem from './LinkItem.js'
+import LinkItem from './LinkItem.js';
+import InfiniteScroll from 'react-infinite-scroll-component';
+
 
 
 class VideoGrid extends React.Component {
@@ -21,8 +23,8 @@ class VideoGrid extends React.Component {
         };
         if(this.props.home){
             opts = {
-                width: '' + window.innerWidth*0.28,
-                height: '' + window.innerWidth*0.15,
+                width: '' + window.innerWidth*0.7,
+                height: '' + window.innerWidth*0.35,
                 playerVars: {
                     color: 'white',
                     autoplay: 0,
@@ -70,13 +72,46 @@ class VideoGrid extends React.Component {
             id = 'videoGridMob';
         }
 
-        // YT No Lib
-        //<iframe style={{ border:'0px'}} width={opts.width} height={opts.height} className='customYT' src={"https://www.youtube.com/embed/watch?v=" + item.link}></iframe> 
-
 
         return (
             <div>
-            <div id={id}>
+           {
+               !this.props.home?
+               <div
+                id="videoScroll"
+                style={{
+                    height:'500px',
+                    overflow: 'auto',
+                    display: 'flex',
+                    flexDirection: 'row',
+                }}
+            >
+        <InfiniteScroll
+            dataLength={links.length}
+            next={this.fetchMoreData}
+            style={{ display: 'flex', flexDirection: 'row', marginInline:'20px' }} //To put endMessage and loader to the top.
+            inverse={true} //
+            hasMore={true}
+            scrollableTarget="scrollableDiv"
+        >
+            {
+                links.map((item) =>
+                    (<div key={item.link} style={{height:'80%', width:'90%', margin:'auto'}}>
+                        <YouTube
+                            className='customYT'
+                            videoId={item.link}
+                            opts={opts}
+                            >
+                        </YouTube>
+                    </div>)
+                )
+            }
+        </InfiniteScroll>
+        </div> :
+        <div>
+        </div>
+           }
+        <div id={id}>
             {
                 links.map((item) =>
                     (<div key={item.link} style={{height:'80%', width:'100%', margin:'auto'}}>
@@ -86,20 +121,13 @@ class VideoGrid extends React.Component {
                             opts={opts}
                             >
                         </YouTube>
-                        <span
-                            style={{
-                                color: '#F5F5F5',
-                                textTransform: 'uppercase',
-                                marginBottom:'5%'
-                            }}
-                        >{item.text}</span>
                     </div>)
                 )
             }
             </div>
             <div>
                 {this.props.home ?
-                        <div style={mob? { marginTop: '30%', width: '100%', height: '100%' } : { marginTop:'15%', width: '100%', height: '100%' }}><LinkItem path={'/videos'} name={'See More'} home={false}></LinkItem></div>
+                        <div style={mob? { marginTop: '30%', width: '100%', height: '100%' } : { marginTop:'8%', width: '100%', height: '100%' }}><LinkItem path={'/videos'} name={'See More'} home={false}></LinkItem></div>
                         : <div className='fab' style={{}} onClick={() => {window.scrollTo({top:0, left:0, behavior:'smooth'})}}><i class='arrow up' style = {{marginTop:25, borderColor:'#f5f5f5'}}></i></div>
                     }
                 </div>
