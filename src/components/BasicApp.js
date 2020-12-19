@@ -10,6 +10,8 @@ import icon from './resources/logo.png';
 import back1 from './resources/background1.jpg';
 import back1mob from './resources/b1mobile.png';
 import smoothscroll from 'smoothscroll-polyfill';
+import iconTransparent from './resources/icon_white_transparent.png'
+
 import {
     Link,
 } from "react-router-dom";
@@ -106,7 +108,9 @@ class BasicApp extends React.Component {
                     <div style={{ height: height, width: '100%', margin: '0', marginRight: 'auto', marginBottom: 'auto', backgroundImage: b1, backgroundSize: 'cover'}}>
                         {mob ?
                             <header style={mob? {width: '100%', height: '10%', marginTop: '0%', marginBottom: '10%', borderRadius: '4px', background: 'none' }: { width: '100%', height: '10%', marginTop: '0%', marginBottom: '10%', marginLeft:'10%', borderRadius: '4px', background: 'none' }}>
-                                <img id='iconPiano' src={icon} style={{ position: 'fixed', height: '60px', width: '60px', left: '15px', top: '15px', borderRadius: '50px', backgroundColor:'none', borderWidth:'2px', borderColor:'solid #f5f5f5' }}
+                                <div 
+                                ><img id='iconPiano' src={iconTransparent} 
+                                style={{ position: 'fixed', height: '60px', width: '50px', left: '15px', top: '15px', backgroundColor:'none', borderWidth:'2px', borderColor:'solid #f5f5f5' }}
                                     onClick={(e) => {
                                         this.disableScroll();
                                         window.scrollTo({ top: 0, left: 0 })
@@ -128,10 +132,14 @@ class BasicApp extends React.Component {
                                                 }
                                             )
                                         }
-                                    }} className='headerspan'></img></header>
+                                    }} className='headerspan'>
+                                    </img>
+                                </div>
+                            </header>
                             :
                             <header style={{ width: '100%', height: '5%', marginTop: '0%', borderRadius: '4px', background: 'none' }}>
                                 <div className='lefty' style={{ width: '33%', marginTop: '2%' }}>
+                                    <span style={{marginInline:'5%', borderRadius: '30px'}} ><img width='7%'  src={iconTransparent}></img></span>
                                     <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 1, left: 0, behavior: 'smooth' }) }}>Videos</span>
                                     <Link to={'/projects'} style={{textDecoration:'none', color:'#F5F5F5'}}><span className={'headerspan'} >Music</span></Link>
                                     <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 2, left: 0, behavior: 'smooth' }) }}>Events</span>

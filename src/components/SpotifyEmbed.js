@@ -44,7 +44,7 @@ class SpotifyEmbed extends React.Component {
         return (
             <div style={{ width: '100%', margin:'auto'}}>
                     <div style={{ width: '100%', margin: 'auto' }}>
-                        <div className="spotifyGrid" style={{ width: '65%', margin: 'auto' }}>
+                        <div className="spotifyGrid" style={mob? {width: '65%', margin: 'auto'} : { width: '65%', margin: 'auto' }}>
                            {
                                 spotifyPic.map((item) => {
                                     return (

@@ -119,6 +119,15 @@ body {
   margin: auto;
 }
 
+#iconPiano:focus{
+  background: transparent;
+  background-color: transparent;
+
+}
+#iconPiano:hover{
+  background: transparent;
+  background-color: transparent;
+}
 
 .header{
   position: fixed;
@@ -301,14 +310,13 @@ h1,h2,h3, h4{
 }
 
 
-@media screen and (max-width:600px) and (orientation:landscape){
   .spotifyGrid{
     display: inline-grid;
-    grid-template-columns: 33% 33%;
-    grid-column-gap: 1%;
+    grid-template-columns: 30% 30% 30%;
     margin:auto;
+    column-gap: 5px;
+    row-gap: 5px;
   }
-} 
 
 @media screen and (min-width:801px){
   .spotifyGrid{

@@ -31,7 +31,7 @@ class VideosPage extends React.Component{
         return (
             <div>
                 <h1>Videos</h1>
-                {mob? <div></div> : <div style={{height:'100px'}}></div>}
+                {mob? <div></div> : <div style={{height:'28px'}}></div>}
                 <div style={this.state.styleVideos}><VideoGrid nVids={100} home={false}></VideoGrid></div>
                 <div style={this.state.styleLoad} id='barVid'>
                     <ProgressBar progress={{amount: 1, time:10}} styleBar={{width:dim, height:dim}}></ProgressBar>
