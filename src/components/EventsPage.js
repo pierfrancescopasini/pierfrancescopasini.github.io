@@ -36,7 +36,7 @@ class EventsPage extends React.Component {
 						<div className='row' style={mob? {width:'90%', height:'90%', margin:'auto'} : {width:'80%', height:'80%', margin:'auto'}}>
 							<GridImage nElem={nElem} sEl={nElem*2}></GridImage>
 							<GridImage nElem={nElem} sEl={nElem}></GridImage>
-							<GridImage nElem={nElem} sEl={0}></GridImage>
+							<GridImage nElem={nElem+5} sEl={0}></GridImage>
 						</div>
 				</div>
 				<div className='fab' style={{}} onClick={() => {window.scrollTo({top:0, left:0, behavior:'smooth'})}}><i class='arrow up' style = {{marginTop:25, borderColor:'#f5f5f5'}}></i></div>

@@ -9,20 +9,10 @@ class VideoGrid extends React.Component {
 
     componentDidMount() {
         window.addEventListener('resize', () => { });
-        window.addEventListener('orientationchange', () => { setTimeout(() => { this.setState({}) }, 200) });
     }
 
     render() {
         let opts = {
-            width: '' + window.innerWidth*0.4,
-            height: '' + window.innerWidth*0.23,
-            playerVars: {
-                color: 'white',
-                autoplay: 0,
-            },
-        };
-        if(this.props.home){
-            opts = {
                 width: '' + window.innerWidth*0.7,
                 height: '' + window.innerWidth*0.35,
                 playerVars: {
@@ -30,7 +20,16 @@ class VideoGrid extends React.Component {
                     autoplay: 0,
                 },
             };
-        }
+            if(!this.props.home){
+                opts = {
+                    width: '' + window.innerWidth*0.9,
+                    height: '' + window.innerWidth*0.44,
+                    playerVars: {
+                        color: 'white',
+                        autoplay: 0,
+                    },
+                };
+            }
 
         let mob = false;
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -76,11 +75,12 @@ class VideoGrid extends React.Component {
         return (
             <div>
            {
-               !this.props.home?
+               !this.props.home && !mob?
                <div
                 id="videoScroll"
                 style={{
-                    height:'500px',
+                    width: window.innerWidth,
+                    margin: 'auto',
                     overflow: 'auto',
                     display: 'flex',
                     flexDirection: 'row',
@@ -89,7 +89,7 @@ class VideoGrid extends React.Component {
         <InfiniteScroll
             dataLength={links.length}
             next={this.fetchMoreData}
-            style={{ display: 'flex', flexDirection: 'row', marginInline:'20px' }} //To put endMessage and loader to the top.
+            style={!mob? { display: 'flex', flexDirection: 'row'}: {display: 'flex', flexDirection: 'column'}}//To put endMessage and loader to the top.
             inverse={true} //
             hasMore={true}
             scrollableTarget="scrollableDiv"
@@ -108,15 +108,12 @@ class VideoGrid extends React.Component {
             }
         </InfiniteScroll>
         </div> :
-        <div>
-        </div>
-           }
         <div id={id}>
             {
                 links.map((item) =>
                     (<div key={item.link} style={{height:'80%', width:'100%', margin:'auto'}}>
                         <YouTube
-                            className='customYT'
+                            className='customYTHome'
                             videoId={item.link}
                             opts={opts}
                             >
@@ -125,9 +122,10 @@ class VideoGrid extends React.Component {
                 )
             }
             </div>
+    }
             <div>
                 {this.props.home ?
-                        <div style={mob? { marginTop: '30%', width: '100%', height: '100%' } : { marginTop:'8%', width: '100%', height: '100%' }}><LinkItem path={'/videos'} name={'See More'} home={false}></LinkItem></div>
+                        <div style={mob? { marginTop: '30%', width: '100%', height: '100%' } : { marginTop:'8%', width: '100%', height: '100%' }}><LinkItem path={'/videos'} name={'More'} home={false}></LinkItem></div>
                         : <div className='fab' style={{}} onClick={() => {window.scrollTo({top:0, left:0, behavior:'smooth'})}}><i class='arrow up' style = {{marginTop:25, borderColor:'#f5f5f5'}}></i></div>
                     }
                 </div>

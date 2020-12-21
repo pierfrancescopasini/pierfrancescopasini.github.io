@@ -29,7 +29,6 @@ class BasicApp extends React.Component {
     componentDidMount() {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
         setTimeout(() => { this.setState({ display: { display: 'block' }, displayBar: { display: 'none' } }) }, 1300);
-        //window.addEventListener('resize', () => { this.setState({}) });
     }
 
     disableScroll = () => {
@@ -138,11 +137,11 @@ class BasicApp extends React.Component {
                             </header>
                             :
                             <header style={{ width: '100%', height: '5%', marginTop: '0%', borderRadius: '4px', background: 'none' }}>
-                                <div className='lefty' style={{ width: '33%', marginTop: '2%' }}>
-                                    <span style={{marginInline:'5%', borderRadius: '30px'}} ><img width='7%'  src={iconTransparent}></img></span>
+                                <div className='lefty' style={{ width: '50%', marginTop: '2%' }}>
+                                    <span className='headerIcon'><img className='imghead' height='56px'  src={iconTransparent}></img></span>
                                     <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 1, left: 0, behavior: 'smooth' }) }}>Videos</span>
                                     <Link to={'/projects'} style={{textDecoration:'none', color:'#F5F5F5'}}><span className={'headerspan'} >Music</span></Link>
-                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 2, left: 0, behavior: 'smooth' }) }}>Events</span>
+                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 2, left: 0, behavior: 'smooth' }) }}>Tour</span>
                                     <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 3, left: 0, behavior: 'smooth' }) }}>Contacts</span>
                                 </div>
                             </header>

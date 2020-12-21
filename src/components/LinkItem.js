@@ -21,8 +21,6 @@ class LinkItem extends React.Component{
             border: 'solid #F5F5F5',
             borderWidth: '1px 1px 1px 1px',
             transition: '0.3s',
-            transform: 'rotate(1deg)',
-            transformOrigin: 'center'
         }
     
         let styleOff = { 

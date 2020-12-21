@@ -6,11 +6,6 @@ class SpotifyEmbed extends React.Component {
     state = {
         styleCards: { display: 'flex', flexDirection: 'row', left: 0, right: 0 },
     }
-
-    componentDidMount = () => {
-        window.addEventListener('orientationchange', () => {this.setState({})})
-    }
-
     render() {
         console.log(this.props)
         let width, height;
@@ -42,14 +37,15 @@ class SpotifyEmbed extends React.Component {
         })
 
         return (
-            <div style={{ width: '100%', margin:'auto'}}>
-                    <div style={{ width: '100%', margin: 'auto' }}>
-                        <div className="spotifyGrid" style={mob? {width: '65%', margin: 'auto'} : { width: '65%', margin: 'auto' }}>
+            <div>
+                    <div>
+                        <div className="spotifyGrid" style={mob? {width:'90%'} : {width: '80%'}}>
                            {
                                 spotifyPic.map((item) => {
                                     return (
                                     <div>
-                                        <div style={{width:'100%'}} onClick={() => {window.location = item.link}}><img style={{width:'100%', cursor: 'pointer', margin:'auto'}} src={cover_images[item.img]}></img></div>
+                                        <div style={{width:'100%'}} onClick={() => { const tab = window.open(item.link, '_blank');}}>
+                                            <img style={{width:'90%', height:'90%', cursor: 'pointer'}} src={cover_images[item.img]}></img></div>
                                     </div>
                                     )
                                 })

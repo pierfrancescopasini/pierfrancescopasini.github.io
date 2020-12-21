@@ -12,7 +12,7 @@ import Evento11 from '../resources/locs/pics/Evento11.jpg';
 import Evento12 from '../resources/locs/pics/Evento12.jpg';
 import Evento13 from '../resources/locs/pics/Evento13.jpg';
 import Evento14 from '../resources/locs/pics/Evento14.jpg';
-import Evento15 from '../resources/locs/pics/Evento1.jpg';
+import Evento15 from '../resources/locs/pics/Evento15.jpg';
 import Evento16 from '../resources/locs/pics/Evento16.jpg';
 import Evento17 from '../resources/locs/pics/Evento17.jpg';
 import Evento18 from '../resources/locs/pics/Evento18.jpg';
@@ -32,6 +32,7 @@ import Evento31 from '../resources/locs/pics/Evento31.jpg';
 import Evento32 from '../resources/locs/pics/Evento32.jpg';
 import Evento33 from '../resources/locs/pics/Evento33.jpg';
 import Evento34 from '../resources/locs/pics/Evento34.jpg';
+import Evento35 from '../resources/locs/pics/Evento35.jpg';
 
 const images = {
     Evento1,
@@ -67,7 +68,8 @@ const images = {
     Evento31,
     Evento32,
     Evento33,
-    Evento34
+    Evento34,
+    Evento35
 } 
 
 export default images;

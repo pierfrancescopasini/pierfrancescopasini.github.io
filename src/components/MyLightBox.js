@@ -30,7 +30,7 @@ class MyLightBox extends React.Component {
                             }}
                             onTouchStart={()=>{window.location = this.props.link}}
                             src={this.props.mainSrc}
-                            width={mob? '70%' : '33.3%'}
+                            width={mob? '70%' : '30%'}
                             onLoad={(e) => {
                                 this.setState({imgHeight:e.target.height +10, imgWidth:e.target.width +10})
                             }}
@@ -46,13 +46,14 @@ class MyLightBox extends React.Component {
                             <div
                                 className='linkImageBtn'
                                 style={{marginLeft:'auto', marginRight:'auto', marginTop:this.state.imgHeight/2.3}}
-                                onClick={() => { window.location = this.props.link }}
+                                onClick={() => {                                             
+                                    const tab = window.open(this.props.link, '_blank');
+                                }}
                                 onLoad={(e) => {this.setState({buttonHeight: e.target.height})}}
                                 onMouseEnter={(e) => {this.setState({buttonHeight: e.target.height})}}
                             >
                                 <div style={{margin:'auto'}}>
-                                    <div style={{  
-                                    }}>
+                                    <div>
                                     Go To Event
                                     {this.state.overBtn ? <i style={{}} className='arrow right'></i> : <i></i>}
                                     </div>

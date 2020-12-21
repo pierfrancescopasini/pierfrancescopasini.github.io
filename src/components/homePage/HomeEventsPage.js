@@ -5,10 +5,6 @@ import LinkItem from '../LinkItem.js'
 
 class HomeEventsPage extends React.Component{
 
-    componentDidMount(){
-        window.addEventListener('orientationchange', () => {});
-    }
-
     render(){
         let mob = false;
         if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
@@ -31,7 +27,7 @@ class HomeEventsPage extends React.Component{
                     }
                     </div>
                 </div>
-                <div style={{marginTop:'5%'}} onClick={() => {window.scrollTo(0,0)}}><LinkItem path={'/events'} name={'See More'}></LinkItem></div>
+                <div style={{marginTop:'5%'}} onClick={() => {window.scrollTo(0,0)}}><LinkItem path={'/events'} name={'More'}></LinkItem></div>
             </div>
         )
     }

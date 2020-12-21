@@ -15,7 +15,6 @@ class HomeProjectPage extends React.Component {
         window.addEventListener('load', () => {            
             this.setState({ stylePage: { display: 'block' }, styleLoad: { display: 'none' } })
         });
-        window.addEventListener('resize', () => {setTimeout(() => {this.setState({})}, 200)});
     }
 
     render() {

@@ -17,9 +17,6 @@ class ProjectsPage extends React.Component {
             this.setState({ styleSpotify: { display: 'block' }, styleLoad: { display: 'none' } })
         });
         window.addEventListener('resize', () => {})
-        window.addEventListener('orientationchange', () => {
-            window.location.reload()
-        })
     }
 
     render() {
@@ -33,7 +30,7 @@ class ProjectsPage extends React.Component {
             <div>
                 <h1>Music</h1>
                 {mob? <div></div> : <div style={{height:'28px'}}></div>}
-                <div style={this.state.styleSpotify}><SpotifyEmbed nTracks={100} nAlbums={100} displayAlbums={true}></SpotifyEmbed></div>
+                <div><SpotifyEmbed nTracks={100} nAlbums={100} displayAlbums={true}></SpotifyEmbed></div>
                 <div style={this.state.styleLoad}><ProgressBar progress={{amount: 0.2, time: 1}} styleBar={{ width: dim, height: dim}} ></ProgressBar></div>
             </div>
         )
