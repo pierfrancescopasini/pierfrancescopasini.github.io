@@ -38,8 +38,17 @@ class GridImage extends React.Component{
 			}
         });
 
-        let ev = [];
-        ev = events.slice(this.props.sEl, this.props.sEl + this.props.nElem);
+		let ev = [];
+        //ev = events.slice(this.props.sEl, this.props.sEl + this.props.nElem);
+		
+		for(let i=0; i < this.props.nElem; i++){
+			let event = events[this.props.sEl + 3*i];
+			if(event){
+				console.log(event.name);
+				ev.push(event);
+			}
+		}
+	
 
         return (
             <div className='column'>
