@@ -18,10 +18,9 @@ class EventsPage extends React.Component {
 		});
 	}
 
-
-
 	render() {
 		document.body.style.backgroundColor = "#000000";
+		document.body.style.overflowY = '';
 		let nElem = Math.ceil(allEv.length/3);
 		let mob = false;
 		if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {

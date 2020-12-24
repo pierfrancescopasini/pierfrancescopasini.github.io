@@ -20,10 +20,11 @@ class ProjectandVideos extends React.Component {
         }
         return (
             <div id='videoscontactslink'>
-                <Link to={'/projects'} style={{ margin: '20px', textDecoration: 'none', color:'#F5F5F5', fontSize:'24px' }} ><span>Music</span></Link>
+                <div><Link to={'/projects'} style={{ margin: '20px', textDecoration: 'none', color:'#F5F5F5', fontSize:'24px' }} ><span>Music</span></Link></div>
                 <div style={{ margin: '20px' }} ><ScrollItem name={'Videos'} scroll={{ top: height*1, left: 0, behavior: 'smooth'}} update={() => {this.props.update()}}></ScrollItem></div>
                 <div style={{ margin: '20px' }} ><ScrollItem name={'Events'} scroll={{ top: height*2, left: 0, behavior: 'smooth'}} update={() => {this.props.update()}}></ScrollItem></div>
                 <div style={{ margin: '20px' }} ><ScrollItem name={'Contacts'} scroll={{ top: height*3, left: 0, behavior: 'smooth'}} update={() => {this.props.update()}}></ScrollItem></div>
+                <div style={{ margin: '20px' }} onClick={() => {}} ><ScrollItem name={'Archive'} scroll={{ top: 0, left: 0, behavior: 'smooth'}} update={() => {}}></ScrollItem></div>
             </div>
         )
     }

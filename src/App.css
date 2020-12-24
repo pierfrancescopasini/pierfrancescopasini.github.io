@@ -23,11 +23,21 @@ body {
 
 .header{
   height: 100%;
-  width: 100%
+  width: 100%;
 }
 
 .lefty{
   float: left;
+  width: 100%;
+  top: 20px;
+  position: absolute;
+  left: 30px;
+}
+
+@media screen and (min-width: 950px){
+  .lefty{
+    width: 30%;
+  }
 }
 
 .mobMenu{
@@ -35,14 +45,15 @@ body {
 }
 
 .headerIcon{
-  margin-right: 4%;
+  top:20px;
+  left: 20px;
   cursor: pointer;
   border-radius: 100px;
   height: 100%;
-  width: 33%;
   padding: 1px;
   font-size: 20px;
   transition: 0.5s;
+  position: fixed;
 }
 
 .imghead{
@@ -62,11 +73,11 @@ body {
 .headerspan{
   font-family: 'Chivo', 'serif';
   color:#f5f5f5;
-  margin-right: 4%;
+  margin-right: 2%;
   cursor: pointer;
   border-radius: 4px;
   height: 100%;
-  width: 33%;
+  width: 25%;
   padding: 1px;
   font-size: 20px;
   transition: 0.3s;
@@ -656,4 +667,20 @@ h1,h2,h3, h4{
   height: 32px;
   transition: 0.4s;
   border-radius: 4px;
+}
+
+.direction{
+  border-radius:50px; 
+  width:56px; 
+  height:56px; 
+  position: fixed; 
+  border: solid #F5F5F5; 
+  border-width: 1px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.direction:hover{
+  border-width: 3px;
+  transition: 0.4s;
 }

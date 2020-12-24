@@ -81,6 +81,24 @@ class BasicApp extends React.Component {
         return (
             <div>
                 <div style={this.state.displayMenu}>
+                    {
+                        !mob && 
+                        <span className='headerIcon'><img onClick={() => {
+                            if(this.state.displayMenu.display === 'block'){
+                                this.setState({
+                                    display:{display:'block'},
+                                    displayMenu:{display:'none'},
+                                    displayBar: {display:'none'}
+                                })
+                            } else {
+                                this.setState({
+                                    display:{display:'none'},
+                                    displayMenu:{display:'block'},
+                                    displayBar: {display:'none'}
+                                })
+                            }
+                        }} className='imghead' height='56px'  src={iconTransparent}></img></span>
+                    }
                     <div
                         className='mobMenu'
                         style={{ width: window.innerWidth, height: window.screen.height, margin: 'auto', backgroundColor: '#000000' }}
@@ -137,8 +155,22 @@ class BasicApp extends React.Component {
                             </header>
                             :
                             <header style={{ width: '100%', height: '5%', marginTop: '0%', borderRadius: '4px', background: 'none' }}>
-                                <div className='lefty' style={{ width: '50%', marginTop: '2%' }}>
-                                    <span className='headerIcon'><img className='imghead' height='56px'  src={iconTransparent}></img></span>
+                                <span className='headerIcon'><img onClick={() => {
+                                        if(this.state.displayMenu.display === 'block'){
+                                            this.setState({
+                                                display:{display:'block'},
+                                                displayMenu:{display:'none'},
+                                                displayBar: {display:'none'}
+                                            })
+                                        } else {
+                                            this.setState({
+                                                display:{display:'none'},
+                                                displayMenu:{display:'block'},
+                                                displayBar: {display:'none'}
+                                            })
+                                        }
+                                    }} className='imghead' height='56px'  src={iconTransparent}></img></span>
+                                <div className='lefty' style={{marginTop: '2%', float: 'left' }}>
                                     <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 1, left: 0, behavior: 'smooth' }) }}>Videos</span>
                                     <Link to={'/projects'} style={{textDecoration:'none', color:'#F5F5F5'}}><span className={'headerspan'} >Music</span></Link>
                                     <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1 * 2, left: 0, behavior: 'smooth' }) }}>Tour</span>
