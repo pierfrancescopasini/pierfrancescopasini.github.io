@@ -4,18 +4,18 @@
   "icons": [
     {
       "src": "favicon.ico",
-      "sizes": "270x310",
+      "sizes": ".",
       "type": "image/x-icon"
     },
     {
-      "src": "pierfrancesco.png",
+      "src": "pieroIcon.png",
       "type": "image/png",
-      "sizes": "270x310"
+      "sizes": "."
     },
     {
-      "src": "pierfrancescopasini.png",
+      "src": "pieroIcon.png",
       "type": "image/png",
-      "sizes": "270x310"
+      "sizes": "."
     }
   ],
   "start_url": ".",
