@@ -189,7 +189,7 @@ class BasicApp extends React.Component {
                         >
                             <i className='arrow up' style={{ marginTop: '25px', borderColor: '#f5f5f5' }}></i>
                         </div>
-                        <div id='homeVideos' style={{ height: height, width: '100%', marginTop: 0, marginBottom: '0px' }}>
+                        <div id='homeVideos' style={{ height:window.innerHeight, width: '100%', marginTop: 0, marginBottom: '0px'}}>
                             <HomeVideosPage></HomeVideosPage>
                         </div>
                         <div id='homeEvents' style={{ height: height, width: '100%', marginTop: 0, marginBottom: '0px' }}>

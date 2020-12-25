@@ -44,8 +44,9 @@ class SpotifyEmbed extends React.Component {
                                 spotifyPic.map((item) => {
                                     return (
                                     <div>
-                                        <div style={{width:'100%'}} onClick={() => { const tab = window.open(item.link, '_blank');}}>
-                                            <img style={{width:'90%', height:'90%', cursor: 'pointer'}} src={cover_images[item.img]}></img></div>
+                                        <div className='coverImgDiv' style={{width:'100%'}} onClick={() => { const tab = window.open(item.link, '_blank');}}>
+                                            <img style={{width:'90%', height:'90%', cursor: 'pointer'}} src={cover_images[item.img]}></img>
+                                        </div>
                                     </div>
                                     )
                                 })

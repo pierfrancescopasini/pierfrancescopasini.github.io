@@ -2,6 +2,8 @@ import React from 'react'
 import ProgressBar from './ProgressBar.js'
 import GridImage from './GridImage'
 import {allEv} from './imports/events.js'
+import iconTransparent from './resources/icon_white_transparent.png';
+import {Link} from 'react-router-dom';
 
 class EventsPage extends React.Component {
 
@@ -30,6 +32,12 @@ class EventsPage extends React.Component {
 			<div style={{ backgroundColor: 'none', width:window.outerWidth, height: window.outerHeight * 2 }}>
 				<h1>Events</h1>
                 {mob? <div></div> : <div style={{height:'28px'}}></div>}
+				{
+                        !mob && 
+                        <Link to={'/'} className='headerIcon'><img onClick={() => {
+                            
+                        }} className='imghead' height='56px'  src={iconTransparent}></img></Link>
+                }
 				<div style={this.state.displayPage}>
 				<div class='flexTable' style={{width: '100%', backgroundColor: 'none', left:0, right:0}}>	
 				<div className='row' style={mob? {width:'90%', height:'90%', margin:'auto'} : {width:'80%', height:'80%', margin:'auto'}}>

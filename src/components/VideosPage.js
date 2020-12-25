@@ -1,6 +1,8 @@
 import React from 'react';
 import VideoGrid from './VideoGrid.js'
 import ProgressBar from './ProgressBar.js';
+import iconTransparent from './resources/icon_white_transparent.png';
+import {Link} from 'react-router-dom';
 
 class VideosPage extends React.Component{
 
@@ -28,9 +30,15 @@ class VideosPage extends React.Component{
             mob = true;
         }    
         return (
-            <div>
+            <div style={{overflowY:'hidden'}}>
                 <h1>Videos</h1>
                 {mob? <div></div> : <div style={{height:'28px'}}></div>}
+                {
+                        !mob && 
+                        <Link to={'/'} className='headerIcon'><img onClick={() => {
+                            
+                        }} className='imghead' height='56px'  src={iconTransparent}></img></Link>
+                    }
                 <div style={this.state.styleVideos}><VideoGrid nVids={100} home={false}></VideoGrid></div>
                 <div style={this.state.styleLoad} id='barVid'>
                     <ProgressBar progress={{amount: 1, time:10}} styleBar={{width:dim, height:dim}}></ProgressBar>

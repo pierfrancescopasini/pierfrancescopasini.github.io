@@ -1,6 +1,9 @@
 import React from 'react';
 import SpotifyEmbed from './SpotifyEmbed.js'
 import ProgressBar from './ProgressBar.js'
+import iconTransparent from './resources/icon_white_transparent.png';
+import {Link} from 'react-router-dom';
+
 
 class ProjectsPage extends React.Component {
     state = {
@@ -30,6 +33,12 @@ class ProjectsPage extends React.Component {
             <div>
                 <h1>Music</h1>
                 {mob? <div></div> : <div style={{height:'28px'}}></div>}
+                {
+                        !mob && 
+                        <Link to={'/'} className='headerIcon'><img onClick={() => {
+                            
+                        }} className='imghead' height='56px'  src={iconTransparent}></img></Link>
+                }
                 <div><SpotifyEmbed nTracks={100} nAlbums={100} displayAlbums={true}></SpotifyEmbed></div>
                 <div style={this.state.styleLoad}><ProgressBar progress={{amount: 0.2, time: 1}} styleBar={{ width: dim, height: dim}} ></ProgressBar></div>
             </div>

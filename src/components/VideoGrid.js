@@ -73,15 +73,12 @@ class VideoGrid extends React.Component {
             id = 'videoGridMob';
         }
 
-        document.body.style.overflowY = 'hidden';
 
         return (
             <div 
                 style={{
                     width: window.innerWidth,
                     margin: 'auto',
-                    overflow: 'hidden',
-                    overflowY:'hidden'
                 }}>
            {
                !this.props.home && !mob?
