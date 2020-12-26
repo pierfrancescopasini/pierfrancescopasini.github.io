@@ -125,38 +125,40 @@ body {
 }
 
 .svgCont{
-  width: 53px;
+  width: 56px;
   height: 56px;
-  border-color: #000000;
+  background: #000000;
+  background-color: #000000;
+  background-size: cover;
+  align-content: center;
+}
+
+.em{
+  width: 56px;
+  height: 56px;
+  background: #000000;
   background-color: #f5f5f5b7;
+  background-size: cover;
+  align-content: center;
 }
 
 .svgContInv{
-  width: 53px;
+  width: 56px;
   height: 56px;
-  border-color: #000000;
   background-color: #000000;
   fill: #f5f5f5b7;
 }
+
 .svgContInv:hover{
-  width: 53px;
-  height: 56px;
-  border-color: #000000;
-  background-color: #000000;
   fill: #F5F5F5;
 }
 
-
-.svgCont:hover{
-  background-color: #f5f5f5;
+.inPath{
+  fill: #f5f5f5b7;
 }
 
-.pathCont{
-  margin: auto;
-}
-
-.pathContInv{
-  margin: auto;
+.inPath:hover{
+  fill: #f5f5f5;
 }
 
 #iconPiano:focus{
@@ -216,12 +218,9 @@ h1,h2,h3, h4{
 
 .socialGrid{
   display: grid;
-  grid-template-columns: 56px 56px 56px 56px;
-  grid-template-rows: 56px;
-  gap: 0px;
-  border:0vw;
-  margin: auto;
+  grid-template-columns: 25% 25% 25% 25%;
   background-color: #000000;
+  margin: auto;
 }
 
 #videocontactslink{
