@@ -1,0 +1,6 @@
+[
+	{ img:'Academy1.jpg', link:'https://www.consbs.it'},
+	{ img:'Academy2.jpg', link:'https://meranojazz.it/it/chi-siamo'},
+	{ img:'Academy3.jpg', link:'http://www.cetmusic.it'},
+	{ img:'Academy4.jpg', link:'https://www.consmilano.it'},
+]

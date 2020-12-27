@@ -1,0 +1,6 @@
+[
+	{ img:'Comune1.jpg', link:'http://www.comune.passirano.bs.it/hh/index.php'},
+	{ img:'Comune2.jpg', link:'https://www.comune.cremona.it'},
+	{ img:'Comune3.jpg', link:'http://www.comune.sanfelicedelbenaco.bs.it'},
+	{ img:'Comune4.jpg', link:'http://www.comune.sanfelicedelbenaco.bs.it'},
+	]

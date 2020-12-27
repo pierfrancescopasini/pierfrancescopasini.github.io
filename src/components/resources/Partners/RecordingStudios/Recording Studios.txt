@@ -1,0 +1,14 @@
+[
+	{ img:'Studio1.jpg', link:'http://www.indieboxmusichall.org/wordpress/'},
+	{ img:'Studio2.jpg', link:'https://www.altrefrequenze.it'},
+	{ img:'Studio3.jpg', link:'https://www.poddighe.com/studio/ita/'},
+	{ img:'Studio4.jpg', link:'https://www.facebook.com/monolithrecordingstudio/'},
+	{ img:'Studio5.jpg', link:'http://www.macwavestudios.com'},
+	{ img:'Studio6.jpg', link:'https://suonovivo.com/index.php?option=com_content&view=article&id=20&catid=10&Itemid=179'},
+	{ img:'Studio7.jpg', link:'https://www.facebook.com/leklubhaus/'},
+	{ img:'Studio8.jpg', link:'https://www.facebook.com/lamacinasonora'},
+	{ img:'Studio9.jpg', link:'http://www.massivearts.com'},
+	{ img:'Studio10.jpg', link:'https://www.bigtreestudio.it/studio'},
+	{ img:'Studio11.jpg', link:'https://www.nacholibrestudios.com'},
+	{ img:'Studio12.jpg', link:'https://www.bluefemme.it'},
+	]

@@ -1,0 +1,6 @@
+[
+	{ img:'Booking1.jpg', link:'http://www.locusta.net/rost_detail.php?id=146&lang=i&band=Voodoo%20Kid'},
+	{ img:'Booking2.jpg', link:'https://www.astarteagency.it/#/Home/7336'},
+	{ img:'Booking3.jpg', link:'http://www.antennamusicfactory.com/artista.php?a=mecna'},
+	{ img:'Booking4.jpg', link:'https://www.instagram.com/loud.promotion/'},
+	]

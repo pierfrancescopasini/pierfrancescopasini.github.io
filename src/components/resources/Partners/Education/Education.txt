@@ -1,0 +1,6 @@
+[
+	{ img:'Education1.jpg', link:'https://www.musicalbeautyschool.it/collaboratori_docenti/'},
+	{ img:'Education2.jpg', link:'https://musical-mente.it/accademia-gli-insegnanti/'},
+	{ img:'Education3.jpg', link:'https://www.madonnadellaneve.it/primaria/classi-docenti-primaria/'},
+	{ img:'Education4.jpg', link:'https://www.docety.com/coachs/23324/dettagli/Pasini+Pierfrancesco#gref'},
+	]

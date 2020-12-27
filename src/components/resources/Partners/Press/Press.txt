@@ -1,0 +1,6 @@
+[
+	{ img:'Press1.jpg', link:'https://www.musicajazz.it/jazz-on-the-road-2019/'},
+	{ img:'Press2.jpg', link:'https://www.giornaledibrescia.it/tempo-libero/greg-dallavoce-new-orleans-è-il-singolo-perfetto-per-la-fase-2-1.3482987'},
+	{ img:'Press3.jpg', link:'https://www.christiansalerno.com/accompagnamenti-al-pianoforte-per-le-canzoni-moderne/'},
+	{ img:'Press4.jpg', link:'https://tg24.sky.it/spettacolo/musica/2020/12/18/domenica-chiamamifaro'},
+	]

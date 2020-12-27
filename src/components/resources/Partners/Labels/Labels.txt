@@ -1,0 +1,9 @@
+[
+	{ img:'Labels1.jpg', link:'https://debord.it/grooviglio.html'},
+	{ img:'Labels2.jpg', link:'https://www.facebook.com/disagiolabel/'},
+	{ img:'Labels3.jpg', link:'https://www.carosellorecords.com/artisti/voodoo_kid'},
+	{ img:'Labels4.jpg', link:'https://www.facebook.com/vulcanoproduzioni'},
+	{ img:'Labels5.jpg', link:'https://www.facebook.com/UMARecordsIT/'},
+	{ img:'Labels6.jpg', link:'https://www.facebook.com/virginrecordsita/'},
+	{ img:'Labels7.jpg', link:'https://www.universalmusic.it/popular-music/artista/mecna_30870885633/'},
+	]
