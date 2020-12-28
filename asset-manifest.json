@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.0014d0e0.chunk.css",
-    "main.js": "/static/js/main.89f4c994.chunk.js",
-    "main.js.map": "/static/js/main.89f4c994.chunk.js.map",
+    "main.js": "/static/js/main.472fc2cd.chunk.js",
+    "main.js.map": "/static/js/main.472fc2cd.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.4d22da63.js",
     "runtime-main.js.map": "/static/js/runtime-main.4d22da63.js.map",
     "static/css/2.ab18fb39.chunk.css": "/static/css/2.ab18fb39.chunk.css",
@@ -98,16 +98,16 @@
     "static/media/b1mobile.239f452f.png": "/static/media/b1mobile.239f452f.png",
     "static/media/backLibro.e8e3ee0d.png": "/static/media/backLibro.e8e3ee0d.png",
     "static/media/background1.682c70d8.jpg": "/static/media/background1.682c70d8.jpg",
+    "static/media/background3.6648eecc.jpg": "/static/media/background3.6648eecc.jpg",
     "static/media/frontLibro.dfd03e73.png": "/static/media/frontLibro.dfd03e73.png",
     "static/media/icon_white_transparent.07f1e2e8.png": "/static/media/icon_white_transparent.07f1e2e8.png",
-    "static/media/logo.94561e5c.png": "/static/media/logo.94561e5c.png",
-    "static/media/pierpiero.64f785bd.jpeg": "/static/media/pierpiero.64f785bd.jpeg"
+    "static/media/logo.94561e5c.png": "/static/media/logo.94561e5c.png"
   },
   "entrypoints": [
     "static/js/runtime-main.4d22da63.js",
     "static/css/2.ab18fb39.chunk.css",
     "static/js/2.9c2e2a0f.chunk.js",
     "static/css/main.0014d0e0.chunk.css",
-    "static/js/main.89f4c994.chunk.js"
+    "static/js/main.472fc2cd.chunk.js"
   ]
 }
