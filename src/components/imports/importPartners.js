@@ -27,9 +27,9 @@ import labels1 from '../resources/Partners/Labels/Labels1.jpg'
 import labels2 from '../resources/Partners/Labels/Labels2.jpg'
 import labels3 from '../resources/Partners/Labels/Labels3.jpg'
 import labels4 from '../resources/Partners/Labels/Labels4.jpg'
-import labels5 from '../resources/Partners/Labels/Labels2.jpg'
-import labels6 from '../resources/Partners/Labels/Labels3.jpg'
-import labels7 from '../resources/Partners/Labels/Labels4.jpg'
+import labels5 from '../resources/Partners/Labels/Labels5.jpg'
+import labels6 from '../resources/Partners/Labels/Labels6.jpg'
+import labels7 from '../resources/Partners/Labels/Labels7.jpg'
 
 //Live stuff
 import live1 from '../resources/Partners/Live/Live1.jpg'
@@ -183,9 +183,6 @@ const studios = [
     studio11,
     studio12,
 ]
-
-
-
 
 const partners = {
     academies,
