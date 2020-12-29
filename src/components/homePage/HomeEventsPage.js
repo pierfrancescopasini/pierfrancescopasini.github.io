@@ -22,7 +22,9 @@ class HomeEventsPage extends React.Component{
 							evArr.map((item) => (
 								<GridImage key={item.name} nElem={1} sEl={item} home={true}></GridImage>
 							))
-                        :  <div style={{width:'60%', margin:'auto'}}><GridImage nElem={2} sEl={0} home={true}></GridImage>
+                        :  <div style={{width:'60%', margin:'auto'}}>
+                            <GridImage nElem={1} sEl={0} home={true}></GridImage>
+                            <GridImage nElem={1} sEl={1} home={true}></GridImage>
 						</div>
                     }
                     </div>

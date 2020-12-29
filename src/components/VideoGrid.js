@@ -115,12 +115,15 @@ class VideoGrid extends React.Component {
                             <i style={{borderColor: '#f5f5f5',  marginTop: '23px', marginRight:'-2.5px'}} className="arrow left"></i>
                         </div>
                         <div style={{margin:'auto'}}>
-                        <YouTube
-                            className='customYTHome'
-                            videoId={this.state.currentVideo}
-                            opts={opts}
+                        <iframe 
+                            width={opts.width} 
+                            height={opts.height}  
+                            src={"https://www.youtube.com/embed/" + this.state.currentVideo }
+                            frameborder="0" 
+                            allow="autoplay; encrypted-media" 
+                            allowfullscreen
                             >
-                        </YouTube>
+                        </iframe>
                         </div>
                     </div>
         </div> :

@@ -1,5 +1,7 @@
 import React from 'react'
 import partners from './imports/importPartners'
+import iconTransparent from './resources/icon_white_transparent.png';
+import {Link} from 'react-router-dom';
 
 let partnersArray = Object.keys(partners);
 let partnersCategory = []
@@ -10,6 +12,9 @@ class PartnersPage extends React.Component {
     render() {
         return (
             <div style={{ backgroundColor: "white" }}>
+                 <Link to={'/'} className='headerIcon'><img onClick={() => {
+                            
+                        }} className='imghead' height='56px'  src={iconTransparent}></img></Link>
                 <h1 style={{ color: '#000000' }}>Partners</h1>
                 {
                     partnersCategory.map(
