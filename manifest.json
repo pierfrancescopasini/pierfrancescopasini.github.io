@@ -2,21 +2,7 @@
   "short_name": "Pierfrancsco Pasini",
   "name": "Pierfrancesco Pasini",
   "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": ".",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "pieroIcon.png",
-      "type": "image/png",
-      "sizes": "."
-    },
-    {
-      "src": "pieroIcon.png",
-      "type": "image/png",
-      "sizes": "."
-    }
+
   ],
   "start_url": ".",
   "display": "standalone",
