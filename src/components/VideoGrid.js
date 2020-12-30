@@ -29,8 +29,8 @@ class VideoGrid extends React.Component {
             };
             if(!this.props.home){
                 opts = {
-                    width: '' + window.innerWidth*0.7,
-                    height: '' + window.innerWidth*0.4,
+                    width: '' + window.innerWidth*0.85,
+                    height: '' + window.innerWidth*0.45,
                     playerVars: {
                         color: 'white',
                         autoplay: 0,

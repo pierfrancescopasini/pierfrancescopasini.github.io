@@ -465,8 +465,7 @@ h1,h2,h3, h4{
   width: 100%;
 }
 
-@media screen and (max-width:600px) and (orientation:portrait){
-  .calendarIt{
+ .calendarIt{
   position: absolute;
   bottom: 8px;
   left: 2.5%;
@@ -483,9 +482,8 @@ h1,h2,h3, h4{
   color: rgb(0,0,0,1);
   cursor: pointer;
 }
-}
 
-@media screen and (max-width:900px) and (orientation:landscape){
+@media screen and (min-width:300px) and (orientation:landscape){
   .calendarIt{
   position: absolute;
   bottom: 0px;
@@ -537,7 +535,7 @@ h1,h2,h3, h4{
   border-radius: 4px;
 }
 
-@media screen and (min-width:901px){
+@media screen and (min-width:900px){
   .calendarDay{
     background-color: #f5f5f5;
     border-radius: 0px 0px 4px 4px;
@@ -547,7 +545,7 @@ h1,h2,h3, h4{
   }
 }
 
-@media screen and (max-width:900px) and (orientation:landscape){
+@media screen and (min-width:900px) and (orientation:landscape){
   .calendarDay{
     background-color: #f5f5f5;
     border-radius: 0px 0px 4px 4px;
@@ -558,7 +556,7 @@ h1,h2,h3, h4{
 }
 
 
-@media screen and (max-width:600px){
+@media screen and (min-width:300px){
   .calendarDay{
     background-color: #f5f5f5;
     border-radius: 0px 0px 4px 4px;

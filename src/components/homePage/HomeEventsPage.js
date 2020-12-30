@@ -15,7 +15,7 @@ class HomeEventsPage extends React.Component{
 		let evArr = [2, 1, 0];
         return (
             <div>
-                {mob? <div></div> : <div style={{height:'50px'}}></div>}
+                {mob? <div style={{height:'80px'}}></div> : <div style={{height:'50px'}}></div>}
                 <div style={{width:'80%', height:'80%', margin:'auto'}}>
                     <div className='row' style={!mob? {width:'80%', margin:'auto'}: {height:'40%', margin:'auto'}}>
 						{!mob? 

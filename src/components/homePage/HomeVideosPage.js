@@ -24,7 +24,7 @@ class HomeVideosPage extends React.Component {
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){nVids = 2; mob=true}          
         return (
             <div>
-                {mob? <div></div> : <div style={{height:'50px'}}></div>}
+                {mob? <div style={{height:'80px'}}></div> : <div style={{height:'50px'}}></div>}
                 <div style={this.state.styleVid}><VideoGrid nVids={nVids} home={true}></VideoGrid></div>
                 <div style={this.state.styleLoad}><ProgressBar progress={{amount: 0.2, time: 1}} styleBar={{ width: dim, height: dim}} ></ProgressBar></div>
             </div>
