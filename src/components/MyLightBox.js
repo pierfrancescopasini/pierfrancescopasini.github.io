@@ -30,7 +30,10 @@ class MyLightBox extends React.Component {
                             }}
                             onTouchStart={()=>{window.location = this.props.link}}
                             src={this.props.mainSrc}
-                            width={mob? '70%' : '30%'}
+                            style={{
+                                maxWidth:'100%',
+                                maxHeight:'100vh'
+                            }}
                             onLoad={(e) => {
                                 this.setState({imgHeight:e.target.height +10, imgWidth:e.target.width +10})
                             }}

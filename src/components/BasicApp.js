@@ -11,6 +11,9 @@ import back1 from './resources/background1.jpg';
 import back1mob from './resources/b1mobile.png';
 import smoothscroll from 'smoothscroll-polyfill';
 import iconTransparent from './resources/icon_white_transparent.png'
+import tourPic from './resources/currentTour.jpg'
+import LinkItem from './LinkItem';
+import Imagewithlightbox from './Imagewithlightbox'
 
 import {
     Link,
@@ -42,6 +45,7 @@ class BasicApp extends React.Component {
 
     render() {
         document.body.style.backgroundColor = '#000000'
+        let tourImg = `url(${tourPic})`;
         let height = window.innerHeight * 1.1;
         let styleH1, styleH2;
         let mob = false;
@@ -193,7 +197,10 @@ class BasicApp extends React.Component {
                             <HomeVideosPage></HomeVideosPage>
                         </div>
                         <div id='homeEvents' style={{ height: height, width: '100%', marginTop: 0, marginBottom: '0px' }}>
-                            <HomeEventsPage></HomeEventsPage>
+                            <div style={{ height: height*0.7, width: '80%', margin:'auto', marginTop: '0px', marginBottom: '20px'}}>
+                                <Imagewithlightbox src={tourPic} home={true}></Imagewithlightbox>
+                            </div>
+                          <LinkItem path={'/events'} name={'More'} home={false}></LinkItem>
                         </div>
                     </div>
                     <hr></hr>
@@ -207,3 +214,5 @@ class BasicApp extends React.Component {
 }
 
 export default BasicApp;
+
+//
