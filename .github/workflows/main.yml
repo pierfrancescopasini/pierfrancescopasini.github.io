@@ -27,10 +27,11 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Deploy changes
-        run: gh-pages -b master -d react-scripts build
+        run: echo Ciao
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          npm install -g gh-pages --save-dev
+          npm run react-scripts build
+          gh-pages -b master -d react-scripts build
