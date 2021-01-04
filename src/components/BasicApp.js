@@ -197,7 +197,7 @@ class BasicApp extends React.Component {
                             <HomeVideosPage></HomeVideosPage>
                         </div>
                         <div id='homeEvents' style={{ height: height, width: '100%', marginTop: 0, marginBottom: '0px' }}>
-                            <div style={{ height: height*0.7, width: '80%', margin:'auto', marginTop: '0px', marginBottom: '20px'}}>
+                            <div style={{ height:'auto', width: '80%', margin:'auto', marginTop: '0px', marginBottom: '20px'}}>
                                 <Imagewithlightbox src={tourPic} home={true}></Imagewithlightbox>
                             </div>
                           <LinkItem path={'/events'} name={'More'} home={false}></LinkItem>

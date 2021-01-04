@@ -32,7 +32,7 @@ class MyLightBox extends React.Component {
                             src={this.props.mainSrc}
                             style={{
                                 maxWidth:'100%',
-                                maxHeight:'100vh'
+                                maxHeight:'90vh'
                             }}
                             onLoad={(e) => {
                                 this.setState({imgHeight:e.target.height +10, imgWidth:e.target.width +10})
