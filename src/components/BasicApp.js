@@ -7,7 +7,7 @@ import HomeVideosPage from './homePage/HomeVideosPage.js';
 import HomeEventsPage from './homePage/HomeEventsPage.js';
 import HomeBookPage from './homePage/HomeBookPage.js';
 import icon from './resources/logo.png';
-import back1 from './resources/background1.jpg';
+import back1 from './resources/homePage1.jpg';
 import back1mob from './resources/b1mobile.png';
 import smoothscroll from 'smoothscroll-polyfill';
 import iconTransparent from './resources/icon_white_transparent.png'
@@ -183,7 +183,6 @@ class BasicApp extends React.Component {
                             </header>
                            }
                         <div style={{height:'100px'}}></div>
-                        <h1 style={styleH1} id="nameTitle" >Pierfrancesco Pasini</h1>
                     </div>
                     <div>
                         <div className='fab'

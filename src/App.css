@@ -114,22 +114,22 @@ body {
   transition: 0.3s;
 }
 
-.column img {
+.eventImage {
   position: relative;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  margin-right: 8px;
-  margin-left: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
   vertical-align: middle;
   cursor: pointer;
   transition: 0.3s;
   border-radius: 4px;
 }
 
-.column img:hover {
-  transform: rotate(1deg);
-  transform-origin: center;
-  transition: 0.5s;
+.eventImage:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
+  z-index: 20;
 }
 
 .svgCont{
@@ -695,7 +695,7 @@ h1,h2,h3, h4{
 }
 
 .coverImgDiv:hover{
-  transform: rotate(2deg);
+  transform: scale(1.05);
   transform-origin: center;
   transition: 0.3s;
 }

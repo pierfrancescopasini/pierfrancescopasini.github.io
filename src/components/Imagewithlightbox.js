@@ -22,6 +22,7 @@ class GridImage extends React.Component {
             <div>
                 <div className='imgCont'>
                     <img
+                        className='eventImage'
                         src={this.props.src}
                         alt={''}
                         style={{ width: '95%', height: '95%' }}
