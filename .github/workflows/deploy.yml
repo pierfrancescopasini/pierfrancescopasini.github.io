@@ -28,3 +28,4 @@ jobs:
       with:
         deploy_key: ${{ secrets.ACTION_DEPLOY_KEY }}
         publish_dir: ./build
+        publish_branch: master
