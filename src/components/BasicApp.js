@@ -205,7 +205,7 @@ class BasicApp extends React.Component {
                     </div>
                     <hr></hr>
                     <footer style={{ width: '100%', height: '10%' }}><Contacts></Contacts></footer>
-                    <h1>culino</h1>
+                    <h1>culetto</h1>
                 </div>
                 <div style={this.state.displayBar} ><ProgressBar progress={{ amount: 0.3, time: 10 }} styleBar={{ width: window.outerWidth / 4, height: window.outerWidth / 4 }}></ProgressBar></div>
             </div>
