@@ -195,6 +195,7 @@ class BasicApp extends React.Component {
                         </div>
                         <div id='homeVideos' style={{ height:window.innerHeight, width: '100%', marginTop: 0, marginBottom: '0px'}}>
                             <HomeVideosPage></HomeVideosPage>
+                            <h1>culettone</h1>
                         </div>
                         <div id='homeEvents' style={{ height: height, width: '100%', marginTop: 0, marginBottom: '0px' }}>
                             <div style={{ height:'auto', width: '80%', margin:'auto', marginTop: '0px', marginBottom: '20px'}}>
@@ -205,7 +206,6 @@ class BasicApp extends React.Component {
                     </div>
                     <hr></hr>
                     <footer style={{ width: '100%', height: '10%' }}><Contacts></Contacts></footer>
-                    <h1>culetto</h1>
                 </div>
                 <div style={this.state.displayBar} ><ProgressBar progress={{ amount: 0.3, time: 10 }} styleBar={{ width: window.outerWidth / 4, height: window.outerWidth / 4 }}></ProgressBar></div>
             </div>
