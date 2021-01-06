@@ -185,15 +185,15 @@ const studios = [
 ]
 
 const partners = {
-    academies,
-    associations,
-    bookings,
-    education,
-    labels,
     lives,
+    studios,
+    labels,
+    bookings,
+    academies,
+    education,
+    associations,
     press,
     comuni,
-    studios,
 }
 
 export default partners;

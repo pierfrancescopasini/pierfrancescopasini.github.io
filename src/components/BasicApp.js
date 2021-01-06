@@ -101,7 +101,7 @@ class BasicApp extends React.Component {
                                     displayBar: {display:'none'}
                                 })
                             }
-                        }} className='imghead' height='56px'  src={iconTransparent}></img></span>
+                        }} className='imghead' height='50px'  src={iconTransparent}></img></span>
                     }
                     <div
                         className='mobMenu'
@@ -131,7 +131,7 @@ class BasicApp extends React.Component {
                             <header style={mob? {width: '100%', height: '10%', marginTop: '0%', marginBottom: '10%', borderRadius: '4px', background: 'none' }: { width: '100%', height: '10%', marginTop: '0%', marginBottom: '10%', marginLeft:'10%', borderRadius: '4px', background: 'none' }}>
                                 <div 
                                 ><img id='iconPiano' src={iconTransparent} 
-                                style={{ position: 'fixed', height: '60px', width: '50px', left: '15px', top: '15px', backgroundColor:'none', borderWidth:'2px', borderColor:'solid #f5f5f5' }}
+                                style={{ position: 'fixed', height: '50px', width: '35px', left: '15px', top: '15px', backgroundColor:'none', borderWidth:'2px', borderColor:'solid #f5f5f5' }}
                                     onClick={(e) => {
                                         this.disableScroll();
                                         window.scrollTo({ top: 0, left: 0 })
@@ -159,21 +159,22 @@ class BasicApp extends React.Component {
                             </header>
                             :
                             <header style={{ width: '100%', height: '5%', marginTop: '0%', borderRadius: '4px', background: 'none' }}>
-                                <span className='headerIcon'><img onClick={() => {
-                                        if(this.state.displayMenu.display === 'block'){
-                                            this.setState({
-                                                display:{display:'block'},
-                                                displayMenu:{display:'none'},
-                                                displayBar: {display:'none'}
-                                            })
-                                        } else {
-                                            this.setState({
-                                                display:{display:'none'},
-                                                displayMenu:{display:'block'},
-                                                displayBar: {display:'none'}
-                                            })
-                                        }
-                                    }} className='imghead' height='56px'  src={iconTransparent}></img></span>
+                                <span className='headerIcon' id='hoverme' onMouseOver={() => {console.log('hover')}}><img onClick={() => {
+                                    if (this.state.displayMenu.display === 'block') {
+                                        this.setState({
+                                            display: { display: 'block' },
+                                            displayMenu: { display: 'none' },
+                                            displayBar: { display: 'none' }
+                                        })
+                                    } else {
+                                        this.setState({
+                                            display: { display: 'none' },
+                                            displayMenu: { display: 'block' },
+                                            displayBar: { display: 'none' }
+                                        })
+                                    }
+                                }}
+                                 className='imghead' height='50px' src={iconTransparent}></img></span>
                                 <div className='lefty' style={{marginTop: '2%', float: 'left' }}>
                                     <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1, left: 0, behavior: 'smooth' }) }}>Videos</span>
                                     <Link to={'/projects'} style={{textDecoration:'none', color:'#F5F5F5'}}><span className={'headerspan'} >Music</span></Link>

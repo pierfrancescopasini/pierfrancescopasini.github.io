@@ -37,7 +37,7 @@ class VideosPage extends React.Component{
                         !mob && 
                         <Link to={'/'} className='headerIcon'><img onClick={() => {
                             
-                        }} className='imghead' height='56px'  src={iconTransparent}></img></Link>
+                        }} className='imghead' height='50px'  src={iconTransparent}></img></Link>
                 }
                 <div style={this.state.styleVideos}><VideoGrid nVids={100} home={false}></VideoGrid></div>
                 <div style={this.state.styleLoad} id='barVid'>

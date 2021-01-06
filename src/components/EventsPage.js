@@ -36,7 +36,7 @@ class EventsPage extends React.Component {
                         !mob && 
                         <Link to={'/'} className='headerIcon'><img onClick={() => {
                             
-                        }} className='imghead' height='56px'  src={iconTransparent}></img></Link>
+                        }} className='imghead' height='50px'  src={iconTransparent}></img></Link>
                 }
 				<div style={this.state.displayPage}>
 				<div class='flexTable' style={{width: '100%', backgroundColor: 'none', left:0, right:0}}>	

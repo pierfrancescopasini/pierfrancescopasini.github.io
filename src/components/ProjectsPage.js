@@ -39,7 +39,7 @@ class ProjectsPage extends React.Component {
                         !mob && 
                         <Link to={'/'} className='headerIcon'><img onClick={() => {
                             
-                        }} className='imghead' height='56px'  src={iconTransparent}></img></Link>
+                        }} className='imghead' height='50px'  src={iconTransparent}></img></Link>
                 }
                 <div><SpotifyEmbed nTracks={100} nAlbums={100} displayAlbums={true}></SpotifyEmbed></div>
                 </div>

@@ -23,12 +23,13 @@ class ProjectandVideos extends React.Component {
         return (
             <div id='videoscontactslink'>
                 <div style={{ margin: '20px' }} ><ProjectItem path={'/about'} name={'Bio'} update={() => {this.props.update()}}></ProjectItem></div>
-                <div style={{ margin: '20px' }} ><ProjectItem path={'/partners'} name={'Partners'} update={() => {this.props.update()}}></ProjectItem></div>
-                <div style={{ margin: '20px' }} ><ProjectItem path={'/projects'} name={'Music'} update={() => {this.props.update()}}></ProjectItem></div>
                 <div style={{ margin: '20px' }} ><ProjectItem name={'Videos'} path={'/videos'} scroll={{ top: height*1, left: 0, behavior: 'smooth'}} update={() => {this.props.update()}}></ProjectItem></div>
-                <div style={{ margin: '20px' }} ><ProjectItem name={'Events'} path={'/events'} scroll={{ top: height*2, left: 0, behavior: 'smooth'}} update={() => {this.props.update()}}></ProjectItem></div>
-                <div style={{ margin: '20px' }} ><ProjectItem name={'Contacts'} path={null} scroll={{ top: height*3, left: 0, behavior: 'smooth'}} update={() => {this.props.update()}}></ProjectItem></div>
                 <div style={{ margin: '20px' }}><ProjectItem name={'Archive'} path={null} scroll={{ top: 0, left: 0, behavior: 'smooth'}} update={() => {}}></ProjectItem></div>
+                <div style={{ margin: '20px' }} ><ProjectItem name={'Events'} path={'/events'} scroll={{ top: height*2, left: 0, behavior: 'smooth'}} update={() => {this.props.update()}}></ProjectItem></div>
+                <div style={{ margin: '20px' }} ><ProjectItem path={'/projects'} name={'Releases'} update={() => {this.props.update()}}></ProjectItem></div>
+                <div style={{ margin: '20px' }} ><ProjectItem path={'/partners'} name={'Partners'} update={() => {this.props.update()}}></ProjectItem></div>
+                <div style={{ margin: '20px' }} ><ProjectItem path={'/store'} name={'Store'} update={() => {this.props.update()}}></ProjectItem></div>
+                <div style={{ margin: '20px' }} ><ProjectItem name={'Contacts'} path={null} scroll={{ top: height*3, left: 0, behavior: 'smooth'}} update={() => {this.props.update()}}></ProjectItem></div>
             </div>
         )
     }
