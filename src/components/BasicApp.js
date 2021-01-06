@@ -195,7 +195,7 @@ class BasicApp extends React.Component {
                         </div>
                         <div id='homeVideos' style={{ height:window.innerHeight, width: '100%', marginTop: 0, marginBottom: '0px'}}>
                             <HomeVideosPage></HomeVideosPage>
-                            <h1>lolloni</h1>
+                            <h1>lollonis</h1>
                         </div>
                         <div id='homeEvents' style={{ height: height, width: '100%', marginTop: 0, marginBottom: '0px' }}>
                             <div style={{ height:'auto', width: '80%', margin:'auto', marginTop: '0px', marginBottom: '20px'}}>
