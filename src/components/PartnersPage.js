@@ -3,6 +3,7 @@ import partners from './imports/importPartners'
 import links from './imports/importPartnersLink'
 import iconTransparent from './resources/icon_white_transparent.png';
 import {Link} from 'react-router-dom';
+import background from './resources/partnersImage.png'
 
 let partnersArray = Object.keys(partners);
 let partnersCategory = []
@@ -11,12 +12,20 @@ for (let i = 0; i < partnersArray.length; i++) {
 }
 class PartnersPage extends React.Component {
     render() {
+        let mob = false;
+        if( /Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            mob = true;
+        }
+        let back = `url(${background})`;
+        
         return (
             <div style={{ backgroundColor: "white" }}>
-                 <Link to={'/'} className='headerIcon'><img onClick={() => {
-                            
-                        }} className='imghead' height='50px'  src={iconTransparent}></img></Link>
-                <h1 style={{ color: '#000000' }}>Partners</h1>
+                 <div style={mob ? {backgroundSize:window.innerWidth, backgroundRepeat: 'no-repeat', backgroundImage:back, height:window.innerHeight/2.6, marginTop:'0px', backgroundPosition:'center top'}: {backgroundSize:'100%', backgroundRepeat: 'no-repeat', backgroundImage:back, height:window.innerHeight/1.3, marginTop:'0px', backgroundPosition:'center top'}}>
+                <Link to={'/'} className='headerIcon'><img className='imghead' height='50px'  src={iconTransparent}></img></Link>
+                    <div style={mob ? { float: 'left', marginTop: window.innerHeight/3.5, marginLeft: '20px', color: '#F5F5F5', fontSize: '25px'} : { float: 'left', marginTop: window.innerHeight/1.6, marginLeft: '20px', color: '#F5F5F5', fontSize: '50px'} }>
+                            PARTNERS
+                    </div>
+                </div>
                 {
                     partnersCategory.map(
                         (category, index) =>

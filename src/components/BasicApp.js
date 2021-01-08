@@ -8,6 +8,7 @@ import HomeEventsPage from './homePage/HomeEventsPage.js';
 import HomeBookPage from './homePage/HomeBookPage.js';
 import icon from './resources/logo.png';
 import back1 from './resources/homePage1.jpg';
+import back2 from './resources/homePage2.png';
 import back1mob from './resources/b1mobile.png';
 import smoothscroll from 'smoothscroll-polyfill';
 import iconTransparent from './resources/icon_white_transparent.png'
@@ -50,6 +51,7 @@ class BasicApp extends React.Component {
         let styleH1, styleH2;
         let mob = false;
         let b1 = `url(${back1})`;
+        let b2 = `url(${back2})`;
         let land = false;
 
         if(/iPad/i.test(navigator.userAgent)){
@@ -67,7 +69,6 @@ class BasicApp extends React.Component {
                 styleH2 = {
                     fontSize: window.outerWidth / 18,
                 }
-                b1 = `url(${back1mob})`;
             } else {
                 styleH1 = {
                     fontSize: window.outerWidth / 20,
@@ -126,12 +127,12 @@ class BasicApp extends React.Component {
                     </div>
                 </div>
                 <div style={this.state.display}>
-                    <div style={{ height: height, width: '100%', margin: '0', marginRight: 'auto', marginBottom: 'auto', backgroundImage: b1, backgroundSize: 'cover'}}>
+                    <div style={{ height: height, width: '100%', margin: '0', marginRight: 'auto', marginBottom: 'auto', backgroundImage: b1, backgroundSize: 'cover', backgroundPosition:'center top'}}>
                         {mob ?
                             <header style={mob? {width: '100%', height: '10%', marginTop: '0%', marginBottom: '10%', borderRadius: '4px', background: 'none' }: { width: '100%', height: '10%', marginTop: '0%', marginBottom: '10%', marginLeft:'10%', borderRadius: '4px', background: 'none' }}>
                                 <div 
                                 ><img id='iconPiano' src={iconTransparent} 
-                                style={{ position: 'fixed', height: '50px', width: '35px', left: '15px', top: '15px', backgroundColor:'none', borderWidth:'2px', borderColor:'solid #f5f5f5' }}
+                                style={{ position: 'fixed', height: '50px', width: 'auto', left: '15px', top: '15px', backgroundColor:'none', borderWidth:'2px', borderColor:'solid #f5f5f5' }}
                                     onClick={(e) => {
                                         this.disableScroll();
                                         window.scrollTo({ top: 0, left: 0 })
@@ -178,8 +179,8 @@ class BasicApp extends React.Component {
                                 <div className='lefty' style={{marginTop: '2%', float: 'left' }}>
                                     <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1, left: 0, behavior: 'smooth' }) }}>Videos</span>
                                     <Link to={'/projects'} style={{textDecoration:'none', color:'#F5F5F5'}}><span className={'headerspan'} >Music</span></Link>
-                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 2, left: 0, behavior: 'smooth' }) }}>Tour</span>
-                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 3, left: 0, behavior: 'smooth' }) }}>Contacts</span>
+                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 3, left: 0, behavior: 'smooth' }) }}>Tour</span>
+                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 4, left: 0, behavior: 'smooth' }) }}>Contacts</span>
                                 </div>
                             </header>
                            }
@@ -195,6 +196,9 @@ class BasicApp extends React.Component {
                         </div>
                         <div id='homeVideos' style={{ height:window.innerHeight, width: '100%', marginTop: 0, marginBottom: '0px'}}>
                             <HomeVideosPage></HomeVideosPage>
+                        </div>
+                        <div style={{ height:window.innerHeight/2, width: '100%', marginTop: 0, marginBottom: '80px', backgroundImage: b2, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition:'center top'}}>
+
                         </div>
                         <div id='homeEvents' style={{ height: height, width: '100%', marginTop: 0, marginBottom: '0px' }}>
                             <div style={{ height:'auto', width: '80%', margin:'auto', marginTop: '0px', marginBottom: '20px'}}>
