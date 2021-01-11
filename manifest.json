@@ -5,12 +5,12 @@
     {
       "src": "favicon.ico",
       "type": "image/x-icon",
-      "sizes": "64x64 32x32 16x16"
+      "sizes": "2249x2710"
     },
     {
       "src": "pieroIcon.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "2249x2710"
     }
   ],
   "start_url": ".",
