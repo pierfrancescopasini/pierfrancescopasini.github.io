@@ -1,4 +1,5 @@
 export const links = [
+    { text: 'Confirmation', link: 'M9VnCvtRLdk' },
     { text: 'Mecna', link: 'LJtOZH701ZI' },
     { text: 'ChiamamiFaro', link: 'nmRxDltsFZY' },
     { text: 'Carolina', link: 'HzTJkXgs44c' },
