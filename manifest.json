@@ -5,12 +5,22 @@
     {
       "src": "favicon.png",
       "type": "image/png",
-      "sizes": "2249x2710"
+      "sizes": "64x64"
+    },
+    {
+      "src": "favicon.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "favicon.png",
+      "type": "image/png",
+      "sizes": "16x16"
     },
     {
       "src": "pieroIcon.png",
       "type": "image/png",
-      "sizes": "2249x2710"
+      "sizes": "512x512"
     }
   ],
   "start_url": ".",
