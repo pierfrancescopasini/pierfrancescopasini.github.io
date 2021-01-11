@@ -8,7 +8,7 @@ import HomeEventsPage from './homePage/HomeEventsPage.js';
 import HomeBookPage from './homePage/HomeBookPage.js';
 import icon from './resources/logo.png';
 import back1 from './resources/homePage1.jpg';
-import back2 from './resources/homePage2.png';
+import back2 from './resources/homePage2.jpg';
 import back1mob from './resources/b1mobile.png';
 import smoothscroll from 'smoothscroll-polyfill';
 import iconTransparent from './resources/icon_white_transparent.png'
@@ -179,8 +179,8 @@ class BasicApp extends React.Component {
                                 <div className='lefty' style={{marginTop: '2%', float: 'left' }}>
                                     <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1, left: 0, behavior: 'smooth' }) }}>Videos</span>
                                     <Link to={'/projects'} style={{textDecoration:'none', color:'#F5F5F5'}}><span className={'headerspan'} >Music</span></Link>
-                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 3, left: 0, behavior: 'smooth' }) }}>Tour</span>
-                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 4, left: 0, behavior: 'smooth' }) }}>Contacts</span>
+                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 2, left: 0, behavior: 'smooth' }) }}>Tour</span>
+                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 3, left: 0, behavior: 'smooth' }) }}>Contacts</span>
                                 </div>
                             </header>
                            }
@@ -197,14 +197,13 @@ class BasicApp extends React.Component {
                         <div id='homeVideos' style={{ height:window.innerHeight, width: '100%', marginTop: 0, marginBottom: '0px'}}>
                             <HomeVideosPage></HomeVideosPage>
                         </div>
-                        <div style={{ height:window.innerHeight/2, width: '100%', marginTop: 0, marginBottom: '80px', backgroundImage: b2, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition:'center top'}}>
-
-                        </div>
-                        <div id='homeEvents' style={{ height: height, width: '100%', marginTop: 0, marginBottom: '0px' }}>
-                            <div style={{ height:'auto', width: '80%', margin:'auto', marginTop: '0px', marginBottom: '20px'}}>
-                                <Imagewithlightbox src={tourPic} home={true}></Imagewithlightbox>
+                        <div id='homeEvents' style={mob ? {height: height/2, width: '100%', marginTop: 0, marginBottom: '0px' } : { height: height/1.1, width: '100%', marginTop: 0, marginBottom: '0px' }}>
+                            <div style={{width:'80%', height:'30%', margin:'auto', marginTop: '0px', marginBottom: '20px'}}>
+                            {/*<div style={{ width:'80%', height:'60%', margin:'auto', marginTop: '0px', marginBottom: '20px'}}>
+                                <Imagewithlightbox src={tourPic} home={true}></Imagewithlightbox>*/}
+                                <div style={{width:'80%', height:'60%', margin:'auto'}}><h3 style={{marginTop:'30%'}}>There are no upcoming events <br></br>:(</h3></div>
                             </div>
-                          <LinkItem path={'/events'} name={'More'} home={false}></LinkItem>
+                            <LinkItem path={'/events'} name={'More'} home={false}></LinkItem>
                         </div>
                     </div>
                     <hr></hr>

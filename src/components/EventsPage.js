@@ -10,7 +10,7 @@ class EventsPage extends React.Component {
 
 	state = {
 		displayBar: { display: 'block' },
-		displayPage: { display: 'none' }
+		displayPage: { display: 'none' },
 	}
 
 	componentDidMount = () => {
@@ -20,6 +20,16 @@ class EventsPage extends React.Component {
 			this.setState({displayPage:{display:'block'}, displayBar:{display:'none'}})
 		});
 	}
+
+	disableScroll = () => {
+        document.body.style.overflow = 'hidden';
+        document.querySelector('html').scrollTop = window.scrollY;
+    }
+        
+    enableScroll = () => {
+        document.body.style.overflow = null;
+    }
+
 
 	render() {
 		document.body.style.backgroundColor = "#000000";
@@ -39,8 +49,8 @@ class EventsPage extends React.Component {
                     </div>
                 </div>
 				<div style={this.state.displayPage}>
-				<div class='flexTable' style={{width: '100%', backgroundColor: 'none', left:0, right:0, marginTop:'5%'}}>	
-				<div className='row' style={mob? {width:'90%', height:'90%', margin:'auto'} : {width:'80%', height:'80%', margin:'auto'}}>
+				<div class='flexTable' style={{width: '100%', backgroundColor: 'none', margin:'auto', marginTop:'5%'}}>	
+				<div className='row' style={mob? {width:'90%', marginLeft:'2%'} : {width:'80%', marginLeft:'10%'}}>
 					<GridImage nElem={nElem} sEl={0}></GridImage>
 					<GridImage nElem={nElem} sEl={1}></GridImage>
 					<GridImage nElem={nElem} sEl={2}></GridImage>

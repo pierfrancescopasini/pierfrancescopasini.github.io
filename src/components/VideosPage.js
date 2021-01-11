@@ -8,7 +8,7 @@ class VideosPage extends React.Component{
 
     state={
         styleVideos : {display:'none'},
-        styleLoad : {display:'block'}
+        styleLoad : {display:'block'},
     }
     componentDidMount = () => {
         window.scrollTo({top:0, left:0, behavior:'smooth'});
@@ -18,6 +18,15 @@ class VideosPage extends React.Component{
         window.addEventListener('load', () => {            
             this.setState({ stylePage: { display: 'block' }, styleLoad: { display: 'none' } })
         });
+    }
+
+    disableScroll = () => {
+        document.body.style.overflow = 'hidden';
+        document.querySelector('html').scrollTop = window.scrollY;
+    }
+        
+    enableScroll = () => {
+        document.body.style.overflow = null;
     }
     
     render(){
@@ -36,6 +45,7 @@ class VideosPage extends React.Component{
                 {
                         !mob && 
                         <Link to={'/'} className='headerIcon'><img onClick={() => {
+                            this.setState({displayVideos:'none'})
                             
                         }} className='imghead' height='50px'  src={iconTransparent}></img></Link>
                 }

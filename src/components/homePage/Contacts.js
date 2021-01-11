@@ -44,19 +44,23 @@ class Contacts extends React.Component {
                                 marginBottom: '20px',
                                 marginLeft: 'auto',
                             }}>(+39)  3343777058</div>
+                       <div
+                            style={{ fontSize: fontSize, marginBottom: '20px', cursor: 'pointer', height: '20px' }}>
+                                P.IVA 04239570981
+                        </div>
                         <div
                             id='mailCont'
                             onClick={() => {
                                 window.location.href = "mailto:pierfrancesco.pasini@gmail.com";
                             }}
-                            style={{ fontSize: fontSize, marginBottom: '20px', cursor: 'pointer', height: '20px' }}>
+                            style={{ fontSize: fontSize, marginBottom: '25px', cursor: 'pointer', height: '20px' }}>
                             pierfrancesco.pasini@gmail.com
                     </div>
                         <div style={{ marginTop: '20px', marginBottom: '20px' }}>
-                            <div style={{ margin: 'auto', width: '224px' }}>
+                            <div style={{ margin: 'auto', width: '280px' }}>
                                 <div className='socialGrid'>
                                     <div className='svgCont'>
-                                        <a href='https://www.instagram.com/pierfrancescopasini/'>
+                                        <a href='https://www.instagram.com/pierfrancescopasini/' target='__black'>
                                             <svg
                                                 width="35px"
                                                 height="35px"
@@ -70,7 +74,7 @@ class Contacts extends React.Component {
                                     </div>
                                     <div className='svgCont'>
 
-                                        <a href='https://it-it.facebook.com/pierfrancesco.pasini'>
+                                        <a href='https://it-it.facebook.com/pierfrancesco.pasini' target='__black'>
                                             <svg
                                                 width="35px"
                                                 height="35px"
@@ -81,10 +85,20 @@ class Contacts extends React.Component {
                                                 />
                                             </svg>
                                         </a>
-
                                     </div>
+                                    <a href='https://www.tiktok.com/@pierfrancescopasini' target='__black'>
                                     <div className='svgCont'>
-                                        <a href='https://open.spotify.com/playlist/24UsN45jfHwYkqtKKt9hwG?si=GY2Fh68jSqG3HnyuMEnlAA'>
+                                    <svg 
+                                                width="35px"
+                                                height="25px"
+                                                style={{marginTop:'5px'}}
+                                                viewBox="0 0 512 512">
+                                            <path className='inPath' d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"></path>
+                                        </svg> 
+                                    </div>
+                                    </a>
+                                    <div className='svgCont'>
+                                        <a href='https://open.spotify.com/playlist/24UsN45jfHwYkqtKKt9hwG?si=GY2Fh68jSqG3HnyuMEnlAA' target='__black'>
                                         <svg
                                                 width='50px'
                                                 height='50px'
@@ -100,7 +114,7 @@ class Contacts extends React.Component {
                                         </a>
                                     </div>
                                     <div className='svgCont'>
-                                        <a href='https://www.youtube.com/channel/UCPB3jS7oPlA-UGXdSfjqxNA'>
+                                        <a href='https://www.youtube.com/channel/UCPB3jS7oPlA-UGXdSfjqxNA' target='__black'>
                                             <svg
                                                 width="35px"
                                                 height="35px"

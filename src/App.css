@@ -29,7 +29,7 @@ body {
 .lefty{
   float: left;
   width: 100%;
-  top: 20px;
+  top: 12.5px;
   position: absolute;
   left: 25px;
 }
@@ -91,7 +91,7 @@ body {
   transition: 0.3s;
   border: solid transparent;
   border-width: 1px;
-  top: 26px;
+  top: 10px;
   padding: 2px;
 }
 
@@ -226,7 +226,7 @@ h1,h2,h3, h4{
 
 .socialGrid{
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 20% 20% 20% 20% 20%;
   background-color: #000000;
   margin: auto;
 }
