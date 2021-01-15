@@ -5,10 +5,9 @@ import {Link} from 'react-router-dom'
 
 class ProjectandVideos extends React.Component {
     state = {
-        mouseOverVideos: false,
-        mouseOverSpotify: false,
-        mouseOverAbout: false
+        archive:false
     }
+
     render() {
         let height = window.innerHeight*1.135;
         let mob = false;
@@ -22,14 +21,25 @@ class ProjectandVideos extends React.Component {
         }
         return (
             <div id='videoscontactslink'>
-                <div style={{ margin: '20px' }} ><ProjectItem path={'/about'} name={'Bio'} update={() => {this.props.update()}}></ProjectItem></div>
-                <div style={{ margin: '20px' }} ><ProjectItem name={'Videos'} path={'/videos'} scroll={{ top: height*1, left: 0, behavior: 'smooth'}} update={() => {this.props.update()}}></ProjectItem></div>
-                <div style={{ margin: '20px' }}><ProjectItem name={'Archive'} path={null} scroll={{ top: 0, left: 0, behavior: 'smooth'}} update={() => {}}></ProjectItem></div>
-                <div style={{ margin: '20px' }} ><ProjectItem name={'Events'} path={'/events'} scroll={{ top: height*2 , left: 0, behavior: 'smooth'}} update={() => {this.props.update()}}></ProjectItem></div>
-                <div style={{ margin: '20px' }} ><ProjectItem path={'/projects'} name={'Releases'} update={() => {this.props.update()}}></ProjectItem></div>
-                <div style={{ margin: '20px' }} ><ProjectItem path={'/partners'} name={'Partners'} update={() => {this.props.update()}}></ProjectItem></div>
-                <div style={{ margin: '20px' }} ><ProjectItem path={'/store'} name={'Store'} update={() => {this.props.update()}}></ProjectItem></div>
-                <div style={{ margin: '20px' }} ><ProjectItem name={'Contacts'} path={null} scroll={{ top: height*3, left: 0, behavior: 'smooth'}} update={() => {this.props.update()}}></ProjectItem></div>
+                <div disabled={this.state.archive} style={this.state.archive ? { margin:'20px', opacity:0.2} :{ margin: '20px' }} ><ProjectItem path={'/about'} name={'Bio'} update={() => {this.props.update()}}></ProjectItem></div>
+                <div style={this.state.archive ? { margin:'20px', opacity:0.2} :{ margin: '20px' }} ><ProjectItem name={'Videos'} path={'/videos'} scroll={{ top: height*1, left: 0, behavior: 'smooth'}} update={() => {this.props.update()}}></ProjectItem></div>
+                <div    onClick={() => {
+                        setTimeout(() => {this.state.archive ? 
+                            this.setState({archive:false})
+                            : this.setState({archive:true});}, 100)
+                        }} style={{ margin: '20px' }}><ProjectItem name={'Archive'} path={null} scroll={{ top: 0, left: 0, behavior: 'smooth'}} update={() => {}} 
+                     >
+                    </ProjectItem>
+                </div>
+                <div style={this.state.archive ? { margin:'20px', opacity:0.2} :{ margin: '20px' }} ><ProjectItem path={'/store'} name={'Store'} update={() => {this.props.update()}}></ProjectItem></div>
+                <div style={this.state.archive ? { margin:'20px', opacity:0.2} :{ margin: '20px' }} ><ProjectItem name={'Contacts'} path={null} scroll={{ top: height*3, left: 0, behavior: 'smooth'}} update={() => {this.props.update()}}></ProjectItem></div>
+                {this.state.archive && 
+                    (<div>
+                        <div style={{ margin: '20px' }} ><ProjectItem name={'Events'} path={'/events'} scroll={{ top: height*2 , left: 0, behavior: 'smooth'}} update={() => {this.props.update()}}></ProjectItem></div>
+                        <div style={{ margin: '20px' }} ><ProjectItem path={'/projects'} name={'Releases'} update={() => {this.props.update()}}></ProjectItem></div>
+                        <div style={{ margin: '20px' }} ><ProjectItem path={'/partners'} name={'Partners'} update={() => {this.props.update()}}></ProjectItem></div>
+                    </div>)
+                }
             </div>
         )
     }
