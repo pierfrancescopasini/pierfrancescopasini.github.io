@@ -28,16 +28,19 @@ class ProjectsPage extends React.Component {
         let dim = window.outerWidth / 4;        
         let mob = false;
         let back = `url(${background})`;
-        if( /Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (window.orientation === 0 || window.orientation === 180)) {
+        if( /Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && (window.orientation === 0 || window.orientation === 180)) {
             mob = true;
             
         }
+        if(window.orientation === 0  || window.orientation === 180){
+			mob = true;
+		}
         
         return (
             <div>
                 <div style={this.state.styleLoad}><ProgressBar progress={{amount: 0.2, time: 0.4}} styleBar={{ width: dim, height: dim}} ></ProgressBar></div>
                 <div style={this.state.styleSpotify}>
-                <div style={mob ? {backgroundSize:window.innerWidth, backgroundRepeat: 'no-repeat', backgroundImage:back, height:window.innerHeight/2.6, marginTop:'0px', backgroundPosition:'center top'}: {backgroundSize:'100%', backgroundRepeat: 'no-repeat', backgroundImage:back, height:window.innerHeight/1.3, marginTop:'0px', backgroundPosition:'center top'}}>
+                <div style={mob ? {backgroundSize:window.innerWidth, backgroundRepeat: 'no-repeat', backgroundImage:back, height:window.innerHeight/2.6, marginTop:'0px', backgroundPosition:'center top'}: {backgroundSize:'100%', backgroundRepeat: 'no-repeat', backgroundImage:back, height:window.innerHeight/1.3, marginTop:'0px', backgroundPosition:'center center'}}>
                 <Link to={'/'} className='headerIcon'><img className='imghead' height='50px'  src={iconTransparent}></img></Link>
                     <div style={mob ? { float: 'left', marginTop: window.innerHeight/3.5, marginLeft: '20px', color: '#F5F5F5', fontSize: '25px'} : { float: 'left', marginTop: window.innerHeight/1.6, marginLeft: '20px', color: '#F5F5F5', fontSize: '50px'} }>
                             RELEASES
