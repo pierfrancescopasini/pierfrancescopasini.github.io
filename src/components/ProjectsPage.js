@@ -28,9 +28,9 @@ class ProjectsPage extends React.Component {
         let dim = window.outerWidth / 4;        
         let mob = false;
         let back = `url(${background})`;
-
-        if( /Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        if( /Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (window.orientation === 0 || window.orientation === 180)) {
             mob = true;
+            
         }
         
         return (

@@ -13,7 +13,7 @@ for (let i = 0; i < partnersArray.length; i++) {
 class PartnersPage extends React.Component {
     render() {
         let mob = false;
-        if( /Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        if( /Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (window.orientation === 0 || window.orientation === 180)) {
             mob = true;
         }
         let back = `url(${background})`;
@@ -32,7 +32,7 @@ class PartnersPage extends React.Component {
                             <div key={Math.random().toFixed(5)}>
                                 <div style={{ marginTop: '80px', marginBottom: '60px' }}>
                                     <div>
-                                        <h2 style={{ color: '#000000', marginLeft: '5%', float: 'left' }}>
+                                        <h2 style={ mob ? {color: '#000000', marginLeft: '5%', float: 'left', fontSize:'12px'} : { color: '#000000', marginLeft: '5%', float: 'left' }}>
                                             {partnersArray[index] === 'lives' ? 'Live Music' : partnersArray[index] === 'comuni' ? 'Public Authorities' : partnersArray[index]}
                                         </h2>
                                     </div>

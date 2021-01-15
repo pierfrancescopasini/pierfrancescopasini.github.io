@@ -39,9 +39,11 @@ class AboutPage extends React.Component {
         let topImg = `url(${pieropic})`;
         document.body.style.overflow = null;
         let mob = false;
-        if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        if( /Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (window.orientation === 0 || window.orientation === 180)) {
             mob = true;
-		}
+            
+        }
+        
         return (
             <div>
                 <div style={this.state.styleLoad} id='barVid'>
@@ -52,7 +54,7 @@ class AboutPage extends React.Component {
                         <Link to={'/'} className='headerIcon'><img onClick={() => {
                             
                         }} className='imghead' height='50px'  src={iconTransparent}></img></Link>
-                    <div style={mob ? { width: '100%', height: window.innerHeight/2.8, backgroundSize: '100%', backgroundImage: topImg, backgroundColor:'#000000', backgroundPosition: 'center top' } : { width: '100%', height: window.innerHeight/1.3, backgroundSize: '100%', backgroundImage: topImg, backgroundColor:'#000000', backgroundPosition: 'center top' }}>
+                    <div style={mob ? { width: '100%', height: window.innerHeight/2.8, backgroundSize: '100%', backgroundImage: topImg, backgroundColor:'#000000', backgroundPosition: 'center top', backgroundRepeat:'no-repeat'} : { width: '100%', height: window.innerHeight/1.3, backgroundSize: '100%', backgroundImage: topImg, backgroundColor:'#000000', backgroundPosition: 'center top', backgroundRepeat:'no-repeat'}}>
                         <div style={mob ? { float: 'left', marginTop: window.innerHeight/3.5, marginLeft: '20px', color: '#F5F5F5', fontSize: '25px'} : { float: 'left', marginTop: window.innerHeight/1.6, marginLeft: '20px', color: '#F5F5F5', fontSize: '50px'} }>
                             BIO
                         </div>
