@@ -32,9 +32,15 @@ class ProjectsPage extends React.Component {
             mob = true;
             
         }
+
+        let fontSize = '50px';
+        let margin = window.innerHeight/1.6;
         if(window.orientation === 0  || window.orientation === 180){
-			mob = true;
-		}
+            mob = true;
+		}else if(window.orientation === 90  || window.orientation === -90){
+            fontSize = '40px';
+            margin = window.innerHeight/1.8;
+        }
         
         return (
             <div>
@@ -42,7 +48,7 @@ class ProjectsPage extends React.Component {
                 <div style={this.state.styleSpotify}>
                 <div style={mob ? {backgroundSize:window.innerWidth, backgroundRepeat: 'no-repeat', backgroundImage:back, height:window.innerHeight/2.6, marginTop:'0px', backgroundPosition:'center top'}: {backgroundSize:'100%', backgroundRepeat: 'no-repeat', backgroundImage:back, height:window.innerHeight/1.3, marginTop:'0px', backgroundPosition:'center center'}}>
                 <Link to={'/'} className='headerIcon'><img className='imghead' height='50px'  src={iconTransparent}></img></Link>
-                    <div style={mob ? { float: 'left', marginTop: window.innerHeight/3.5, marginLeft: '20px', color: '#F5F5F5', fontSize: '25px'} : { float: 'left', marginTop: window.innerHeight/1.6, marginLeft: '20px', color: '#F5F5F5', fontSize: '50px'} }>
+                    <div style={mob ? { float: 'left', marginTop: window.innerHeight/3.5, marginLeft: '20px', color: '#F5F5F5', fontSize: '25px'} : { float: 'left', marginTop: margin, marginLeft: '20px', color: '#F5F5F5', fontSize: fontSize} }>
                             RELEASES
                     </div>
                 </div>
