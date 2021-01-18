@@ -3,6 +3,8 @@ import pieropic from './resources/bioImage.png'
 import ProgressBar from './ProgressBar.js'
 import iconTransparent from './resources/icon_white_transparent.png';
 import {Link} from 'react-router-dom';
+import DocLightbox from './DocLightbox';
+
 
 class AboutPage extends React.Component {
 
@@ -74,7 +76,7 @@ class AboutPage extends React.Component {
                                 ABOUT ME
                             </h2>
                         </div>
-                        <div style={{width:'80%', margin:'auto', fontSize:'20px', marginBottom:'50px'}}>
+                        <div style={mob ? {width:'80%', margin:'auto', fontSize:'12px', marginBottom:'50px'} : {width:'80%', margin:'auto', fontSize:'20px', marginBottom:'50px'}}>
                             Ciao a tutti, io sono Pierfrancesco Pasini. Sono molto molto bravo. Fatemi suonare con voi. Perfavore. 
                             Quando avete tempo. Se avete tempo.  IO VI AMO TUTTI
                             Ciao a tutti, io sono Pierfrancesco Pasini. Sono molto molto bravo. Fatemi suonare con voi. Perfavore. 
@@ -95,8 +97,11 @@ class AboutPage extends React.Component {
                         <div>  
                             <h2 style={{color:'#000000', float:'left', marginLeft:'20px', fontWeight:'light'}}>CV</h2>
                         </div>
-                        <div style={{width:'80%', margin:'auto', fontSize:'20px', marginBottom:'50px'}}>
-                            Hi yall, here's my CV
+                        <div style={mob ? {width:'80%', margin:'auto', fontSize:'12px', marginBottom:'50px'} : {width:'80%', margin:'auto', fontSize:'20px', marginBottom:'50px'}}>
+                            <div style={{display:'grid', gridTemplateColumns:'50% 50%'}}> 
+                                <div style={{width:'80%', marginLeft:'5%', marginTop:'30%'}}>Hi yall, here's my BT</div>
+                                <DocLightbox th={false} cv={true}></DocLightbox>
+                            </div>
                         </div>
                         </div>                    
                     </div>
@@ -105,8 +110,11 @@ class AboutPage extends React.Component {
                         <div>  
                             <h2 style={{color:'#000000', float:'left', marginLeft:'20px', fontWeight:'light'}}>BACHELOR THESIS</h2>
                         </div>
-                        <div style={{width:'80%', margin:'auto', fontSize:'20px', marginBottom:'50px'}}>
-                            Hi yall, here's my BT
+                        <div style={mob ? {width:'80%', margin:'auto', fontSize:'12px', marginBottom:'50px'} : {width:'80%', margin:'auto', fontSize:'20px', marginBottom:'50px'}}>
+                            <div style={{display:'grid', gridTemplateColumns:'50% 50%'}}> 
+                                <div style={{width:'80%', marginLeft:'5%', marginTop:'30%'}}>Hi yall, here's my BT</div>
+                                <DocLightbox th={true} cv={false}></DocLightbox>
+                            </div>
                         </div>
                     </div>
                     </div>  

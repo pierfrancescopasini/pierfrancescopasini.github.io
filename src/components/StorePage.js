@@ -76,7 +76,7 @@ class StorePage extends React.Component {
                                 ABOUT ME
                             </h2>
                         </div>
-                        <div style={{width:'80%', margin:'auto', fontSize:'20px', marginBottom:'50px'}}>
+                        <div style={mob ? {width:'80%', margin:'auto', fontSize:'12px', marginBottom:'50px'} : {width:'80%', margin:'auto', fontSize:'20px', marginBottom:'50px'}}>
                             Ciao a tutti, io sono Pierfrancesco Pasini. Sono molto molto bravo. Fatemi suonare con voi. Perfavore. 
                             Quando avete tempo. Se avete tempo.  IO VI AMO TUTTI
                             Ciao a tutti, io sono Pierfrancesco Pasini. Sono molto molto bravo. Fatemi suonare con voi. Perfavore. 
@@ -97,7 +97,7 @@ class StorePage extends React.Component {
                         <div>  
                             <h2 style={{color:'#000000', float:'left', marginLeft:'20px', fontWeight:'light'}}>CV</h2>
                         </div>
-                        <div style={{width:'80%', margin:'auto', fontSize:'20px', marginBottom:'50px'}}>
+                        <div style={mob ? {width:'80%', margin:'auto', fontSize:'12px', marginBottom:'50px'} : {width:'80%', margin:'auto', fontSize:'20px', marginBottom:'50px'}}>
                             Hi yall, here's my CV
                         </div>
                         </div>                    
@@ -107,7 +107,7 @@ class StorePage extends React.Component {
                         <div>  
                             <h2 style={{color:'#000000', float:'left', marginLeft:'20px', fontWeight:'light'}}>BACHELOR THESIS</h2>
                         </div>
-                        <div style={{width:'80%', margin:'auto', fontSize:'20px', marginBottom:'50px'}}>
+                        <div style={mob ? {width:'80%', margin:'auto', fontSize:'12px', marginBottom:'50px'} : {width:'80%', margin:'auto', fontSize:'20px', marginBottom:'50px'}}>
                             Hi yall, here's my BT
                         </div>
                     </div>
