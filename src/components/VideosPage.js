@@ -12,6 +12,7 @@ class VideosPage extends React.Component{
     }
     componentDidMount = () => {
         window.scrollTo({top:0, left:0, behavior:'smooth'});
+        document.querySelector('#meta-location').setAttribute('content', window.location.href)
         setTimeout(() => {        
             this.setState({ styleVideos: { display: 'block' }, styleLoad: { display: 'none' } })
         }, 2000);

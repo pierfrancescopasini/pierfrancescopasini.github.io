@@ -17,6 +17,7 @@ class EventsPage extends React.Component {
 		setTimeout(() => {this.setState({displayPage:{display:'block'}, displayBar:{display:'none'}})}, 500);
 		window.scrollTo({top:0, left:0, behavior:'smooth'});
 		window.addEventListener('load', () => {
+			document.querySelector('#meta-location').setAttribute('content', window.location.href)
 			this.setState({displayPage:{display:'block'}, displayBar:{display:'none'}})
 		});
 	}
@@ -58,7 +59,7 @@ class EventsPage extends React.Component {
                     </div>
                 </div>
 				<div style={this.state.displayPage}>
-				<div class='flexTable' style={{width: '100%', backgroundColor: 'none', margin:'auto', marginTop:'5%'}}>	
+				<div className='flexTable' style={{width: '100%', backgroundColor: 'none', margin:'auto', marginTop:'5%'}}>	
 				<div className='row' style={mob? {width:'90%', marginLeft:'2%'} : {width:'80%', marginLeft:'10%'}}>
 					<GridImage nElem={nElem} sEl={0}></GridImage>
 					<GridImage nElem={nElem} sEl={1}></GridImage>

@@ -4,6 +4,8 @@ import ProgressBar from './ProgressBar.js'
 import iconTransparent from './resources/icon_white_transparent.png';
 import {Link} from 'react-router-dom';
 import DocLightbox from './DocLightbox';
+import {CVFiles, THFiles} from './imports/importDocs';
+
 
 
 class AboutPage extends React.Component {
@@ -20,6 +22,7 @@ class AboutPage extends React.Component {
         }, 800);
         window.addEventListener('load', () => {
             this.setState({ stylePage: { display: 'block', backgroundColor:'#F5F5F5', width:'100%' }, styleLoad: { display: 'none' } })
+            document.querySelector('#meta-location').setAttribute('content', window.location.href)
         });
     }
 
@@ -100,7 +103,7 @@ class AboutPage extends React.Component {
                         <div style={mob ? {width:'80%', margin:'auto', fontSize:'12px', marginBottom:'50px'} : {width:'80%', margin:'auto', fontSize:'20px', marginBottom:'50px'}}>
                             <div style={{display:'grid', gridTemplateColumns:'50% 50%'}}> 
                                 <div style={{width:'80%', marginLeft:'5%', marginTop:'30%'}}>Hi yall, here's my BT</div>
-                                <DocLightbox th={false} cv={true}></DocLightbox>
+                                <DocLightbox th={false} cv={true} files={CVFiles}></DocLightbox>
                             </div>
                         </div>
                         </div>                    
@@ -113,7 +116,7 @@ class AboutPage extends React.Component {
                         <div style={mob ? {width:'80%', margin:'auto', fontSize:'12px', marginBottom:'50px'} : {width:'80%', margin:'auto', fontSize:'20px', marginBottom:'50px'}}>
                             <div style={{display:'grid', gridTemplateColumns:'50% 50%'}}> 
                                 <div style={{width:'80%', marginLeft:'5%', marginTop:'30%'}}>Hi yall, here's my BT</div>
-                                <DocLightbox th={true} cv={false}></DocLightbox>
+                                <DocLightbox th={true} cv={false} files={THFiles}></DocLightbox>
                             </div>
                         </div>
                     </div>

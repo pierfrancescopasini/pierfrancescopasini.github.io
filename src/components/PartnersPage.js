@@ -11,6 +11,10 @@ for (let i = 0; i < partnersArray.length; i++) {
     partnersCategory.push(partners[partnersArray[i]])
 }
 class PartnersPage extends React.Component {
+
+    componentDidMount = () => {
+        document.querySelector('#meta-location').setAttribute('content', window.location.href)
+    }
     render() {
         let mob = false;
         if( /Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && (window.orientation === 0 || window.orientation === 180)) {

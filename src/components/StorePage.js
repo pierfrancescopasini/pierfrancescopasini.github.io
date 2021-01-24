@@ -13,6 +13,7 @@ class StorePage extends React.Component {
 
     componentDidMount = () => {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+        document.querySelector('#meta-location').setAttribute('content', window.location.href)
         setTimeout(() => {
             this.setState({ stylePage: { display: 'block', backgroundColor:'#F5F5F5', width:'100%'}, styleLoad: { display: 'none' } })
         }, 800);

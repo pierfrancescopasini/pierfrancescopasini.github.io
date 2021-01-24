@@ -2,19 +2,13 @@ import React from 'react';
 import Contacts from './homePage/Contacts.js';
 import ProgressBar from './ProgressBar.js';
 import ProjectsandVideos from './ProjectsandVideos.js';
-import HomeProjectPage from './homePage/HomeProjectPage.js';
 import HomeVideosPage from './homePage/HomeVideosPage.js';
-import HomeEventsPage from './homePage/HomeEventsPage.js';
-import HomeBookPage from './homePage/HomeBookPage.js';
-import icon from './resources/logo.png';
-import back1 from './resources/homePage1.jpg';
-import back2 from './resources/homePage2.jpg';
-import back1mob from './resources/b1mobile.png';
+import back1 from './resources/homePage1.png';
+import back2 from './resources/homePage2.png';
 import smoothscroll from 'smoothscroll-polyfill';
 import iconTransparent from './resources/icon_white_transparent.png'
 import tourPic from './resources/currentTour.jpg'
 import LinkItem from './LinkItem';
-import Imagewithlightbox from './Imagewithlightbox'
 
 import {
     Link,
@@ -32,6 +26,7 @@ class BasicApp extends React.Component {
 
     componentDidMount() {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+        document.querySelector('#meta-location').setAttribute('content', window.location.href)
         setTimeout(() => { this.setState({ display: { display: 'block' }, displayBar: { display: 'none' } }) }, 1300);
     }
 

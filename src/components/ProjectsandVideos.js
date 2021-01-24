@@ -1,7 +1,5 @@
 import React from 'react';
-import LinkItem from './LinkItem.js';
 import ProjectItem from './ProjectItem.js'
-import {Link} from 'react-router-dom'
 
 class ProjectandVideos extends React.Component {
     state = {
