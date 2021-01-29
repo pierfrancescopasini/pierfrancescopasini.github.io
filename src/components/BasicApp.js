@@ -4,7 +4,7 @@ import ProgressBar from './ProgressBar.js';
 import ProjectsandVideos from './ProjectsandVideos.js';
 import HomeVideosPage from './homePage/HomeVideosPage.js';
 import back1 from './resources/homePage1.png';
-import back2 from './resources/homePage2.png';
+import back1mob from './resources/homePage1mob.png';
 import smoothscroll from 'smoothscroll-polyfill';
 import iconTransparent from './resources/icon_white_transparent.png'
 import tourPic from './resources/currentTour.jpg'
@@ -46,14 +46,13 @@ class BasicApp extends React.Component {
         let styleH1, styleH2;
         let mob = false;
         let b1 = `url(${back1})`;
-        let b2 = `url(${back2})`;
         let land = false;
 
         if(/iPad/i.test(navigator.userAgent)){
             if (window.matchMedia("(orientation: portrait)").matches) {
                 mob = true;
+                b1 = `url(${back1mob})`;
             }
-
         }
 
         if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -75,6 +74,7 @@ class BasicApp extends React.Component {
                 land = true;
             }
             mob = true;
+            b1 = `url(${back1mob})`;
         }
 
 
@@ -149,7 +149,7 @@ class BasicApp extends React.Component {
                                                 }
                                             )
                                         }
-                                    }} className='headerspan'>
+                                    }}>
                                     </img>
                                 </div>
                             </header>

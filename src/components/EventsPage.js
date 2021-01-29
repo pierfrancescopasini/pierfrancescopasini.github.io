@@ -4,7 +4,8 @@ import GridImage from './GridImage'
 import {allEv} from './imports/events.js'
 import iconTransparent from './resources/icon_white_transparent.png';
 import {Link} from 'react-router-dom';
-import background from './resources/eventsImage.png'
+import background from './resources/eventsImage.png';
+import yall from 'yall-js';
 
 class EventsPage extends React.Component {
 
@@ -20,6 +21,9 @@ class EventsPage extends React.Component {
 			document.querySelector('#meta-location').setAttribute('content', window.location.href)
 			this.setState({displayPage:{display:'block'}, displayBar:{display:'none'}})
 		});
+
+		yall();
+		
 	}
 
 	disableScroll = () => {

@@ -62,6 +62,7 @@ body {
   transition: 0.5s;
   position: fixed;
   display: inline-block;
+  z-index: 2000;
 }
 
 .imghead{
@@ -93,6 +94,7 @@ body {
   border-width: 1px;
   top: 10px;
   padding: 2px;
+  z-index: 2000;
 }
 
 .headerspan:hover{

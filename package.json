@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "fs": "^0.0.1-security",
     "gh-pages": "^3.1.0",
     "rc-progress": "^3.1.1",
     "react": "^17.0.1",
@@ -23,6 +24,7 @@
     "react-youtube": "^7.13.0",
     "smoothscroll-polyfill": "^0.4.4",
     "web-vitals": "^0.2.4",
+    "yall-js": "^3.2.0",
     "yoast": "^1.0.0"
   },
   "scripts": {

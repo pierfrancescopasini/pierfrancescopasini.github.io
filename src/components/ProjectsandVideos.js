@@ -36,7 +36,6 @@ class ProjectandVideos extends React.Component {
                         <div style={{ margin: '20px', marginBottom: '30px' }} ><ProjectItem path={'/partners'} name={'Partners'} update={() => {this.props.update()}}></ProjectItem></div>
                     </div>)
                 }
-                <div style={this.state.archive ? { margin:'20px', opacity:0.1} :{ margin: '20px' }} ><ProjectItem path={'/store'} name={'Store'} update={() => {this.props.update()}}></ProjectItem></div>
                 <div style={this.state.archive ? { margin:'20px', opacity:0.1} :{ margin: '20px' }} ><ProjectItem name={'Contacts'} path={null} scroll={{ top: height*3, left: 0, behavior: 'smooth'}} update={() => {this.props.update()}}></ProjectItem></div>
             </div>
         )

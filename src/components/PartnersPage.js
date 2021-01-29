@@ -3,7 +3,8 @@ import partners from './imports/importPartners'
 import links from './imports/importPartnersLink'
 import iconTransparent from './resources/icon_white_transparent.png';
 import {Link} from 'react-router-dom';
-import background from './resources/partnersImage.png'
+import background from './resources/partnersImage.png';
+import yall from 'yall-js';
 
 let partnersArray = Object.keys(partners);
 let partnersCategory = []
@@ -13,7 +14,7 @@ for (let i = 0; i < partnersArray.length; i++) {
 class PartnersPage extends React.Component {
 
     componentDidMount = () => {
-        document.querySelector('#meta-location').setAttribute('content', window.location.href)
+        yall();
     }
     render() {
         let mob = false;
@@ -74,7 +75,9 @@ class PartnersPage extends React.Component {
                                                             const tab = window.open(item.link, '_blank');
                                                         }}
                                                     >
-                                                        <img src={image}
+                                                        <img 
+                                                            className = 'lazy'
+                                                            data-src={image}
                                                             style={{
                                                                 display: 'block',
                                                                 top: '50%',

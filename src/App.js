@@ -6,7 +6,6 @@ import VideosPage from './components/VideosPage.js';
 import ProjectsPage from './components/ProjectsPage.js';
 import EventsPage from './components/EventsPage.js';
 import PartnersPage from './components/PartnersPage.js';
-import StorePage from './components/StorePage.js';
 
 import {
   Route,
@@ -39,7 +38,6 @@ componentDidMount = () => {
                 <Route exact path='/about' component={AboutPage} />
                 <Route exact path='/videos' component={VideosPage} />
                 <Route exact path='/projects' component={ProjectsPage} />
-                <Route exact path='/store' component={StorePage} />
                 <Route exact path='/events' component={EventsPage} />
                 <Route exact path='/partners' component={PartnersPage} />
                 <Route exact path='/' component={BasicApp} />

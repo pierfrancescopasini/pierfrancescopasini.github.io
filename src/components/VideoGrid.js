@@ -3,9 +3,6 @@ import YouTube from 'react-youtube';
 import LinkItem from './LinkItem.js';
 import links from './imports/importLinkVideos.js'
 
-
-console.log(links)
-
 class VideoGrid extends React.Component {
 
     state = {
@@ -94,7 +91,7 @@ class VideoGrid extends React.Component {
                                     index: newIndex
                                 }
                             )}}
-                            style={{ right: '2.5px', marginTop: window.innerHeight/2 -56*3}}>
+                            style={{ right: '5px', marginTop: window.innerHeight/2 -56}}>
                             <i 
                             style={{borderColor: '#f5f5f5', marginTop: '23px', marginLeft:'-2.5px'}} className="arrow right"></i>
                         </div>
@@ -111,7 +108,7 @@ class VideoGrid extends React.Component {
                                 )
                             }
                             }}
-                        style={{left: '2.5px', marginTop: window.innerHeight/2 -56*3}}>
+                        style={{left: '5px', marginTop: window.innerHeight/2 -56*3}}>
                             <i style={{borderColor: '#f5f5f5',  marginTop: '23px', marginRight:'-2.5px'}} className="arrow left"></i>
                         </div>
                         <div style={{margin:'auto'}}>
@@ -144,7 +141,7 @@ class VideoGrid extends React.Component {
     }
             <div>
                 {this.props.home ?
-                        <div style={mob? { marginTop: '30%', width: '100%', height: '100%' } : { marginTop:'8%', width: '100%', height: '100%' }}><LinkItem path={'/videos'} name={'More'} home={false}></LinkItem></div>
+                        <div style={mob? { marginTop: '10%', width: '100%', height: '100%' } : { marginTop:'8%', width: '100%', height: '100%' }}><LinkItem path={'/videos'} name={'More'} home={false}></LinkItem></div>
                         : <div></div>
                     }
                 </div>

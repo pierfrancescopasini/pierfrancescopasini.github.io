@@ -23,7 +23,7 @@ class HomeVideosPage extends React.Component {
         let mob=false;
         if( /Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && (window.orientation === 0 || window.orientation === 180)) {
             mob = true;
-            nVids = 2; 
+            nVids = 2;
         }
         if(window.orientation === 0  || window.orientation === 180){
 			mob = true;

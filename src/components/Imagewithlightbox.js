@@ -1,5 +1,6 @@
 import React from 'react'
 import MyLightBox from './MyLightBox.js'
+import yall from 'yall-js';
 import "react-image-lightbox/style.css";
 
 
@@ -16,14 +17,13 @@ class GridImage extends React.Component {
             }
         )
     }
-
     render() {
         return (
             <div>
                 <div className='imgCont'>
                     <img
-                        className='eventImage'
-                        src={this.props.src}
+                        className='lazy eventImage'
+                        data-src={this.props.src}
                         alt={''}
                         style={{ width: '95%', height: '95%' }}
                         onClick={() => {
