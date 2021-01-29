@@ -42,14 +42,11 @@ class VideosPage extends React.Component{
         return (
             <div style={{overflowY:'hidden'}}>
                 <h1>Videos</h1>
-                {mob? <div></div> : <div style={{height:'28px'}}></div>}
-                {
-                        !mob && 
+                {mob? <div></div> : <div style={{height:'28px'}}></div>} 
                         <Link to={'/'} className='headerIcon'><img onClick={() => {
                             this.setState({displayVideos:'none'})
                             
                         }} className='imghead' height='50px'  src={iconTransparent}></img></Link>
-                }
                 <div style={this.state.styleVideos}><VideoGrid nVids={100} home={false}></VideoGrid></div>
                 <div style={this.state.styleLoad} id='barVid'>
                     <ProgressBar progress={{amount: 1, time:10}} styleBar={{width:dim, height:dim}}></ProgressBar>

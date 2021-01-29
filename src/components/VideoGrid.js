@@ -91,7 +91,7 @@ class VideoGrid extends React.Component {
                                     index: newIndex
                                 }
                             )}}
-                            style={{ right: '5px', marginTop: window.innerHeight/2 -56}}>
+                            style={{ right: '20px', marginTop: window.innerHeight/2 -56*3}}>
                             <i 
                             style={{borderColor: '#f5f5f5', marginTop: '23px', marginLeft:'-2.5px'}} className="arrow right"></i>
                         </div>
@@ -108,7 +108,7 @@ class VideoGrid extends React.Component {
                                 )
                             }
                             }}
-                        style={{left: '5px', marginTop: window.innerHeight/2 -56*3}}>
+                        style={{left: '20px', marginTop: window.innerHeight/2 -56*3}}>
                             <i style={{borderColor: '#f5f5f5',  marginTop: '23px', marginRight:'-2.5px'}} className="arrow left"></i>
                         </div>
                         <div style={{margin:'auto'}}>
