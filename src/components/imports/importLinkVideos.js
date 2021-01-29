@@ -3,7 +3,7 @@ export const links = [
     { text: 'Mecna', link: 'LJtOZH701ZI' },
     { text: 'ChiamamiFaro', link: 'nmRxDltsFZY' },
     { text: 'Carolina 2', link: 'HzTJkXgs44c' },
-    { text: 'Carolina', link: 'Lex3FXEpr0Y' },
+    { text: 'Carolina 1', link: 'Lex3FXEpr0Y' },
 ]
 
 export default links;
