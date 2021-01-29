@@ -21,11 +21,9 @@ jobs:
       run: yarn
     - name: Build page
       run: npm run build
-      env:
-        CI: false
     - name: Deploy to gh-pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.ACTION_DEPLOY_KEY }}
-        publish_dir: ./build
-        publish_branch: master
+      run: |
+          git config --global user.name ${{ secrets.USER_NAME }}\
+          git config --global user.mail ${{ secrets.USER_MAIL }}\
+          npm run deploy 
+
