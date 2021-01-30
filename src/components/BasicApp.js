@@ -189,16 +189,18 @@ class BasicApp extends React.Component {
                         >
                             <i className='arrow up' style={{ marginTop: '25px', borderColor: '#f5f5f5' }}></i>
                         </div>
-                        <div id='homeVideos' style={{ height:window.innerHeight, width: '100%', marginTop: 0, marginBottom: '0px'}}>
-                            <HomeVideosPage></HomeVideosPage>
-                        </div>
-                        <div id='homeEvents' style={mob ? {height: height/2, width: '100%', marginTop: 0, marginBottom: '0px' } : { height: height/1.1, width: '100%', marginTop: 0, marginBottom: '0px' }}>
-                            <div style={{width:'80%', height:'30%', margin:'auto', marginTop: '0px', marginBottom: '20px'}}>
-                            {/*<div style={{ width:'80%', height:'60%', margin:'auto', marginTop: '0px', marginBottom: '20px'}}>
-                                <Imagewithlightbox src={tourPic} home={true}></Imagewithlightbox>*/}
-                                <div style={{width:'80%', height:'60%', margin:'auto'}}><h3 style={{marginTop:'30%'}}>There are no upcoming events <br></br>:(</h3></div>
+                        <div style={{display:'grid', gridTemplateColumns: '100%', gap:'5%', marginBottom:'50px'}}>
+                            <div id='homeVideos' style={{ width: '100%', marginTop: 0, marginBottom: '0px'}}>
+                                <HomeVideosPage></HomeVideosPage>
                             </div>
-                            <LinkItem path={'/events'} name={'More'} home={false}></LinkItem>
+                            <div id='homeEvents' style={mob ? {height: height/2, width: '100%', marginTop: 0, marginBottom: '0px' } : { height: height/1.1, width: '100%', marginTop: 0, marginBottom: '0px' }}>
+                                <div style={{width:'80%', height:'30%', margin:'auto', marginTop: '0px', marginBottom: '20px'}}>
+                                {/*<div style={{ width:'80%', height:'60%', margin:'auto', marginTop: '0px', marginBottom: '20px'}}>
+                                    <Imagewithlightbox src={tourPic} home={true}></Imagewithlightbox>*/}
+                                    <div style={{width:'80%', height:'60%', margin:'auto'}}><h3 style={{marginTop:'30%'}}>There are no upcoming events <br></br>:(</h3></div>
+                                </div>
+                                <LinkItem path={'/events'} name={'More'} home={false}></LinkItem>
+                            </div>
                         </div>
                     </div>
                     <hr></hr>

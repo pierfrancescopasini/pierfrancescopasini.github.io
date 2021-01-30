@@ -39,18 +39,18 @@ class VideoGrid extends React.Component {
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             mob = true;
             if (window.matchMedia("(orientation: portrait)").matches) {
-                    opts = {
-                        width: '' + window.innerWidth*0.85,
-                        height: '' + window.innerWidth*0.45,
-                        playerVars: {
-                            color: 'white',
-                            autoplay: 0,
-                        },
-                    };
-            } else {
                 opts = {
-                    width: '' + window.innerWidth*0.4,
-                    height: '' + window.innerWidth*0.23,
+                    width: '' + window.innerWidth*0.85,
+                    height: '' + window.innerWidth*0.45,
+                    playerVars: {
+                        color: 'white',
+                        autoplay: 0,
+                    },
+                };
+            }else{
+                opts = {
+                    width: '' + window.innerWidth*0.7,
+                    height: '' + window.innerWidth*0.32,
                     playerVars: {
                         color: 'white',
                         autoplay: 0,
@@ -124,7 +124,7 @@ class VideoGrid extends React.Component {
                         </div>
                     </div>
         </div> :
-        <div style={{marginTop: '20%'}} id={id}>
+        <div style={{marginTop: '10%', marginBottom:'10%'}} id={id}>
             {
                 inLinks.map((item) =>
                     (<div key={item.link} style={{height:'80%', width:'100%', margin:'auto'}}>
@@ -141,7 +141,7 @@ class VideoGrid extends React.Component {
     }
             <div>
                 {this.props.home ?
-                        <div style={mob? { marginTop: '15%', width: '100%', height: '100%' } : { marginTop:'8%', width: '100%', height: '100%' }}><LinkItem path={'/videos'} name={'More'} home={false}></LinkItem></div>
+                        <div style={mob? { marginTop: '5%', width: '100%', height: '100%' } : { marginTop:'8%', width: '100%', height: '100%' }}><LinkItem path={'/videos'} name={'More'} home={false}></LinkItem></div>
                         : <div></div>
                     }
                 </div>
