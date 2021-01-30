@@ -74,13 +74,12 @@ class PartnersPage extends React.Component {
                                                         onClick={() => {
                                                             let arr = links[partnersArray[index]];
                                                             let items = arr.filter((item) => item.img === image);
-                                                            const tab = window.open(items[0].link, '_blank');
+                                                            if(items[0] !==null){const tab = window.open(items[0].link, '_blank');}
                                                         }}
                                                     >
-                                                        {console.log('IMAGE ' + category['' + image].default)}
                                                         <img 
                                                             className = 'lazy'
-                                                            data-src={category[image].default}
+                                                            data-src={category[image] !== null && category[image].default}
                                                             style={{
                                                                 display: 'block',
                                                                 top: '50%',

@@ -43,7 +43,6 @@ class GridImage extends React.Component{
 		for(let i=0; i < this.props.nElem; i++){
 			let event = events[this.props.sEl + 3*i];
 			if(event){
-				console.log(event.name);
 				ev.push(event);
 			}
 		}
@@ -51,24 +50,18 @@ class GridImage extends React.Component{
 
         return (
             <div className='column'>
-				{
-					ev.forEach((item) => {
-						console.log(item);
-						//console.log('DEFAULT ' + images[item.img].default)
-					})
-				}
                 {
 					ev.map((item) => {
 						return (
 							<div key={images[item.name]}>
 									<Imagewithlighbox
-										src={images[item.name].default} 
-										link={item.link} 
+										src={images[item.name] !== null && images[item.name].default} 
+										link={item !== null ? item.link : ''} 
 										style={{width:'100%'}} 
 										withDate={this.props.home}
-										day = {item.date.getDate()}
-										month={item.date.toLocaleString('en-US', { month: 'short' })}
-										year={item.date.getFullYear()}
+										day = {item !== null ? item.date.getDate() : ''}
+										month={item !== null && item.date.toLocaleString('en-US', { month: 'short' })}
+										year={ item !== null && item.date.getFullYear()}
 									></Imagewithlighbox>
 							</div>
 						)
