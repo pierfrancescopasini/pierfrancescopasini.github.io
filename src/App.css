@@ -333,7 +333,7 @@ h1,h2,h3, h4{
 #videoGridMob{
   display: grid;
   grid-template-columns: 100%;
-  grid-row-gap: 2%;
+  grid-row-gap: 5%;
 }
 
 #videoGridHome{
@@ -349,6 +349,15 @@ h1,h2,h3, h4{
   margin-left:auto;
   margin-bottom: 20px;
 }
+
+.customYTHome{
+  transition: 0.3s;
+  border-radius: 4px;
+  margin-right:auto;
+  margin-left:auto;
+  margin-bottom: 20px;
+}
+
 @media screen and (min-width: 640px){
 .customYT{
   margin-right: 56px;
