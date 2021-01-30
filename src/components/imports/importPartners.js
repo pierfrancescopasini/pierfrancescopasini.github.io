@@ -1,3 +1,37 @@
+function importAll(r) {
+    let images = {};
+    r.keys().map((item, index) => { 
+        const replaced = item.replace('./', '');
+        //const fullyReplaced = replaced.replace( /\.(png|jpe?g|svg)$/, '');
+        images[replaced] = r(item); });
+    return images;
+  }
+  
+  const lives = importAll(require.context('../resources/Partners/Live/', false, /\.(png|jpe?g|svg)$/));
+  const studios = importAll(require.context('../resources/Partners/RecordingStudios/', false, /\.(png|jpe?g|svg)$/));
+  const labels = importAll(require.context('../resources/Partners/Labels/', false, /\.(png|jpe?g|svg)$/));
+  const bookings = importAll(require.context('../resources/Partners/Bookings/', false, /\.(png|jpe?g|svg)$/));
+  const academies = importAll(require.context('../resources/Partners/Academy/', false, /\.(png|jpe?g|svg)$/));
+  const education = importAll(require.context('../resources/Partners/Education/', false, /\.(png|jpe?g|svg)$/));
+  const associations = importAll(require.context('../resources/Partners/Associations/', false, /\.(png|jpe?g|svg)$/));
+  const press = importAll(require.context('../resources/Partners/Press/', false, /\.(png|jpe?g|svg)$/));
+  const comuni = importAll(require.context('../resources/Partners/PublicAuthorities/', false, /\.(png|jpe?g|svg)$/));
+
+const partners = {
+    lives,
+    studios,
+    labels,
+    bookings,
+    academies,
+    education,
+    associations,
+    press,
+    comuni,
+}
+
+export default partners;
+
+/*
 //ACADEMIES
 import academy1 from '../resources/Partners/Academy/Academy1.jpg'
 import academy2 from '../resources/Partners/Academy/Academy2.jpg'
@@ -183,17 +217,4 @@ const studios = [
     studio11,
     studio12,
 ]
-
-const partners = {
-    lives,
-    studios,
-    labels,
-    bookings,
-    academies,
-    education,
-    associations,
-    press,
-    comuni,
-}
-
-export default partners;
+*/

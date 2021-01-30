@@ -280,6 +280,7 @@ h1,h2,h3, h4{
   box-shadow: 0px 0px 0px 1px #B0B0B0;
   transition: 0.4s;
   align-content: center;
+  z-index: 1000;
 }
 
 .fab:hover{

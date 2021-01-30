@@ -2,6 +2,7 @@ import React from 'react';
 
 let currentDisplay = 0;
 const userLang = navigator.language || navigator.userLanguage;
+console.log(userLang);
 let sources = null;
 class DocLightbox extends React.Component{
     state = {

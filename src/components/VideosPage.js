@@ -39,7 +39,7 @@ class VideosPage extends React.Component {
             mob = true;
         }
         return (
-            <div>
+            <div style={mob? {}: {overflow:'hidden'}}>
                 <h1>Videos</h1>
                 {mob ? <div></div> : <div style={{ height: '28px' }}></div>}
                 <Link to={'/'} className='headerIcon'><img onClick={() => {

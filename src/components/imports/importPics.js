@@ -1,3 +1,22 @@
+
+
+function importAll(r) {
+    let images = {};
+    r.keys().map((item, index) => { 
+        const replaced = item.replace('./', '');
+        const fullyReplaced = replaced.replace( /\.(png|jpe?g|svg)$/, '');
+        console.log('fullyReplace ' + fullyReplaced);
+        images[fullyReplaced] = r(item); });
+    return images;
+  }
+  
+
+const images = importAll(require.context('../resources/locs/pics', false, /\.(png|jpe?g|svg)$/));
+
+
+export default images;
+
+/*
 import Evento1 from '../resources/locs/pics/Evento1.jpg';
 import Evento2 from '../resources/locs/pics/Evento2.jpg';
 import Evento3 from '../resources/locs/pics/Evento3.jpg';
@@ -71,5 +90,4 @@ const images = {
     Evento34,
     Evento35
 } 
-
-export default images;
+*/

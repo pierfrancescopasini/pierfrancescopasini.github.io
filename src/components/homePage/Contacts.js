@@ -20,16 +20,17 @@ class Contacts extends React.Component {
             marginLeft: '5.5px',
             marginTop: '5.5px',
             marginBottom: '5.5px',
-            fontSize: '20px'
+            fontSize: '15px'
         }
         let fontSize = 20;
         let mob = false;
         if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             mob = true;
+            fontSize = '16px';
             if (window.matchMedia("(orientation: portrait)").matches) {
-                fontSize = window.innerWidth / 20;
+                //fontSize = window.innerWidth / 20;
             } else {
-                fontSize = window.innerWidth / 40;
+                //fontSize = window.innerWidth / 40;
             }
             styleOn.fontSize = fontSize;
         }

@@ -27,7 +27,7 @@ class BasicApp extends React.Component {
     componentDidMount() {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
         setTimeout(() => { this.setState({ display: { display: 'block' }, displayBar: { display: 'none' } }) }, 1300);
-        window.addEventListener('orientationchange', () => {this.setState(() => {})})
+        window.addEventListener('orientationchange', () => {window.location.reload()});
     }
 
     disableScroll = () => {
@@ -172,10 +172,10 @@ class BasicApp extends React.Component {
                                 }}
                                  className='imghead' height='50px' src={iconTransparent}></img></span>
                                 <div className='lefty' style={{marginTop: '2%', float: 'left' }}>
-                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.1, left: 0, behavior: 'smooth' }) }}>Videos</span>
+                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 1.3, left: 0, behavior: 'smooth' }) }}>Videos</span>
                                     <Link to={'/projects'} style={{textDecoration:'none', color:'#F5F5F5'}}><span className={'headerspan'} >Music</span></Link>
-                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 2, left: 0, behavior: 'smooth' }) }}>Tour</span>
-                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 3, left: 0, behavior: 'smooth' }) }}>Contacts</span>
+                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 2.4, left: 0, behavior: 'smooth' }) }}>Tour</span>
+                                    <span className={'headerspan'} onClick={() => { window.scrollTo({ top: window.innerHeight * 3.2, left: 0, behavior: 'smooth' }) }}>Contacts</span>
                                 </div>
                             </header>
                            }
@@ -189,12 +189,12 @@ class BasicApp extends React.Component {
                         >
                             <i className='arrow up' style={{ marginTop: '25px', borderColor: '#f5f5f5' }}></i>
                         </div>
-                        <div style={{display:'grid', gridTemplateColumns: '100%', gap:'2%', marginBottom:'50px'}}>
-                            <div id='homeVideos' style={mob ? { width: '100%', marginTop: 0, marginBottom: '0px'} : {width:'100%', height:'100vh'}}>
+                        <div style={{display:'grid', gridTemplateColumns: '100%', gap:'10%', marginBottom:'50px'}}>
+                            <div id='homeVideos' style={mob ? { width: '100%', marginTop: 0, marginBottom: '0px'} : {width:'100%'}}>
                                 <HomeVideosPage></HomeVideosPage>
                             </div>
                             <div id='homeEvents' style={mob ? {height: height/2, width: '100%', marginTop: 0, marginBottom: '0px' } : { height: height/1.1, width: '100%', marginTop: 0, marginBottom: '0px' }}>
-                                <div style={{width:'80%', height:'30%', margin:'auto', marginTop: '0px', marginBottom: '20px'}}>
+                                <div style={{width:'80%', height:'30%', margin:'auto', marginTop: '0px', marginBottom: '0px'}}>
                                 {/*<div style={{ width:'80%', height:'60%', margin:'auto', marginTop: '0px', marginBottom: '20px'}}>
                                     <Imagewithlightbox src={tourPic} home={true}></Imagewithlightbox>*/}
                                     <div style={{width:'80%', height:'60%', margin:'auto'}}><h3 style={{marginTop:'30%'}}>There are no upcoming events <br></br>:(</h3></div>
@@ -203,8 +203,10 @@ class BasicApp extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <hr></hr>
-                    <footer style={{ width: '100%', height: '10%' }}><Contacts></Contacts></footer>
+                    <span style={{position:'absolute', left:'0px', height:'2px', backgroundColor:'white', color:'white', width: window.innerWidth, marginBottom:'10px'}}></span>
+                    <footer style={{ zIndex: '0', position: 'absolute', width: '100%', height: '10%', marginTop:'3%', marginBottom:'2%'}}>
+                        <Contacts></Contacts>
+                    </footer>
                 </div>
                 <div style={this.state.displayBar} ><ProgressBar progress={{ amount: 0.3, time: 10 }} styleBar={{ width: window.outerWidth / 4, height: window.outerWidth / 4 }}></ProgressBar></div>
             </div>

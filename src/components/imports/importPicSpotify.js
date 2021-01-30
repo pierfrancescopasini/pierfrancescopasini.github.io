@@ -1,3 +1,19 @@
+function importAll(r) {
+    let images = {};
+    r.keys().map((item, index) => { 
+        const replaced = item.replace('./', '');
+        const fullyReplaced = replaced.replace( /\.(png|jpe?g|svg)$/, '');
+        images[fullyReplaced] = r(item); });
+    return images;
+  }
+  
+
+const cover_images = importAll(require.context('../resources/cover', false, /\.(png|jpe?g|svg)$/));
+
+
+export default cover_images;
+
+/*
 import Cover1 from '../resources/cover/Cover1.jpg'
 import Cover2 from '../resources/cover/Cover2.jpg'
 import Cover3 from '../resources/cover/Cover3.jpg'
@@ -31,3 +47,4 @@ const cover_images = {
 } 
 
 export default cover_images;
+*/

@@ -57,9 +57,12 @@ class PartnersPage extends React.Component {
                                         style={category.length > 10 ?
                                             { width: '85%', display: 'grid', gridTemplateColumns: '20% 20% 20% 20% 20%', marginLeft: '15%', marginBottom: '80px' } :
                                             { width: '85%', display: 'grid', gridTemplateColumns: '25% 25% 25% 25%', marginLeft: '15%', marginBottom: '80px' }}>
+                                        {console.log(category)}
+                                        {console.log(Array.from(Object.keys(category)))}
                                         {
-                                            category.slice().reverse().map(
-                                                (image, indice) => <div key={Math.random().toFixed(4)} style={{ display: 'inline', width: '40%', height: 'auto' }}>
+                                           Array.from(Object.keys(category)).slice().reverse().map(
+                                                (image, indice) => 
+                                                <div key={Math.random().toFixed(4)} style={{ display: 'inline', width: '40%', height: 'auto' }}>
                                                     <div
                                                         style={{
                                                             display: 'flex',
@@ -70,14 +73,14 @@ class PartnersPage extends React.Component {
                                                         }}
                                                         onClick={() => {
                                                             let arr = links[partnersArray[index]];
-                                                            let length = arr.length -1;
-                                                            let item = arr[length-indice];
-                                                            const tab = window.open(item.link, '_blank');
+                                                            let items = arr.filter((item) => item.img === image);
+                                                            const tab = window.open(items[0].link, '_blank');
                                                         }}
                                                     >
+                                                        {console.log('IMAGE ' + category['' + image].default)}
                                                         <img 
                                                             className = 'lazy'
-                                                            data-src={image}
+                                                            data-src={category[image].default}
                                                             style={{
                                                                 display: 'block',
                                                                 top: '50%',

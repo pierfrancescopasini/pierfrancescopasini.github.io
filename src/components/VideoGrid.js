@@ -150,7 +150,7 @@ class VideoGrid extends React.Component {
     }
             <div>
                 {this.props.home ?
-                        <div style={mob? { marginTop: '5%', width: '100%', height: '100%' } : { marginTop:'8%', width: '100%', height: '100%' }}><LinkItem path={'/videos'} name={'More'} home={false}></LinkItem></div>
+                        <div style={mob? { marginTop: '2%', width: '100%', height: '100%' } : { marginTop:'8%', width: '100%', height: '100%' }}><LinkItem path={'/videos'} name={'More'} home={false}></LinkItem></div>
                         : <div></div>
                     }
                 </div>

@@ -30,7 +30,7 @@ class HomeVideosPage extends React.Component {
 		}        
         return (
             <div>
-                {mob? <div style={{height:'20px'}}></div> : <div style={{height:'50px'}}></div>}
+                {mob? <div style={{height:'20px'}}></div> : <div style={{height:'0px'}}></div>}
                 <div style={this.state.styleVid}><VideoGrid nVids={nVids} home={true}></VideoGrid></div>
                 <div style={this.state.styleLoad}><ProgressBar progress={{amount: 0.2, time: 1}} styleBar={{ width: dim, height: dim}} ></ProgressBar></div>
             </div>
