@@ -73,7 +73,7 @@ class DocLightbox extends React.Component{
                 <div style={{width:'100%'}}>
                     <div style={window.innerWidth < 500 ? {fontSize:'15px', textDecoration:'bold'} : {fontSize:'18px', textDecoration:'bold'}}>
                         {th ? 
-                            (userLang === 'it-IT' || userLang === 'it' || userLang === 'IT') ? 'Tesi' : 'Thesis' 
+                            (userLang === 'it-IT' || userLang === 'it' || userLang === 'IT' || userLang == 'it-it') ? 'Tesi' : 'Thesis' 
                             : 'Curriculum Vitae'}
                     </div>
                     <img style={{width:'80%', marginTop:'10%', height:'auto', cursor:'pointer', boxShadow: '2px 2px 2px 1px rgb(0,0,0,0.4)'}} src={sources[0]} 

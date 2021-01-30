@@ -189,8 +189,8 @@ class BasicApp extends React.Component {
                         >
                             <i className='arrow up' style={{ marginTop: '25px', borderColor: '#f5f5f5' }}></i>
                         </div>
-                        <div style={{display:'grid', gridTemplateColumns: '100%', gap:'5%', marginBottom:'50px'}}>
-                            <div id='homeVideos' style={{ width: '100%', marginTop: 0, marginBottom: '0px'}}>
+                        <div style={{display:'grid', gridTemplateColumns: '100%', gap:'2%', marginBottom:'50px'}}>
+                            <div id='homeVideos' style={mob ? { width: '100%', marginTop: 0, marginBottom: '0px'} : {width:'100%', height:'100vh'}}>
                                 <HomeVideosPage></HomeVideosPage>
                             </div>
                             <div id='homeEvents' style={mob ? {height: height/2, width: '100%', marginTop: 0, marginBottom: '0px' } : { height: height/1.1, width: '100%', marginTop: 0, marginBottom: '0px' }}>

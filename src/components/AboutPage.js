@@ -75,7 +75,7 @@ class AboutPage extends React.Component {
                     <div style={{ display: 'grid', gridTemplateColumns: '100%' }}>
                         <div style={{ display: 'grid', gridTemplateColumns: '100%', width: '100%', borderRadius: '4px', margin: 'auto' }}>
                             <div style={(mob || window.innerWidth < 640 ) ? { width: '80%', margin: 'auto', fontSize: '12px', marginBottom: '50px', marginTop: '50px', textAlign: 'justify' } : { width: '80%', margin: 'auto', fontSize: '20px', marginBottom: '50px', marginTop: '50px', textAlign: 'justify'  }}>
-                                {(userLang === 'it-IT' || userLang === 'it' || userLang === 'IT') ? texts.bio.ita : texts.bio.eng}
+                                {(userLang === 'it-IT' || userLang === 'it' || userLang === 'IT' || userLang == 'it-it') ? texts.bio.ita : texts.bio.eng}
                         </div>
                     </div>
                     </div>
