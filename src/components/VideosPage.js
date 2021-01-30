@@ -12,7 +12,6 @@ class VideosPage extends React.Component {
     }
     componentDidMount = () => {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-        document.querySelector('#meta-location').setAttribute('content', window.location.href)
         setTimeout(() => {
             this.setState({ styleVideos: { display: 'block' }, styleLoad: { display: 'none' } })
         }, 2000);
@@ -40,7 +39,7 @@ class VideosPage extends React.Component {
             mob = true;
         }
         return (
-            <div style={{ overflowY: 'hidden' }}>
+            <div>
                 <h1>Videos</h1>
                 {mob ? <div></div> : <div style={{ height: '28px' }}></div>}
                 <Link to={'/'} className='headerIcon'><img onClick={() => {

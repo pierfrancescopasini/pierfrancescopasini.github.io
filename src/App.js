@@ -18,18 +18,6 @@ class App extends React.Component {
   }
 
 componentDidMount = () => {
-  window.addEventListener('resize', (e) => {
-    e.preventDefault();
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-      //setTimeout(() => {this.setState({});}, 20);
-    }else{
-      this.setState({});
-    }
-  });
-  window.addEventListener('orientationchange', (e) => {
-    e.preventDefault();
-    this.reload();
-  });
 }
 
   render(){

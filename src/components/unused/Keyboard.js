@@ -7,7 +7,6 @@ class Keyboard extends React.Component {
 
     componentDidMount = () => {
         window.addEventListener('resize', () => {setTimeout(() => {this.setState({})}, 200)});
-        window.addEventListener('orientationchange', () => {window.location.reload()})
     }
     render() {
         //Roba de initializao

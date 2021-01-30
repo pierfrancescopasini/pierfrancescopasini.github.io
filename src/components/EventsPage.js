@@ -18,7 +18,6 @@ class EventsPage extends React.Component {
 		setTimeout(() => {this.setState({displayPage:{display:'block'}, displayBar:{display:'none'}})}, 500);
 		window.scrollTo({top:0, left:0, behavior:'smooth'});
 		window.addEventListener('load', () => {
-			document.querySelector('#meta-location').setAttribute('content', window.location.href)
 			this.setState({displayPage:{display:'block'}, displayBar:{display:'none'}})
 		});
 

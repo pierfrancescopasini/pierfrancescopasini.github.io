@@ -20,7 +20,6 @@ class ProjectsPage extends React.Component {
         window.addEventListener('load', () => {            
             this.setState({ styleSpotify: { display: 'block' }, styleLoad: { display: 'none' } })
         });
-        window.addEventListener('resize', () => {})
     }
 
     render() {

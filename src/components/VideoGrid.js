@@ -3,6 +3,9 @@ import YouTube from 'react-youtube';
 import LinkItem from './LinkItem.js';
 import links from './imports/importLinkVideos.js'
 
+let opts = null;
+let mob = false;
+
 class VideoGrid extends React.Component {
 
     state = {
@@ -10,13 +13,8 @@ class VideoGrid extends React.Component {
         index: 0
     }
 
-    componentDidMount() {
-        window.addEventListener('resize', () => { });
-        this.setState({currentVideo:links[0].link});
-    }
-
-    render() {
-        let opts = {
+    setOpts(){
+            opts = {
                 width: '' + window.innerWidth*0.7,
                 height: '' + window.innerWidth*0.35,
                 playerVars: {
@@ -35,7 +33,7 @@ class VideoGrid extends React.Component {
                 };
             }
 
-        let mob = false;
+        mob = false;
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             mob = true;
             if (window.matchMedia("(orientation: portrait)").matches) {
@@ -49,8 +47,8 @@ class VideoGrid extends React.Component {
                 };
             }else{
                 opts = {
-                    width: '' + window.innerWidth*0.7,
-                    height: '' + window.innerWidth*0.32,
+                    width: '' + window.innerWidth*0.6,
+                    height: '' + window.innerWidth*0.35,
                     playerVars: {
                         color: 'white',
                         autoplay: 0,
@@ -58,7 +56,18 @@ class VideoGrid extends React.Component {
                 };
             }
         }
+    }
 
+    componentDidMount() {
+        this.setState({currentVideo:links[0].link});
+        window.addEventListener('orientationchange', () => {
+            this.setOpts();
+        })
+    }
+
+    render() {
+       
+        this.setOpts();
        
 
         let inLinks = links.slice(0, this.props.nVids);

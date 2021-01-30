@@ -23,7 +23,6 @@ class AboutPage extends React.Component {
         }, 800);
         window.addEventListener('load', () => {
             this.setState({ stylePage: { display: 'block', backgroundColor: '#FFFFFF', width: '100%' }, styleLoad: { display: 'none' } })
-            document.querySelector('#meta-location').setAttribute('content', window.location.href)
         });
     }
 
