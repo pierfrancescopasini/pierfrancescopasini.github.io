@@ -27,6 +27,7 @@ class BasicApp extends React.Component {
     componentDidMount() {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
         setTimeout(() => { this.setState({ display: { display: 'block' }, displayBar: { display: 'none' } }) }, 1300);
+        window.addEventListener('orientationchange', () => {this.setState(() => {})})
     }
 
     disableScroll = () => {
