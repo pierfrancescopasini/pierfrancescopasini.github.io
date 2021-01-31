@@ -2,8 +2,8 @@ function importAll(r) {
     let images = {};
     r.keys().map((item, index) => { 
         const replaced = item.replace('./', '');
-        //const fullyReplaced = replaced.replace( /\.(png|jpe?g|svg)$/, '');
-        images[replaced] = r(item); });
+        const fullyReplaced = replaced.replace( /\.(png|jpe?g|svg)$/, '');
+        images[fullyReplaced] = r(item); });
     return images;
   }
   

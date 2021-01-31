@@ -1,6 +1,6 @@
 import React from 'react';
 import pieropic from './resources/bioImage.png'
-import ProgressBar from './ProgressBar.js'
+import ProgressBar from '../ProgressBar.js'
 import iconTransparent from './resources/icon_white_transparent.png';
 import {Link} from 'react-router-dom';
 

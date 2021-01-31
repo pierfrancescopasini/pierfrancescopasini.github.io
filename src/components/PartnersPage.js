@@ -57,12 +57,25 @@ class PartnersPage extends React.Component {
                                         style={category.length > 10 ?
                                             { width: '85%', display: 'grid', gridTemplateColumns: '20% 20% 20% 20% 20%', marginLeft: '15%', marginBottom: '80px' } :
                                             { width: '85%', display: 'grid', gridTemplateColumns: '25% 25% 25% 25%', marginLeft: '15%', marginBottom: '80px' }}>
-                                        {console.log(category)}
-                                        {console.log(Array.from(Object.keys(category)))}
                                         {
-                                           Array.from(Object.keys(category)).slice().reverse().map(
-                                                (image, indice) => 
-                                                <div key={Math.random().toFixed(4)} style={{ display: 'inline', width: '40%', height: 'auto' }}>
+                                           console.log(Object.keys(category).sort(
+                                               (a,b) => {
+                                                let bNum = parseInt(b.match(/(\d+)/));
+                                                let aNum = parseInt(a.match(/(\d+)/));
+                                                return bNum - aNum;
+                                               }
+                                           ))
+                                        }
+                                        {
+                                           Object.keys(category).sort(
+                                            (a,b) => {
+                                             let bNum = parseInt(b.match(/(\d+)/));
+                                             let aNum = parseInt(a.match(/(\d+)/));
+                                             return bNum - aNum;
+                                            }
+                                        ).map(
+                                                (image) => 
+                                                <div key={Math.random().toFixed(4)} style={mob ? { display: 'inline', width: '60%', height: 'auto' } : { display: 'inline', width: '40%', height: 'auto' } }>
                                                     <div
                                                         style={{
                                                             display: 'flex',
@@ -74,12 +87,13 @@ class PartnersPage extends React.Component {
                                                         onClick={() => {
                                                             let arr = links[partnersArray[index]];
                                                             let items = arr.filter((item) => item.img === image);
-                                                            if(items[0] !==null){const tab = window.open(items[0].link, '_blank');}
+                                                            if(items[0] !==null){
+                                                                const tab = window.open(typeof(items[0].link) !== undefined ? items[0].link : '', '_blank');}
                                                         }}
                                                     >
                                                         <img 
                                                             className = 'lazy'
-                                                            data-src={category[image] !== null && category[image].default}
+                                                            data-src={category[image] !== null && typeof(category[image].default) !== undefined ? category[image].default : ''}
                                                             style={{
                                                                 display: 'block',
                                                                 top: '50%',

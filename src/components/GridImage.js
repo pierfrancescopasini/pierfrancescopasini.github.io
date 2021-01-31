@@ -55,7 +55,7 @@ class GridImage extends React.Component{
 						return (
 							<div key={images[item.name]}>
 									<Imagewithlighbox
-										src={images[item.name] !== null && images[item.name].default} 
+										src={images[item.name] !== null && typeof(images[item.name].default) ? images[item.name].default : ''} 
 										link={item !== null ? item.link : ''} 
 										style={{width:'100%'}} 
 										withDate={this.props.home}
