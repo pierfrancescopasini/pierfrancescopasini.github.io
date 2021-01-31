@@ -4,7 +4,6 @@ import ProgressBar from './ProgressBar.js';
 import ProjectsandVideos from './ProjectsandVideos.js';
 import HomeVideosPage from './homePage/HomeVideosPage.js';
 import back1 from './resources/homePage1.png';
-import back1mob from './resources/homePage1mob.png';
 import smoothscroll from 'smoothscroll-polyfill';
 import iconTransparent from './resources/icon_white_transparent.png'
 import tourPic from './resources/currentTour.jpg'
@@ -52,7 +51,6 @@ class BasicApp extends React.Component {
         if(/iPad/i.test(navigator.userAgent)){
             if (window.matchMedia("(orientation: portrait)").matches) {
                 mob = true;
-                b1 = `url(${back1mob})`;
             }
         }
 
@@ -75,7 +73,6 @@ class BasicApp extends React.Component {
                 land = true;
             }
             mob = true;
-            b1 = `url(${back1mob})`;
         }
 
 
