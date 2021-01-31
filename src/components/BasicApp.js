@@ -16,6 +16,7 @@ import {
 
 smoothscroll.polyfill();
 window.__forceSmoothScrollPolyfill__ = true;
+let mob = false;
 
 class BasicApp extends React.Component {
     state = {
@@ -28,7 +29,7 @@ class BasicApp extends React.Component {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
         setTimeout(() => { this.setState({ display: { display: 'block' }, displayBar: { display: 'none' } }) }, 1300);
         window.addEventListener('orientationchange', () => {window.location.reload()});
-        window.addEventListener('resize', () => {window.location.reload()});
+        mob === true && window.addEventListener('resize', () => {window.location.reload()});
     }
 
     disableScroll = () => {
@@ -45,7 +46,6 @@ class BasicApp extends React.Component {
         let tourImg = `url(${tourPic})`;
         let height = window.innerHeight * 1.1;
         let styleH1, styleH2;
-        let mob = false;
         let b1 = `url(${back1})`;
         let land = false;
 
