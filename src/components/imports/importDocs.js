@@ -9,8 +9,8 @@ import TH4 from '../resources/Thesis/TH_4.png'
 import TH5 from '../resources/Thesis/TH_5.png'
 import TH6 from '../resources/Thesis/TH_6.png'
 
-import BOOK from '../resources/Book/bookCover.png';
-import BOOK2 from '../resources/Book/bookCover2.png';
+import BOOK from '../resources/Book/bookCover.jpg';
+import BOOK2 from '../resources/Book/bookCover2.jpg';
 
 export const CVFiles = {
     CV1,
