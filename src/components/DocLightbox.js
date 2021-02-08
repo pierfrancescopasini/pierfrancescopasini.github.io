@@ -2,7 +2,6 @@ import React from 'react';
 
 let currentDisplay = 0;
 const userLang = navigator.language || navigator.userLanguage;
-console.log(userLang);
 let sources = null;
 class DocLightbox extends React.Component{
     state = {
@@ -11,8 +10,7 @@ class DocLightbox extends React.Component{
 
 
     render(){
-        const {th, files} = this.props;
-        //sources = null;
+        const {th1, th2, book, files} = this.props;
         sources = files;
         let mob = false;
         if( /Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && (window.orientation === 0 || window.orientation === 180)) {
@@ -24,7 +22,7 @@ class DocLightbox extends React.Component{
 		}
         
         sources = Object.values(sources);
-
+        console.log(sources);
 
         if(this.state.displayLightBox){
             return(
@@ -71,11 +69,14 @@ class DocLightbox extends React.Component{
             )
         }else{
             return(
-                <div style={{width:'100%'}}>
+                <div style={{width:'100%', marginTop: '30px'}}>
                     <div style={window.innerWidth < 500 ? {fontSize:'15px', textDecoration:'bold'} : {fontSize:'18px', textDecoration:'bold'}}>
-                        {th ? 
-                            (userLang === 'it-IT' || userLang === 'it' || userLang === 'IT' || userLang == 'it-it') ? 'Tesi' : 'Thesis' 
-                            : 'Curriculum Vitae'}
+                        {th1 || th2 ? 
+                            (userLang === 'it-IT' || userLang === 'it' || userLang === 'IT' || userLang == 'it-it') ? 'Tesi Triennale' : ' Bachelor Thesis' 
+                            : 
+                        book ? 
+                        (userLang === 'it-IT' || userLang === 'it' || userLang === 'IT' || userLang == 'it-it') ? 'Il mio libro' : 'My Book' 
+                        : 'Curriculum Vitae'}
                     </div>
                     <img style={{width:'80%', marginTop:'10%', height:'auto', cursor:'pointer', boxShadow: '2px 2px 2px 1px rgb(0,0,0,0.4)'}} src={sources[0]} 
                         onClick={() => {

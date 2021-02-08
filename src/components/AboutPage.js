@@ -4,7 +4,7 @@ import ProgressBar from './ProgressBar.js'
 import iconTransparent from './resources/icon_white_transparent.png';
 import { Link } from 'react-router-dom';
 import DocLightbox from './DocLightbox';
-import { CVFiles, THFiles } from './imports/importDocs';
+import { BookFiles, CVFiles, THFiles1, THFiles2,  } from './imports/importDocs';
 import texts from './resources/texts';
 
 const userLang = navigator.language || navigator.userLanguage;
@@ -83,8 +83,10 @@ class AboutPage extends React.Component {
                         <div style={{ display: 'grid', gridTemplateColumns: '100%', width: '100%', borderRadius: '4px', margin: 'auto' }}>
                             <div style={mob ? { width: '80%', margin: 'auto', fontSize: '12px', marginBottom: '50px' } : { width: '80%', margin: 'auto', fontSize: '20px', marginBottom: '50px' }}>
                                 <div style={{ display: 'grid', gridTemplateColumns: '50% 50%' }}>
-                                    <DocLightbox th={false} cv={true} files={CVFiles}></DocLightbox>
-                                    <DocLightbox th={true} cv={false} files={THFiles}></DocLightbox>
+                                    <DocLightbox th1={false} th2={false} cv={true} boook={false} files={CVFiles}></DocLightbox>
+                                    <DocLightbox th1={false} th2={false} cv={false} book={true} files={BookFiles}></DocLightbox>
+                                    <DocLightbox th1={false} th2={true} cv={false} boook={false} files={THFiles2}></DocLightbox>
+                                    <DocLightbox th1={true} th2={false} cv={false} book={false} files={THFiles1}></DocLightbox>
                                 </div>
                             </div>
                         </div>
