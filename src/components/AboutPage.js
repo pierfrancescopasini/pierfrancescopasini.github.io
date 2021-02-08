@@ -82,7 +82,7 @@ class AboutPage extends React.Component {
                     <div style={{ display: 'grid', gridTemplateColumns: '100%', backgroundColor:'#FFFFFF', height:'100%' }}>
                         <div style={{ display: 'grid', gridTemplateColumns: '100%', width: '100%', borderRadius: '4px', margin: 'auto', backgroundColor:'#FFFFFF'}}>
                             <div style={mob ? { width: '80%', margin: 'auto', fontSize: '12px', marginBottom: '50px' } : { width: '80%', margin: 'auto', fontSize: '20px', marginBottom: '50px' }}>
-                                <div style={{ display: 'grid', gridTemplateColumns: '50% 50%', rowGap: '25%', gridTemplateRows: '60vh',  height:'200vh', backgroundColor:'#FFFFFF' }}>
+                                <div style={mob ? { display: 'grid', gridTemplateColumns: '50% 50%', rowGap: '5%', gridTemplateRows: '45vh',  height:'100vh', backgroundColor:'#FFFFFF' } : { display: 'grid', gridTemplateColumns: '50% 50%', rowGap: '25%', gridTemplateRows: '60vh',  height:'200vh', backgroundColor:'#FFFFFF' }}>
                                     <DocLightbox th1={false} th2={false} cv={true} boook={false} files={CVFiles}></DocLightbox>
                                     <DocLightbox th1={false} th2={false} cv={false} book={true} files={BookFiles}></DocLightbox>
                                     <DocLightbox th1={false} th2={true} cv={false} boook={false} files={THFiles2}></DocLightbox>
