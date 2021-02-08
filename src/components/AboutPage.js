@@ -19,10 +19,10 @@ class AboutPage extends React.Component {
     componentDidMount = () => {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
         setTimeout(() => {
-            this.setState({ stylePage: { display: 'block', backgroundColor: '#FFFFFF', width: '100%', height:'500%' }, styleLoad: { display: 'none' } })
+            this.setState({ stylePage: { display: 'block', backgroundColor: '#FFFFFF', width: '100%', height:'fit-content' }, styleLoad: { display: 'none' } })
         }, 800);
         window.addEventListener('load', () => {
-            this.setState({ stylePage: { display: 'block', backgroundColor: '#FFFFFF', width: '100%', height:'500%' }, styleLoad: { display: 'none' } })
+            this.setState({ stylePage: { display: 'block', backgroundColor: '#FFFFFF', width: '100%', height:'fit-content' }, styleLoad: { display: 'none' } })
         });
     }
 
@@ -58,7 +58,7 @@ class AboutPage extends React.Component {
             margin = window.innerHeight / 1.8;
         }
         return (
-            <div>
+            <div style={{width: '100%'}}>
                 <div style={this.state.styleLoad} id='barVid'>
                     <ProgressBar progress={{ amount: 1, time: 10 }} styleBar={{ width: dim, height: dim }}></ProgressBar>
                 </div>
@@ -72,17 +72,17 @@ class AboutPage extends React.Component {
                             BIO
                         </div>
                     </div>
-                    <div style={{ display: 'grid', gridTemplateColumns: '100%' }}>
-                        <div style={{ display: 'grid', gridTemplateColumns: '100%', width: '100%', borderRadius: '4px', margin: 'auto' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: '100%', backgroundColor:'#FFFFFF', height:'100%' }}>
+                        <div style={{ display: 'grid', gridTemplateColumns: '100%', width: '100%', borderRadius: '4px', margin: 'auto', backgroundColor:'#FFFFFF' }}>
                             <div style={(mob || window.innerWidth < 640 ) ? { width: '80%', margin: 'auto', fontSize: '12px', marginBottom: '50px', marginTop: '50px', textAlign: 'justify' } : { width: '80%', margin: 'auto', fontSize: '20px', marginBottom: '50px', marginTop: '50px', textAlign: 'justify'  }}>
                                 {(userLang === 'it-IT' || userLang === 'it' || userLang === 'IT' || userLang == 'it-it') ? texts.bio.ita : texts.bio.eng}
                         </div>
                     </div>
                     </div>
-                    <div style={{ display: 'grid', gridTemplateColumns: '100%' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: '100%', backgroundColor:'#FFFFFF', height:'100%' }}>
                         <div style={{ display: 'grid', gridTemplateColumns: '100%', width: '100%', borderRadius: '4px', margin: 'auto', backgroundColor:'#FFFFFF'}}>
                             <div style={mob ? { width: '80%', margin: 'auto', fontSize: '12px', marginBottom: '50px' } : { width: '80%', margin: 'auto', fontSize: '20px', marginBottom: '50px' }}>
-                                <div style={{ display: 'grid', gridTemplateColumns: '50% 50%', rowGap: '3%', backgroundColor:'#FFFFFF', height:'130%' }}>
+                                <div style={{ display: 'grid', gridTemplateColumns: '50% 50%', rowGap: '25%', gridTemplateRows: '60vh',  height:'200vh', backgroundColor:'#FFFFFF' }}>
                                     <DocLightbox th1={false} th2={false} cv={true} boook={false} files={CVFiles}></DocLightbox>
                                     <DocLightbox th1={false} th2={false} cv={false} book={true} files={BookFiles}></DocLightbox>
                                     <DocLightbox th1={false} th2={true} cv={false} boook={false} files={THFiles2}></DocLightbox>
