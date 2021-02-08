@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.99faa693.chunk.css",
-    "main.js": "/static/js/main.21428b84.chunk.js",
-    "main.js.map": "/static/js/main.21428b84.chunk.js.map",
+    "main.js": "/static/js/main.354ce94a.chunk.js",
+    "main.js.map": "/static/js/main.354ce94a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.9a3dfc79.js",
     "runtime-main.js.map": "/static/js/runtime-main.9a3dfc79.js.map",
     "static/css/2.ab18fb39.chunk.css": "/static/css/2.ab18fb39.chunk.css",
-    "static/js/2.b836386d.chunk.js": "/static/js/2.b836386d.chunk.js",
-    "static/js/2.b836386d.chunk.js.map": "/static/js/2.b836386d.chunk.js.map",
+    "static/js/2.f7140cf2.chunk.js": "/static/js/2.f7140cf2.chunk.js",
+    "static/js/2.f7140cf2.chunk.js.map": "/static/js/2.f7140cf2.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.ab18fb39.chunk.css.map": "/static/css/2.ab18fb39.chunk.css.map",
     "static/css/main.99faa693.chunk.css.map": "/static/css/main.99faa693.chunk.css.map",
-    "static/js/2.b836386d.chunk.js.LICENSE.txt": "/static/js/2.b836386d.chunk.js.LICENSE.txt",
+    "static/js/2.f7140cf2.chunk.js.LICENSE.txt": "/static/js/2.f7140cf2.chunk.js.LICENSE.txt",
     "static/media/Associations2.jpg": "/static/media/Associations2.23d6ed49.jpg",
     "static/media/CV_1.c171fe2b.jpg": "/static/media/CV_1.c171fe2b.jpg",
     "static/media/CV_2.9be1e315.jpg": "/static/media/CV_2.9be1e315.jpg",
@@ -101,7 +101,12 @@
     "static/media/TH_1.ff5141da.jpg": "/static/media/TH_1.ff5141da.jpg",
     "static/media/TH_2.ae283013.jpg": "/static/media/TH_2.ae283013.jpg",
     "static/media/TH_3.a2e72ca8.jpg": "/static/media/TH_3.a2e72ca8.jpg",
+    "static/media/TH_4.d0b3f5e1.png": "/static/media/TH_4.d0b3f5e1.png",
+    "static/media/TH_5.8f5cc1d9.png": "/static/media/TH_5.8f5cc1d9.png",
+    "static/media/TH_6.d344d557.png": "/static/media/TH_6.d344d557.png",
     "static/media/bioImage.475b9899.png": "/static/media/bioImage.475b9899.png",
+    "static/media/bookCover.c9fa5c1a.png": "/static/media/bookCover.c9fa5c1a.png",
+    "static/media/bookCover2.4f145d90.png": "/static/media/bookCover2.4f145d90.png",
     "static/media/currentTour.39cbb690.jpg": "/static/media/currentTour.39cbb690.jpg",
     "static/media/eventsImage.7284b529.png": "/static/media/eventsImage.7284b529.png",
     "static/media/homePage1.713ca376.png": "/static/media/homePage1.713ca376.png",
@@ -112,8 +117,8 @@
   "entrypoints": [
     "static/js/runtime-main.9a3dfc79.js",
     "static/css/2.ab18fb39.chunk.css",
-    "static/js/2.b836386d.chunk.js",
+    "static/js/2.f7140cf2.chunk.js",
     "static/css/main.99faa693.chunk.css",
-    "static/js/main.21428b84.chunk.js"
+    "static/js/main.354ce94a.chunk.js"
   ]
 }
