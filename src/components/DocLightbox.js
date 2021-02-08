@@ -69,7 +69,7 @@ class DocLightbox extends React.Component{
             )
         }else{
             return(
-                <div style={{width:'100%', marginTop: '30px'}}>
+                <div style={{width:'100%'}}>
                     <div style={window.innerWidth < 500 ? {fontSize:'15px', textDecoration:'bold'} : {fontSize:'18px', textDecoration:'bold'}}>
                         {th1 || th2 ? 
                             (userLang === 'it-IT' || userLang === 'it' || userLang === 'IT' || userLang == 'it-it') ? 'Tesi Triennale' : ' Bachelor Thesis' 

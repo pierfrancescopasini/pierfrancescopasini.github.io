@@ -19,10 +19,10 @@ class AboutPage extends React.Component {
     componentDidMount = () => {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
         setTimeout(() => {
-            this.setState({ stylePage: { display: 'block', backgroundColor: '#FFFFFF', width: '100%' }, styleLoad: { display: 'none' } })
+            this.setState({ stylePage: { display: 'block', backgroundColor: '#FFFFFF', width: '100%', height:'500%' }, styleLoad: { display: 'none' } })
         }, 800);
         window.addEventListener('load', () => {
-            this.setState({ stylePage: { display: 'block', backgroundColor: '#FFFFFF', width: '100%' }, styleLoad: { display: 'none' } })
+            this.setState({ stylePage: { display: 'block', backgroundColor: '#FFFFFF', width: '100%', height:'500%' }, styleLoad: { display: 'none' } })
         });
     }
 
@@ -80,9 +80,9 @@ class AboutPage extends React.Component {
                     </div>
                     </div>
                     <div style={{ display: 'grid', gridTemplateColumns: '100%' }}>
-                        <div style={{ display: 'grid', gridTemplateColumns: '100%', width: '100%', borderRadius: '4px', margin: 'auto' }}>
+                        <div style={{ display: 'grid', gridTemplateColumns: '100%', width: '100%', borderRadius: '4px', margin: 'auto', backgroundColor:'#FFFFFF'}}>
                             <div style={mob ? { width: '80%', margin: 'auto', fontSize: '12px', marginBottom: '50px' } : { width: '80%', margin: 'auto', fontSize: '20px', marginBottom: '50px' }}>
-                                <div style={{ display: 'grid', gridTemplateColumns: '50% 50%' }}>
+                                <div style={{ display: 'grid', gridTemplateColumns: '50% 50%', rowGap: '3%', backgroundColor:'#FFFFFF', height:'130%' }}>
                                     <DocLightbox th1={false} th2={false} cv={true} boook={false} files={CVFiles}></DocLightbox>
                                     <DocLightbox th1={false} th2={false} cv={false} book={true} files={BookFiles}></DocLightbox>
                                     <DocLightbox th1={false} th2={true} cv={false} boook={false} files={THFiles2}></DocLightbox>
